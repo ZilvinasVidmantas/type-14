@@ -40,7 +40,7 @@ class Apartment {
   }
 
   get address() {
-    return `${this.street}, ${this.city}.`
+    return `${this.street}, ${this.city[0].toUpperCase() + this.city.slice(1)}.`
   }
 
   get squares() {
@@ -92,7 +92,7 @@ console.groupEnd();
 console.group("6. Atrinkite visus būstus iš Vilniaus, kurių tipas yra 'flat'");
 {
   const flatsFromVilnius = apartments.filter(({ type, city }) =>
-    type === 'flat' &&
+    type.toLowerCase() === 'flat' &&
     city.toLowerCase() === 'vilnius'
   );
   console.table(flatsFromVilnius);
