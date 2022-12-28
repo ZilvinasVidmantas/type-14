@@ -6,13 +6,80 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>50 - Events and DOM manipulation</title>
-  <script src="main.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- 1 -->
+  <script src="js/1.js" defer></script>
+  <script src="js/2.js" defer></script>
 </head>
 
 <body>
-  <main>
-    <h1></h1>
+  <main class="container py-5">
+    <h1>DOM manipuliavimo užduotys</h1>
+    <p>
+      Kiekvieną užduotį reikia atlikti atskirame JS faile, pagal užduoties numerį. Kiekvienas
+      failas,
+      turi turėti savo aplinką, nekonfliktuojančią su kitais failais. Tam naudokite IIFE;
+      <br><br>
+      Nors užduotys labai panašios, siūlyčiau išvengti kopijavimo, nes jūs mokotės, o ne dirbate.
+      Jūsų tikslas išmokti, o ne greit padaryti. Rašymas yra vienas geriausiu būdų mokytis.
+    </p>
   </main>
+
+
+  <section class="container py-5">
+    <h2>1. Pakeisti kvadrato spalvą</h2>
+    <p>
+      Sukurkite mygtuką ir pilką kvadratą. Paspaudus mygtuką, turi pasikeisti kvadrato spalva.
+    </p>
+    <button class="js-btn-1">Pakeisti spalvą</button>
+    <div>
+      <span class="js-square-1 square"></span>
+    </div>
+  </section>
+  <hr>
+
+  <section class="container py-5">
+    <h2>2. Pakeisti kvadrato spalvą 2</h2>
+    <p>
+      Sukurkite pilką kvadratą. Paspaudus kvadrat1, turi pasikeisti kvadrato spalva.
+    </p>
+  </section>
+  <hr>
+
+  <section class="container py-5">
+    <h2>3. Besikeičianti kvadrato spalva </h2>
+    <p>
+      Sukurkite pilką kvadratą. Paspaudus kvadratą, turi pasikeisti kvadrato spalva. Paspaudus jį
+      vėl, spalva turi dingti (kvadratas vėl pilkas)
+    </p>
+  </section>
+  <hr>
+
+  <section class="container py-5">
+    <h2>4. Besikeičianti kvadrato spalva 2</h2>
+    <p>
+      Sukurkite pilką kvadratą. Paspaudus kvadratą, turi pasikeisti kvadrato spalva tokiu būdų:
+    </p>
+    <ul>
+      <li>Pilkas kvadratas virsta geltonu</li>
+      <li>geltonas kvadratas virsta žaliu</li>
+      <li>žalias kvadratas virsta raudonu</li>
+      <li>raudonas kvadratas virsta pilku</li>
+    </ul>
+  </section>
+  <hr>
+
+  <section class="container py-5">
+    <h2>5. Besikeičianti kvadrato spalva pagal įvesties lauko reikšmę</h2>
+    <p>
+      Sukurkite pilką kvadratą iį įvesties lauką įvesti spalvai. Paspaudus kvadratą, turi pasikeisti
+      kvadrato spalva pagal įvesties lauke pasirinktą spalvą.
+    </p>
+  </section>
 </body>
 
 </html>
