@@ -1,14 +1,9 @@
 // IIFE - Imediatly invoked function expression
 (() => {
   const square = document.querySelector('.js-square-4');
-  const { background, backgroundColor } = getComputedStyle(square);
+  const initColor = getComputedStyle(square).backgroundColor || '#fff';
 
-  const colors = [
-    backgroundColor || background || '#fff',
-    'yellow',
-    'green',
-    'red',
-  ];
+  const colors = [initColor, 'yellow', 'green', 'red'];
   let index = 0;
 
   const changeSquareColor = () => {
