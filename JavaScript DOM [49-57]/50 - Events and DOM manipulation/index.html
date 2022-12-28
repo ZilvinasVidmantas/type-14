@@ -16,6 +16,7 @@
   <script src="js/3.js" defer></script>
   <script src="js/4.js" defer></script>
   <script src="js/5.js" defer></script>
+  <script src="js/6.js" defer></script>
 </head>
 
 <body>
@@ -84,12 +85,72 @@
   <section class="container py-5">
     <h2>5. Besikeičianti kvadrato spalva pagal įvesties lauko reikšmę</h2>
     <p>
-      Sukurkite pilką kvadratą ir įvesties lauką įvesti spalvai. Paspaudus kvadratą, turi pasikeisti kvadrato spalva pagal įvesties lauke pasirinktą spalvą.
+      Sukurkite pilką kvadratą ir įvesties lauką įvesti spalvai. Paspaudus kvadratą, turi pasikeisti
+      kvadrato spalva pagal įvesties lauke pasirinktą spalvą.
     </p>
     <input class="js-color-input-5" type="color">
     <div>
       <span class="js-square-5 square"></span>
     </div>
+  </section>
+
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+
+  <section class="container py-5">
+    <h2>Elementų manipuliavimas naudojant target.classList</h2>
+    <p>
+      Šių užduočių tikslas manipuliuoti elemento klasėmis.
+      <br>
+      Kiekvienas HTMLElement'as turi savybę <strong>classList</strong>, kurioje yra išsaugotos visos
+      to elemento klasės. Jos išsaugotos specialiame prototipe: <strong>DOMTokenList</strong>. Jis
+      pasižymi tokiais pagrindiniais metodais:
+    </p>
+    <ul>
+      <li>add</li>
+      <li>remove</li>
+      <li>contains</li>
+      <li>replace</li>
+      <li>toggle</li>
+    </ul>
+    <p>
+      Naudodami šiuos metodus atlikite sekančias užduotis. Visos užduotys atliekamos manipuliuojant
+      CSS klasėmis (kurias jums reikės apsirašyti main.css faile).
+    </p>
+
+    <article>
+      <h3>6. Sukurkite kvadračiuką. Jį paspaudus pasikeičia jo spalva į raudoną. Paspaudus dar katą
+        - spalva grįžta į pilką</h3>
+      <div>
+        <span class="js-square-6 square"></span>
+      </div>
+    </article>
+
+    <article>
+      <h3>7. Sukurkite kvadračiuką ir mygtuką. Paspaudus mygtuką, kvadratas dingsta. Paspaudus
+        mygtuką dar kartą, kvadratas atsiranda. Taip pat keiskite ir mygtuko tekstą, taip
+        sufleruojant ką darys mygtuko paspaudimas.</h3>
+    </article>
+
+    <article>
+      <h3>8. Sukurkite kvadračiuką, select'ą ir mygtuką. Paspaudus mygtuką susikuria kvadračiukas su
+        spalva nurodyta select'e (3 options)</h3>
+    </article>
+
+    <article>
+      <h3>9. Sukurkite kvadračiuką, select'ą ir mygtuką. Paspaudus mygtuką susikuria kvadračiukas su
+        dydžiu nurodytu select'e (3 options - sm, md, lg)</h3>
+    </article>
+
+    <article>
+      <h3>10. Sukurkite kvadračiuką, mygtuką ir 2 select'us (po 3 option). Vienas selektas skirtas
+        pasirinkti kvadračiuko spalvai, kitas dydžiui. Paspaudus mygtuką turi susikurti kvadračiukas
+        nuropdytas pagal pasirinkimus selektuose </h3>
+    </article>
+
+
   </section>
 
 </body>

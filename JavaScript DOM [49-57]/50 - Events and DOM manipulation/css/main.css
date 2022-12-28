@@ -4,3 +4,7 @@
   display: inline-block;
   background-color: lightgray;
 }
+
+.bg-red {
+  background-color: red;
+}
