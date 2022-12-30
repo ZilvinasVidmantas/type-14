@@ -73,13 +73,10 @@ Pvz2.:
         vardas atsiras po apačia, tvarkingame sąraše (su kableliais):
         Pvz.: Petras, Jonas, Mantas, Antanas.
       </p>
-      <form class="form-8-3 task-form">
         <div class="mb-3">
-          <label for="age" class="form-label">abel</label>
-          <input type="number" class="form-control" id="age" name="age">
+          <label for="age" class="form-label">Įveskite vardą ir "nulipkite"</label>
+          <input type="text" class="js-input-8-3 form-control" id="age" name="age">
         </div>
-        <button type="submit" class="btn btn-primary">submit</button>
-      </form>
       <div class="js-result-8-3"></div>
     </article>
     <hr>
@@ -87,18 +84,20 @@ Pvz2.:
     <article class="py-5 ps-5">
       <h2>4 užduotis</h2>
       <p>
-        Sukurkite input (be mygtuko), į kurį įrašius vardą ir nulipus nuo input (t.y. blur event),
-        vardas atsiras po apačia, tvarkingame sąraše (su kableliais):
-        Pvz.: Petras, Jonas, Mantas, Antanas.
+        Sukurkite formą su dviem inputais, kurie paims skaičius. Suvedus duomenis - turi alert'int skaičių, kuris arčiausiai 100.
+        Pvz.: fn(101, 81) grąžins 101.
       </p>
       <form class="form-8-4 task-form">
         <div class="mb-3">
-          <label for="age" class="form-label">abel</label>
-          <input type="number" class="form-control" id="age" name="age">
+          <label for="n1" class="form-label">1 skaičius</label>
+          <input type="number" class="form-control" id="n1" name="n1">
+        </div>
+        <div class="mb-3">
+          <label for="n2" class="form-label">2 skaičius</label>
+          <input type="number" class="form-control" id="n2" name="n2">
         </div>
         <button type="submit" class="btn btn-primary">submit</button>
       </form>
-      <div class="js-result-8-4"></div>
     </article>
   </section>
 </body>
