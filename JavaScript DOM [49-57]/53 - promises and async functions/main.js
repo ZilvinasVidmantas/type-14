@@ -11,5 +11,22 @@
     1. Atsiųsti vartotojus
     2. Suformuoti select'o pasirinkimus pagal parsiųstus vartotojus
     3. Apdoroti ir išsitestuoti nesėkmės atvejį
-
 */
+
+const userSelect = document.querySelector('#user-select');
+
+const renderUserOptions = (users) => {
+  const optionsStr = users
+    .map(({ username, name }) => `<option>${username} - ${name}</option>`)
+    .join('');
+  userSelect.innerHTML += optionsStr;
+}
+
+
+// 2.1.
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then((res) => res.json())
+  .then(renderUserOptions)
+
+
+
