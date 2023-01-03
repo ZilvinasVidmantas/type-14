@@ -5,5 +5,3 @@ Peržiūrėti playlist'ą apie JSON serverį
   * https://www.youtube.com/watch?v=_1kNqAybxW0&list=PLC3y8-rFHvwhc9YZIdqNL5sWeTCGxF4ya&ab_channel=Codevolution
 
   Cao.lt:
-    * 9 pamoka
-    * 11 pamoka
