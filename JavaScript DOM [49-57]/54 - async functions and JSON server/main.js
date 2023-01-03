@@ -1,14 +1,6 @@
 import ApiService from './services/api-service.js';
 import UserSelectComponent from './components/user-select-component.js';
-
-/*
-  Sukurkite AlertComponent
-    1. Atskirame faile sukurkite klasę, kurios konstruktorius priimtų viską, ko reikia sukurti alert'o atvaizdavimui.
-    2. Sukurkite atvaizdavimą ir patalpinkite jį į AlertComponent.htmlElement savybę
-    3. Kiekvienos klaidos atveju, kviečiama funkcija <renderAlert>. Vietoj funkcijos kvietimo:
-      * sukurkite AlertComponent objektą (instance) perduodami jam reikiamus argumentus
-      * įdėkite AlertComponent.htmlElement'ą į alertContainer vidų (google.lt mdn append)
-*/
+import AlertComponent from './components/alert-component.js';
 
 // Pagrindinis HTML elementas, kurio viduje bus sugeneruotas visas turinys.
 const rootHtmlElement = document.querySelector('#root');
@@ -30,21 +22,14 @@ const renderTodosTable = (todos) => {
   todosTableBody.innerHTML = todosRowsStr;
 }
 
-const renderAlert = (error) => {
-  alertContainer.innerHTML = `
-  <div class="alert alert-danger alert-dismissible" role="alert">
-    <div>${error.message}</div>
-    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-  </div>`;
-}
-
 const handleUserChange = async (e) => {
   const userId = e.target.value;
   try {
     const todos = await ApiService.getUserTodos(userId);
     renderTodosTable(todos);
   } catch (error) {
-    renderAlert(error)
+    const alertComponent = new AlertComponent(error);
+    alertContainer.append(alertComponent.htmlElement);
   }
 }
 
@@ -54,6 +39,7 @@ const handleUserChange = async (e) => {
     const userSelectComponent = new UserSelectComponent(users, handleUserChange);
     rootHtmlElement.append(userSelectComponent.htmlElement)
   } catch (error) {
-    renderAlert(error)
+    const alertComponent = new AlertComponent(error);
+    alertContainer.append(alertComponent.htmlElement);
   }
 })();
