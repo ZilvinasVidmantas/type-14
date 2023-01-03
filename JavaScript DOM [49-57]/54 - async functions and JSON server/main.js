@@ -1,16 +1,11 @@
-import ApiService from './api-service.js';
+import ApiService from './services/api-service.js';
+import UserSelectComponent from './components/user-select-component.js';
 
-const userSelect = document.querySelector('#user-select');
+// Pagrindinis HTML elementas, kurio viduje bus sugeneruotas visas turinys.
+const rootHtmlElement = document.querySelector('#root');
 const alertContainer = document.querySelector('.js-alert-container');
 const todosTable = document.querySelector('.js-todos-table');
 const todosTableBody = todosTable.querySelector('tbody');
-
-const renderUserOptions = (users) => {
-  const optionsStr = users
-    .map(({ username, name, id }) => `<option value="${id}">${username} - ${name}</option>`)
-    .join('');
-  userSelect.innerHTML += optionsStr;
-}
 
 const renderTodosTable = (todos) => {
   if (todosTable.classList.contains('d-none')) {
@@ -26,7 +21,7 @@ const renderTodosTable = (todos) => {
   todosTableBody.innerHTML = todosRowsStr;
 }
 
-const displayError = (error) => {
+const renderAlert = (error) => {
   alertContainer.innerHTML = `
   <div class="alert alert-danger alert-dismissible" role="alert">
     <div>${error.message}</div>
@@ -34,21 +29,22 @@ const displayError = (error) => {
   </div>`;
 }
 
-userSelect.addEventListener('change', async (e) => {
+const handleUserChange = async (e) => {
   const userId = e.target.value;
   try {
     const todos = await ApiService.getUserTodos(userId);
     renderTodosTable(todos);
   } catch (error) {
-    displayError(error)
+    renderAlert(error)
   }
-});
+}
 
-(async () => {
+(async function initialize() {
   try {
     const users = await ApiService.getUsers();
-    renderUserOptions(users);
+    const userSelectComponent = new UserSelectComponent(users, handleUserChange);
+    rootHtmlElement.append(userSelectComponent.htmlElement)
   } catch (error) {
-    displayError(error)
+    renderAlert(error)
   }
 })();
