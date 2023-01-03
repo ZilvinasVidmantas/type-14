@@ -1,7 +1,5 @@
 const serverAddress = 'https://jsonplaceholder.typicode.com';
 
-export const userSelect = 7;
-
 const getUserTodos = async (userId) => {
   const response = await fetch(`${serverAddress}/todos?userId=${userId}`);
   const todos = await response.json();

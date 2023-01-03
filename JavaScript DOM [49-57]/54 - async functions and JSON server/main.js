@@ -1,4 +1,4 @@
-import ApiService, { userSelect } from './api-service.js';
+import ApiService from './api-service.js';
 
 const userSelect = document.querySelector('#user-select');
 const alertContainer = document.querySelector('.js-alert-container');
