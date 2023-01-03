@@ -1,6 +1,15 @@
 import ApiService from './services/api-service.js';
 import UserSelectComponent from './components/user-select-component.js';
 
+/*
+  Sukurkite AlertComponent
+    1. Atskirame faile sukurkite klasę, kurios konstruktorius priimtų viską, ko reikia sukurti alert'o atvaizdavimui.
+    2. Sukurkite atvaizdavimą ir patalpinkite jį į AlertComponent.htmlElement savybę
+    3. Kiekvienos klaidos atveju, kviečiama funkcija <renderAlert>. Vietoj funkcijos kvietimo:
+      * sukurkite AlertComponent objektą (instance) perduodami jam reikiamus argumentus
+      * įdėkite AlertComponent.htmlElement'ą į alertContainer vidų (google.lt mdn append)
+*/
+
 // Pagrindinis HTML elementas, kurio viduje bus sugeneruotas visas turinys.
 const rootHtmlElement = document.querySelector('#root');
 const alertContainer = document.querySelector('.js-alert-container');
