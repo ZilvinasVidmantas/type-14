@@ -57,13 +57,6 @@ const displayError = (error) => {
   </div>`;
 }
 
-// 2.1.
-fetch('https://jsonplaceholder.typicode.com/users')
-  .then((res) => res.json())
-  .then(renderUserOptions)
-  // 2.3
-  .catch(displayError);
-
 userSelect.addEventListener('change', (e) => {
   const userId = e.target.value;
   fetch(`https://jsonplaceholder.typicode.com/todos?userId=${userId}`)
@@ -71,3 +64,10 @@ userSelect.addEventListener('change', (e) => {
     .then(renderTodosTable)
     .catch(displayError);
 });
+
+// 2.1.
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then((res) => res.json())
+  .then(renderUserOptions)
+  // 2.3
+  .catch(displayError);

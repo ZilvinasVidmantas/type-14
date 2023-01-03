@@ -1,3 +1,5 @@
+import ApiService, { userSelect } from './api-service.js';
+
 const userSelect = document.querySelector('#user-select');
 const alertContainer = document.querySelector('.js-alert-container');
 const todosTable = document.querySelector('.js-todos-table');
@@ -15,18 +17,16 @@ const renderTodosTable = (todos) => {
     todosTable.classList.remove('d-none');
   }
   const todosRowsStr = todos.map(({ id, title, completed }) => `
-  <tr>
-    <th scope="row">${id}</th>
-    <td>${title}</td>
-    <td>${completed ? 'Atlikta' : 'Neatlikta'}</td>
-  </tr>`)
+    <tr>
+      <th scope="row">${id}</th>
+      <td>${title}</td>
+      <td>${completed ? 'Atlikta' : 'Neatlikta'}</td>
+    </tr>`)
     .join('');
-
   todosTableBody.innerHTML = todosRowsStr;
 }
 
 const displayError = (error) => {
-  console.dir(error);
   alertContainer.innerHTML = `
   <div class="alert alert-danger alert-dismissible" role="alert">
     <div>${error.message}</div>
@@ -37,18 +37,16 @@ const displayError = (error) => {
 userSelect.addEventListener('change', async (e) => {
   const userId = e.target.value;
   try {
-    const response = await fetch(`https://jsonplaceholder.typicode.com/todos?userId=${userId}`);
-    const todos = await response.json();
+    const todos = await ApiService.getUserTodos(userId);
     renderTodosTable(todos);
   } catch (error) {
-    displayError(error);
+    displayError(error)
   }
 });
 
 (async () => {
   try {
-    const res = await fetch('https://jsonplaceholder.typicode.com/users');
-    const users = await res.json();
+    const users = await ApiService.getUsers();
     renderUserOptions(users);
   } catch (error) {
     displayError(error)
