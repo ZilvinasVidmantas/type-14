@@ -1,5 +1,0 @@
-Padaryti nepadarytus namų darbus.
-
-cao.lt:
-  privaloma: 20
-  papildomai: 19
