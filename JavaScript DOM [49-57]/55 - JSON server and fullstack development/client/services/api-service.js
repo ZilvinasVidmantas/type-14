@@ -1,4 +1,4 @@
-const serverAddress = 'https://jsonplaceholder.typicode.com';
+const serverAddress = 'http://localhost:3000';
 
 const getUserTodos = async (userId) => {
   const response = await fetch(`${serverAddress}/todos?userId=${userId}`);
