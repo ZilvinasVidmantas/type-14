@@ -3,7 +3,7 @@ class ContainerComponent {
 
   constructor() {
     this.htmlElement = document.createElement('div');
-    this.htmlElement.className = 'container';
+    this.htmlElement.className = 'container my-5';
   }
 
   addComponents(...components) {

@@ -1,4 +1,4 @@
-# TS-14 Users and todos JSON server
+# Fullstack CRUD application
 
 ## Required Programs
   * Node v16.x.y or higher
