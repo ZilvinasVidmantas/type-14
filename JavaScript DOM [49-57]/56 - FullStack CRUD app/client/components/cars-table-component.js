@@ -12,23 +12,39 @@ class CarsTableComponent {
         <th scope="col">Title</th>
         <th scope="col">Year</th>
         <th scope="col">Is Damaged</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody></tbody>`;
     this.tbody = this.htmlElement.querySelector('tbody');
   }
 
-  renderCars(cars) {
-    const carsRowsStr = cars.map(({ id, title, year, damaged }) => `
-      <tr>
-        <td>${id}</td>
-        <td>${title}</td>
-        <td>${year}</td>
-        <td>${damaged}</td>
-      </tr>`)
-      .join('');
+  createRowHtmlElement({ id, title, year, damaged }) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${id}</td>
+      <td>${title}</td>
+      <td>${year}</td>
+      <td>${damaged}</td>
+      <td class="d-flex justify-content-end">
+        <button class="btn btn-danger btn-sm">✕</button>
+      </td>`;
 
-    this.tbody.innerHTML = carsRowsStr;
+    const deleteButton = tr.querySelector('.btn-danger');
+    deleteButton.addEventListener('click', () => {
+      console.log(`trinamas elementas su id: "${id}"`);
+    });
+
+    return tr;
+  }
+
+
+  renderCars(cars) {
+    const rowsHtmlElements = cars.map(this.createRowHtmlElement);
+
+    this.tbody.innerHTML = null;
+    this.tbody.append(...rowsHtmlElements);
+
   }
 }
 

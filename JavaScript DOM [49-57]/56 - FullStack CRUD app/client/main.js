@@ -24,6 +24,5 @@ rootHtmlElement.append(containerComponent.htmlElement);
 
 
 // Create - 3.
-// Read - 1.
 // Update - 4.
 // Delete - 2.
