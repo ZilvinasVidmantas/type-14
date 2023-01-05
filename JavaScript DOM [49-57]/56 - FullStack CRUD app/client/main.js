@@ -5,17 +5,12 @@ import ContainerComponent from "./components/container-component.js";
 import FlexContainerComponent from "./components/flex-container-component.js";
 import ApiService from "./services/api-service.js";
 
-const rootHtmlElement = document.querySelector('#root');
-
 let carsTableComponent;
 let carFormComponent;
+let alertComponent;
+
 let cars;
 let editedRowId = null;
-
-const containerComponent = new ContainerComponent();
-const alertComponent = new AlertComponent();
-containerComponent.addComponents(alertComponent);
-rootHtmlElement.append(containerComponent.htmlElement);
 
 const handleCarDelete = async (id) => {
   try {
@@ -63,11 +58,22 @@ const handleCarEdit = (carProps) => {
   }
 }
 
-(async () => {
+(async function initialize() {
+  const rootHtmlElement = document.querySelector('#root');
+  const containerComponent = new ContainerComponent();
+  alertComponent = new AlertComponent();
+  containerComponent.addComponents(alertComponent);
+  rootHtmlElement.append(containerComponent.htmlElement);
   try {
     cars = await ApiService.getCars();
-    carsTableComponent = new CarsTableComponent(cars, handleCarDelete, handleCarEdit);
-    carFormComponent = new CarFormComponent(handleCarCreate);
+    carsTableComponent = new CarsTableComponent({
+      cars,
+      onDelete: handleCarDelete,
+      onEdit: handleCarEdit,
+    });
+    carFormComponent = new CarFormComponent({
+      onSubmit: handleCarCreate,
+    });
     const flexContainerComponent = new FlexContainerComponent();
     flexContainerComponent.addComponents(carsTableComponent, carFormComponent);
     containerComponent.addComponents(flexContainerComponent);

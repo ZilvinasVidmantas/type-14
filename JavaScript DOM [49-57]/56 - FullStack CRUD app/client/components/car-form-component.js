@@ -7,7 +7,7 @@ class CarFormComponent {
   formNameElement;
   submitButton;
 
-  constructor(onSubmit) {
+  constructor({ onSubmit }) {
     this.htmlElement = document.createElement('form');
     this.htmlElement.className = 'shadow p-3';
     this.htmlElement.innerHTML = `

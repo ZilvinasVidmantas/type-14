@@ -5,7 +5,7 @@ class CarsTableComponent {
   onEdit;
   editedRowId;
 
-  constructor(cars, onDelete, onEdit) {
+  constructor({ cars, onDelete, onEdit }) {
     this.htmlElement = document.createElement('table');
     this.htmlElement.className = 'table table-striped';
     this.htmlElement.innerHTML = ` 
