@@ -5,17 +5,27 @@ import ApiService from "./services/api-service.js";
 
 const rootHtmlElement = document.querySelector('#root');
 
-const carsTableComponent = new CarsTableComponent();
+let carsTableComponent;
 const containerComponent = new ContainerComponent();
 const alertComponent = new AlertComponent();
 containerComponent.addComponents(alertComponent);
 
 rootHtmlElement.append(containerComponent.htmlElement);
 
-(async () => {
+const handleCarDelete = async (id) => {
   try {
+    await ApiService.deleteCar(id);
     const cars = await ApiService.getCars();
     carsTableComponent.renderCars(cars);
+  } catch (error) {
+    alertComponent.show(error.message);
+  }
+}
+
+(async () => {
+  try {
+    const cars = await ApiService.getCars(); //     dependency injection
+    carsTableComponent = new CarsTableComponent(cars, handleCarDelete);
     containerComponent.addComponents(carsTableComponent);
   } catch (error) {
     alertComponent.show(error.message);
