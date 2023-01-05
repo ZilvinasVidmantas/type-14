@@ -10,7 +10,7 @@
       "id": "3",
       "title": "Žirgelis Raitotas",
       "year": 2017,
-      "damaged": true
+      "damaged": false
     },
     {
       "title": "asdasd",
@@ -19,10 +19,10 @@
       "id": "x91vkVb"
     },
     {
-      "title": "",
-      "year": "",
+      "title": "Žirgelis Raitotas",
+      "year": "2017",
       "damaged": false,
-      "id": "jiBhDLU"
+      "id": "8mO8Xci"
     }
   ]
 }

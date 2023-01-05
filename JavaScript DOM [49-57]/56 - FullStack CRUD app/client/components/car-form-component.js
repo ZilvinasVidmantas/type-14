@@ -1,6 +1,11 @@
 class CarFormComponent {
   htmlElement;
   onSubmit;
+  titleInput;
+  yearInput;
+  damagedInput;
+  formNameElement;
+  submitButton;
 
   constructor(onSubmit) {
     this.htmlElement = document.createElement('form');
@@ -19,8 +24,13 @@ class CarFormComponent {
         <input type="checkbox" class="form-check-input" id="damaged" name="damaged">
         <label class="form-check-label" for="damaged">Is damaged</label>
       </div>
-      <button type="submit" class="btn btn-primary w-100">Create car</button>`;
+      <button type="submit" class="btn btn-success w-100">Create car</button>`;
     this.onSubmit = onSubmit;
+    this.titleInput = this.htmlElement.querySelector('[name=title]');
+    this.yearInput = this.htmlElement.querySelector('[name=year]');
+    this.damagedInput = this.htmlElement.querySelector('[name=damaged]');
+    this.formNameElement = this.htmlElement.querySelector('h2');
+    this.submitButton = this.htmlElement.querySelector('button');
 
     this.htmlElement.addEventListener('submit', this.handleSubmit);
   }
@@ -39,6 +49,22 @@ class CarFormComponent {
     this.onSubmit(values);
 
     event.target.reset();
+  }
+
+  enableEditing = (carData) => {
+    this.titleInput.value = carData.title;
+    this.yearInput.value = carData.year;
+    this.damagedInput.checked = carData.damaged;
+    this.formNameElement.innerText = 'Update Car';
+    this.submitButton.innerText = 'Update Car';
+    this.submitButton.className = 'btn btn-warning w-100';
+  }
+
+  disableEditing = () => {
+    this.htmlElement.reset();
+    this.formNameElement.innerText = 'Create Car';
+    this.submitButton.innerText = 'Update Car';
+    this.submitButton.className = 'btn btn-success w-100';
   }
 }
 

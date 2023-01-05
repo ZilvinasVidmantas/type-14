@@ -38,10 +38,16 @@ const handleCarCreate = async (carProps) => {
   }
 }
 
-const handleCarEdit = (car) => {
-  if (editedRowId === car.id) editedRowId = null;
-  else editedRowId = car.id;
+const handleCarEdit = (carData) => {
+  if (editedRowId === carData.id) editedRowId = null;
+  else editedRowId = carData.id;
+
   carsTableComponent.renderCars(cars, editedRowId);
+  if (editedRowId === null) {
+    carFormComponent.disableEditing();
+  } else {
+    carFormComponent.enableEditing(carData);
+  }
 }
 
 (async () => {
