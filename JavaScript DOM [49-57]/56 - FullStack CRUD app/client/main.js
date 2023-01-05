@@ -15,7 +15,6 @@ let editedRowId = null;
 const containerComponent = new ContainerComponent();
 const alertComponent = new AlertComponent();
 containerComponent.addComponents(alertComponent);
-
 rootHtmlElement.append(containerComponent.htmlElement);
 
 const handleCarDelete = async (id) => {
@@ -38,23 +37,36 @@ const handleCarCreate = async (carProps) => {
   }
 }
 
-const handleCarEdit = (carData) => {
-  if (editedRowId === carData.id) editedRowId = null;
-  else editedRowId = carData.id;
+const handleCarUpdate = async (carProps) => {
+  try {
+    await ApiService.updateCar(editedRowId, carProps);
+    cars = await ApiService.getCars();
+    editedRowId = null;
+    carFormComponent.disableEditing();
+    carsTableComponent.renderCars(cars, editedRowId);
+  } catch (error) {
+    alertComponent.show(error.message);
+  }
+}
+
+const handleCarEdit = (carProps) => {
+  if (editedRowId === carProps.id) editedRowId = null;
+  else editedRowId = carProps.id;
 
   carsTableComponent.renderCars(cars, editedRowId);
   if (editedRowId === null) {
     carFormComponent.disableEditing();
+    carFormComponent.onSubmit = handleCarCreate;
   } else {
-    carFormComponent.enableEditing(carData);
+    carFormComponent.enableEditing(carProps);
+    carFormComponent.onSubmit = handleCarUpdate;
   }
 }
 
 (async () => {
   try {
-    cars = await ApiService.getCars(); //     dependency injection 2x
+    cars = await ApiService.getCars();
     carsTableComponent = new CarsTableComponent(cars, handleCarDelete, handleCarEdit);
-    //                                   dependency injection
     carFormComponent = new CarFormComponent(handleCarCreate);
     const flexContainerComponent = new FlexContainerComponent();
     flexContainerComponent.addComponents(carsTableComponent, carFormComponent);
@@ -62,7 +74,4 @@ const handleCarEdit = (carData) => {
   } catch (error) {
     alertComponent.show(error.message);
   }
-})()
-
-
-// Update - 4.
+})();

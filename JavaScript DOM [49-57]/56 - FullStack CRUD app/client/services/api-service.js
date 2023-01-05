@@ -30,10 +30,25 @@ const createCar = async (carProps) => {
   return cars;
 }
 
+const updateCar = async (id, carProps) => {
+  const response = await fetch(`${serverAddress}/cars/${id}`, {
+    method: 'PATCH',
+    headers: {
+      "Content-Type": "application/json",
+      "accept": "application/json"
+    },
+    body: JSON.stringify(carProps)
+  });
+  const cars = await response.json();
+
+  return cars;
+}
+
 const ApiService = {
   getCars,
   deleteCar,
   createCar,
+  updateCar,
 };
 
 export default ApiService;

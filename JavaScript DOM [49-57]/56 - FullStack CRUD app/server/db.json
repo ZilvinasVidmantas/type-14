@@ -2,8 +2,8 @@
   "cars": [
     {
       "id": "1",
-      "title": "Opel Astra",
-      "year": 2002,
+      "title": "testas",
+      "year": "1994",
       "damaged": true
     },
     {
@@ -14,7 +14,7 @@
     },
     {
       "title": "asdasd",
-      "year": "654",
+      "year": "660",
       "damaged": true,
       "id": "x91vkVb"
     },

@@ -51,10 +51,10 @@ class CarFormComponent {
     event.target.reset();
   }
 
-  enableEditing = (carData) => {
-    this.titleInput.value = carData.title;
-    this.yearInput.value = carData.year;
-    this.damagedInput.checked = carData.damaged;
+  enableEditing = ({ title, year, damaged }) => {
+    this.titleInput.value = title;
+    this.yearInput.value = year;
+    this.damagedInput.checked = damaged;
     this.formNameElement.innerText = 'Update Car';
     this.submitButton.innerText = 'Update Car';
     this.submitButton.className = 'btn btn-warning w-100';
