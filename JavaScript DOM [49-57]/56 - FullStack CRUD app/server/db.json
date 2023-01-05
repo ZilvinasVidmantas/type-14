@@ -7,22 +7,22 @@
       "damaged": true
     },
     {
-      "id": "2",
-      "title": "Subaru Impreza",
-      "year": 1998,
-      "damaged": false
-    },
-    {
       "id": "3",
       "title": "Žirgelis Raitotas",
       "year": 2017,
       "damaged": true
     },
     {
-      "id": "4",
-      "title": "BMW X5",
-      "year": 2012,
-      "damaged": false
+      "title": "asdasd",
+      "year": "654",
+      "damaged": true,
+      "id": "x91vkVb"
+    },
+    {
+      "title": "",
+      "year": "",
+      "damaged": false,
+      "id": "jiBhDLU"
     }
   ]
 }

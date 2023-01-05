@@ -16,9 +16,24 @@ const deleteCar = async (id) => {
   return cars;
 }
 
+const createCar = async (carProps) => {
+  const response = await fetch(`${serverAddress}/cars`, {
+    method: 'POST',
+    headers: {
+      "Content-Type": "application/json",
+      "accept": "application/json"
+    },
+    body: JSON.stringify(carProps)
+  });
+  const cars = await response.json();
+
+  return cars;
+}
+
 const ApiService = {
   getCars,
   deleteCar,
+  createCar,
 };
 
 export default ApiService;

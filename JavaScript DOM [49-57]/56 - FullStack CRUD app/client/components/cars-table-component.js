@@ -30,8 +30,10 @@ class CarsTableComponent {
       <td>${title}</td>
       <td>${year}</td>
       <td>${damaged}</td>
-      <td class="d-flex justify-content-end">
-        <button class="btn btn-danger btn-sm">✕</button>
+      <td>
+        <div class="d-flex justify-content-end">
+          <button class="btn btn-danger btn-sm">✕</button>
+        </div>
       </td>`;
 
     const deleteButton = tr.querySelector('.btn-danger');
