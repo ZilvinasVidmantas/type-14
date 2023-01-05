@@ -2,8 +2,10 @@ class CarsTableComponent {
   htmlElement;
   tbody;
   onDelete;
+  onEdit;
+  editedRowId;
 
-  constructor(cars, onDelete) {
+  constructor(cars, onDelete, onEdit) {
     this.htmlElement = document.createElement('table');
     this.htmlElement.className = 'table table-striped';
     this.htmlElement.innerHTML = ` 
@@ -19,31 +21,40 @@ class CarsTableComponent {
     <tbody></tbody>`;
     this.tbody = this.htmlElement.querySelector('tbody');
     this.onDelete = onDelete;
+    this.onEdit = onEdit;
+    this.editedRowId = null;
 
-    this.renderCars(cars);
+    this.renderCars(cars, null);
   }
 
-  createRowHtmlElement = ({ id, title, year, damaged }) => {
+  createRowHtmlElement = (car) => {
+    const { id, title, year, damaged } = car;
     const tr = document.createElement('tr');
+    const thisRowIsEdited = id === this.editedRowId;
+    if (thisRowIsEdited) tr.classList.add('bg-edited');
     tr.innerHTML = `
       <td>${id}</td>
       <td>${title}</td>
       <td>${year}</td>
       <td>${damaged}</td>
       <td>
-        <div class="d-flex justify-content-end">
+        <div class="d-flex justify-content-end gap-2">
+          <button class="btn btn-warning btn-sm">${thisRowIsEdited ? 'Cancel' : '⟳'}</button>
           <button class="btn btn-danger btn-sm">✕</button>
         </div>
       </td>`;
 
     const deleteButton = tr.querySelector('.btn-danger');
-    //                                          Inversion of Control
     deleteButton.addEventListener('click', () => this.onDelete(id));
+
+    const updateButton = tr.querySelector('.btn-warning');
+    updateButton.addEventListener('click', () => this.onEdit(car));
 
     return tr;
   }
 
-  renderCars(cars) {
+  renderCars(cars, editedRowId) {
+    this.editedRowId = editedRowId;
     const rowsHtmlElements = cars.map(this.createRowHtmlElement);
 
     this.tbody.innerHTML = null;

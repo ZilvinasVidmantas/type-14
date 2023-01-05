@@ -9,6 +9,9 @@ const rootHtmlElement = document.querySelector('#root');
 
 let carsTableComponent;
 let carFormComponent;
+let cars;
+let editedRowId = null;
+
 const containerComponent = new ContainerComponent();
 const alertComponent = new AlertComponent();
 containerComponent.addComponents(alertComponent);
@@ -18,8 +21,8 @@ rootHtmlElement.append(containerComponent.htmlElement);
 const handleCarDelete = async (id) => {
   try {
     await ApiService.deleteCar(id);
-    const cars = await ApiService.getCars();
-    carsTableComponent.renderCars(cars);
+    cars = await ApiService.getCars();
+    carsTableComponent.renderCars(cars, editedRowId);
   } catch (error) {
     alertComponent.show(error.message);
   }
@@ -28,17 +31,23 @@ const handleCarDelete = async (id) => {
 const handleCarCreate = async (carProps) => {
   try {
     await ApiService.createCar(carProps);
-    const cars = await ApiService.getCars();
-    carsTableComponent.renderCars(cars);
+    cars = await ApiService.getCars();
+    carsTableComponent.renderCars(cars, editedRowId);
   } catch (error) {
     alertComponent.show(error.message);
   }
 }
 
+const handleCarEdit = (car) => {
+  if (editedRowId === car.id) editedRowId = null;
+  else editedRowId = car.id;
+  carsTableComponent.renderCars(cars, editedRowId);
+}
+
 (async () => {
   try {
-    const cars = await ApiService.getCars(); //     dependency injection
-    carsTableComponent = new CarsTableComponent(cars, handleCarDelete);
+    cars = await ApiService.getCars(); //     dependency injection 2x
+    carsTableComponent = new CarsTableComponent(cars, handleCarDelete, handleCarEdit);
     //                                   dependency injection
     carFormComponent = new CarFormComponent(handleCarCreate);
     const flexContainerComponent = new FlexContainerComponent();
