@@ -1,18 +1,6 @@
 {
   "cars": [
     {
-      "id": "1",
-      "title": "testas",
-      "year": "1994",
-      "damaged": true
-    },
-    {
-      "id": "3",
-      "title": "Žirgelis Raitotas",
-      "year": 2017,
-      "damaged": false
-    },
-    {
       "title": "asdasd",
       "year": "660",
       "damaged": true,
