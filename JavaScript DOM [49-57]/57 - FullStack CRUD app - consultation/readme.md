@@ -10,4 +10,4 @@ Requests examples can be viewed using [Postman](https://www.postman.com/download
 
 ## Code View
 
-You can view code in Visual studio instance using [this link]([./cars.postman_collection.json](https://github.dev/ZilvinasVidmantas/type-14/tree/main/JavaScript%20DOM%20%5B49-57%5D/57%20-%20FullStack%20CRUD%20app%20-%20consultation))
+You can view code in Visual studio instance using [this link](https://github.dev/ZilvinasVidmantas/type-14/tree/main/JavaScript%20DOM%20%5B49-57%5D/57%20-%20FullStack%20CRUD%20app%20-%20consultation)
