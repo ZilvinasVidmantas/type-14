@@ -1,0 +1,16 @@
+{
+  "cars": [
+    {
+      "title": "asdasd",
+      "year": "660",
+      "damaged": true,
+      "id": "x91vkVb"
+    },
+    {
+      "title": "Žirgelis Raitotas",
+      "year": "2017",
+      "damaged": false,
+      "id": "8mO8Xci"
+    }
+  ]
+}

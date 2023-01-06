@@ -1,0 +1,28 @@
+{
+  "cars": [
+    {
+      "id": "1",
+      "title": "Opel Astra",
+      "year": 2002,
+      "damaged": true
+    },
+    {
+      "id": "2",
+      "title": "Subaru Impreza",
+      "year": 1998,
+      "damaged": false
+    },
+    {
+      "id": "3",
+      "title": "Žirgelis Raitotas",
+      "year": 2017,
+      "damaged": true
+    },
+    {
+      "id": "4",
+      "title": "BMW X5",
+      "year": 2012,
+      "damaged": false
+    }
+  ]
+}
