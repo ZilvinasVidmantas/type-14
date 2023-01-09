@@ -1,0 +1,15 @@
+{
+  "name": "projekto-kurimas-paskaitos-metu",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}
