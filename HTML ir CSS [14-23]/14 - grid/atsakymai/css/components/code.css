@@ -1,0 +1,14 @@
+.code {
+    background: #f5f5f5;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: var(--black);
+}
+
+.code .code__comment {
+    color: darkgreen;
+    font-style: italic;
+}

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>18-20: Mobile first practice</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="container">
+
+      <a href="" class="navbar__logo-link">
+        <span class="text-black">Hiking</span>
+        <span class="text-primary">Tours</span>
+      </a>
+
+      <nav class="navbar__nav navbar__nav--page">
+        <ul>
+          <li><a href="" class="navbar__link">Home</a></li>
+          <li><a href="" class="navbar__link">About</a></li>
+          <li><a href="" class="navbar__link">Services</a></li>
+          <li><a href="" class="navbar__link">Featured</a></li>
+          <li><a href="" class="navbar__link">Gallery</a></li>
+        </ul>
+      </nav>
+
+      <nav class="navbar__nav navbar__nav--social">
+        <ul>
+          <li>
+            <a href="" class="navbar__link"><i class="bi bi-facebook"></i></a>
+          </li>
+          <li>
+            <a href="" class="navbar__link"><i class="bi bi-twitter"></i></a>
+          </li>
+          <li>
+            <a href="" class="navbar__link"><i class="bi bi-linkedin"></i></a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">continue exploring</h1>
+      <p class="hero__text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+        explicabo debitis est autem dicta.
+      </p>
+      <a href="#featured" class="btn btn--white btn-lg--primary">Explore tours</a>
+    </div>
+  </main>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section__heading  mb-5">
+        <span>About</span>
+        <span class="text-primary">us</span>
+      </h2>
+      <div class="about__content">
+        <div class="about__img-container">
+          <img src="./assets/about.avif" class="about__img" alt="awesome hike" />
+        </div>
+        <article class="about__info">
+          <h3 class="about__info-title">explore the difference</h3>
+          <p class="mb-3">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur
+            quisquam harum nam cumque temporibus explicabo dolorum sapiente odio
+            unde dolor?
+          </p>
+          <p class="mb-4">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur
+            quisquam harum nam cumque temporibus explicabo dolorum sapiente odio
+            unde dolor?
+          </p>
+          <a href="#" class="btn btn--primary">Read More</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-white-grey">
+    <div class="container">
+      <h2 class="section__heading mb-5">
+        <span>Our</span>
+        <span class="text-primary">services</span>
+      </h2>
+      <div class="services-grid">
+
+        <article class="service">
+          <div class="service__icon-container">
+            <i class="bi bi-wallet-fill"></i>
+          </div>
+          <div>
+            <h3 class="service__title">SAVING MONEY</h3>
+            <p class="service__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores, officia.</p>
+          </div>
+        </article>
+
+        <article class="service">
+          <div class="service__icon-container">
+            <i class="bi bi-tree-fill"></i>
+          </div>
+          <div>
+            <h3 class="service__title">ENDLESS HIKING</h3>
+            <p class="service__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores, officia.</p>
+          </div>
+        </article>
+
+        <article class="service">
+          <div class="service__icon-container">
+            <i class="bi bi-microsoft"></i>
+          </div>
+          <div>
+            <h3 class="service__title">AMAZING COMFORT</h3>
+            <p class="service__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores, officia.</p>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section__heading mb-5">
+        <span>Featured</span>
+        <span class="text-primary">tours</span>
+      </h2>
+      <div class="tours-grid">
+        <article class="tour-card">
+          <img src="assets/featured-tour-tibet.jfif" alt="" class="tour-card__image">
+          <div class="tour-card__date">August 14th, 2022</div>
+          <div class="tour-card__content">
+            <h3 class="tour-card__title">Tibet adventure</h3>
+            <div class="tour-card__info">
+              <div class="text-primary">
+                <i class="bi bi-map-fill"></i>
+                <span>China</span>
+              </div>
+              <div>
+                <div>6 Days</div>
+                <div>From $2100</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tour-card">
+          <img src="assets/featured-tour-java.jfif" alt="" class="tour-card__image">
+          <div class="tour-card__date">October 1th, 2022</div>
+          <div class="tour-card__content">
+            <h3 class="tour-card__title">Best Of Java</h3>
+            <div class="tour-card__info">
+              <div class="text-primary">
+                <i class="bi bi-map-fill"></i>
+                <span>Indonesia</span>
+              </div>
+              <div>
+                <div>10 Days</div>
+                <div>From $4100</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tour-card">
+          <img src="assets/featured-tour-honk-kong.jfif" alt="" class="tour-card__image">
+          <div class="tour-card__date">September 26th, 2022</div>
+          <div class="tour-card__content">
+            <h3 class="tour-card__title">Explore Hong Kong</h3>
+            <div class="tour-card__info">
+              <div class="text-primary">
+                <i class="bi bi-map-fill"></i>
+                <span>Hong Kong</span>
+              </div>
+              <div>
+                <div>12 Days</div>
+                <div>From $3100</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tour-card">
+          <img src="assets/featured-tour-tibet.jfif" alt="" class="tour-card__image">
+          <div class="tour-card__date">December 5th, 2022</div>
+          <div class="tour-card__content">
+            <h3 class="tour-card__title">Kenya Highlights</h3>
+            <div class="tour-card__info">
+              <div class="text-primary">
+                <i class="bi bi-map-fill"></i>
+                <span>Kenya</span>
+              </div>
+              <div>
+                <div>22 Days</div>
+                <div>From $5400</div>
+              </div>
+            </div>
+          </div>
+
+        </article>
+      </div>
+
+      <div class="text-center my-6">
+        <a href="" class="tours-link">all tours</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white-grey pt-5">
+    <h2 class="section__heading mb-4">
+      <span>Our</span>
+      <span class="text-primary">Gallery</span>
+    </h2>
+
+    <div class="bg-primary pb-6">
+      <div class="gallery-grid">
+        <div class="gallery-img-container">
+          <img src="assets/featured-tour-tibet.jfif" alt="">
+        </div>
+        <div class="gallery-img-container">
+          <img src="assets/featured-tour-java.jfif" alt="">
+        </div>
+        <div class="gallery-img-container">
+          <img src="assets/featured-tour-honk-kong.jfif" alt="">
+        </div>
+        <div class="gallery-img-container">
+          <img src="assets/featured-tour-kenya.jfif" alt="">
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="contacts">
+          <div class="text-white text-center">
+            <h3 class="mb-3">WANT LATEST TOUR INFO AND UPDATES?</h3>
+            <p>Sign Up For Newsletter And Stay Up To Date</p>
+          </div>
+          <form class="contacts__form">
+            <input type="text" placeholder="EMAIL" class="contacts__input">
+            <button type="submit" class="contacts__btn">SUBMIT</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <foooter class="footer">
+    <nav class="footer__nav footer__nav--page">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Services</a></li>
+        <li><a href="">Featured</a></li>
+        <li><a href="">Gallery</a></li>
+      </ul>
+    </nav>
+    
+    <nav class="footer__nav footer__nav--social">
+      <ul>
+        <li>
+          <a href=""><i class="bi bi-facebook"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="bi bi-twitter"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </li>
+      </ul>
+    </nav>
+
+    <p>
+      Copyright © Hiking Tours 2022. All Rights Reserved.
+    </p>
+  </foooter>
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+
+Projekto pateikimas:
+  * https://github.com vieša repozitorija.
+  * Projekto vystymo darbai atliekami juo skaidant tvarkingai įvardintais commit'ais. 
+
+---------------------------------------------------------------------------------------------
+
+Techninės priemonės:
+  * React.js
+  * FE komponentų Framework'as (Material-ui)
+  * react-router-dom 'v5' arba 'v6'
+  * Redux.js (ir|arba) React Context.
+  * Validacija įvedamiems duomenims (Formik)
+  * node.js
+  * Express.js
+
+---------------------------------------------------------------------------------------------
+
+Funkciniai reikalavimai:
+  * Autentifikacija ir Autorizacija
+    * Prisijungus turi būti galima atlikti papildomus veiksmus:
+      * (C) kurti nauja turinį
+      * (R) matyti papildomą turinį
+      * (U) atnaujinti esantį turinį
+      * (D) trinti esantį turinį
+      Pavyzdžiui:
+        * keisti puslapio turinį ( turinio valdymo sistema. Verslui ar organizacijai. )
+        * kurti pirkinių krepšelius ir daryti užsakymus ( e-shop )
+        * rezervuoti laikus ( restorano online rezervacijos )
+        * komentuoti ( blog'as / naujienraštis )
+        * ir t.t.
+  
+  * Duomenų bazė su bent 5 struktūromis. Bent 3 ryšiai tarp struktūrų.
+    * Teisingai sudaryta duomenų bazės ryšių schema.
+
+  * Sąsaja su node.js + Express.js serverio API .
+  * Duomenų saugojimas localStorage, pvz: 
+    * Autentifikacijai.
+    * Neprisiregistravusio vartotojo duomenims saugoti.
+
+  * Dizainas (Pakeisti ir panaudoti stilių temos kintamieji).
+  * Kliento pusės maršrutai(FE routing)
+  * URLSearchParametrų panaudojimas filtruoti elementams.
+  * Puslapiavimas ir/arba infinite scroll
+
+---------------------------------------------------------------------------------------------
+
+Nefunkciniai reikalavimai:
+  * visi vadinami failai kebab-case'u
+  * kintamieji ir funkcijos vadinami camelCase'u
+  * klasės, prototipai ir react-komponentai vadinami PascalCase'u
+  * funkcijos atlieka tik vieną darbą.
+  * kintamieji, klasių, komponenetų ir funkcijų su parametrais pavadinimai turi sufleruoti jų paskirtį.
+  * eslint sugriežtinti rašymo standartai
+
+---------------------------------------------------------------------------------------------
+
+Vertinimas:
+  1  Pasiekiama repozitorija su readme.md failu, kurioje aprašyta kaip pasileisti projektą. [1]
+  2  Veikiantys kliento pusės maršrutai [1]
+  3  Panaudota localStorage arba sessionStorage [1]
+  4  Panaudota globalios puslapio būsenos technologijos( react-context arba redux.js ) [1]
+  5  Prisitaikantis dizainas visiems puslapiams [1]
+  6  Autentifikacija ir Autorizacija [1-2]
+    6.1 viena rolė [1]
+    6.2 kelios rolės [1]
+  7  Teisingais ryšiais sudaryta ir pakankamo struktūrinio turinio duomenų bazė [1]
+  8  Duomenų filtracija (ir|arba) paieška [1]
+  9  Panaudota komponentų biblioteka su pritaikytais temos nustatymais [1]
+  10  Puslapiavimas (ir|arba) infinite* scroll [1]
+  11  FULLSTACK CRUD veiksmai [1-2] 
+    11.1 Vienos struktūros pilni CRUD veiksmai [1]
+    11.2 Struktūros susijusios su kita struktūra CRUD veiksmai [1]
+  12  Formos validacija [1]
+
+  minimalus taškų skaičius išlaikymui: 5
+  maksimalus taškų skaičius: 14
+
+  Surinkus 6 taškus - pažymys 6
+  Surinkus 11 taškų - pažymys 10
+  Surinkus 14 taškų - pažymys 10
+
+  Taškų yra daugiau nei pažymių tam, kad galėtumėte laisviau
+  išvystyti savo projekto idėją per daug neprisirišant prie vertinimo kriterijų.
+  Pvz.: 
+    * Kuriate reprezentacinį puslapį tik su ADMIN turinio valdymo sistema, 
+      jums nereikalingos kelios rolės. 
+    * Jeigu jūsų puslapio idėja išpildyta naudojant scroll'inant puslapį, jums
+      nereikia router'io
+    

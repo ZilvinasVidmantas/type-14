@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Šriftai, Ikonos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <!-- Mūsų rašyti stiliai -->
+  <link rel="stylesheet" href="../css/main.css">
+  <title>CSS pagrindai</title>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="container">
+      <nav>
+        <ul class="d-flex">
+          <li><a href="../index.html" class="navbar__link">Pagrindinis</a></li>
+          <li><a href="./css-basics.html" class="navbar__link">CSS pagrindai</a></li>
+          <li><a href="" class="navbar__link  active">Display tipai</a></li>
+          <li><a href="./box-model.html" class="navbar__link">Box model</a></li>
+          <li><a href="./typography.html" class="navbar__link">Typography</a></li>
+          <li><a href="./flex.html" class="navbar__link">Flex</a></li>
+          <li><a href="./grid.html" class="navbar__link">Grid</a></li>
+          <li><a href="./position.html" class="navbar__link">Position</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-navbar">
+    <div class="container py-4">
+      <h1 class="h1 mb-2">Display tipai</h1>
+      <p>
+        Display tipas tai CSS savybės reikšmė. Yra 3 primityvūs display tipai: <strong>block</strong>,
+        <strong>inline</strong> ir
+        <strong>inline-block</strong>. CSS savybė <strong>display</strong> pasako kaip bus atvaizduojamas html elemntas.
+        <br><br>
+        Kai kuriems elementams naršyklė suteikia šiuos display tipus automatiškai.
+      </p>
+    </div>
+  </main>
+
+  <section class="my-4">
+    <div class="container">
+      <h2 class="h2 mb-2">Inline</h2>
+      <p>
+        Tai pagrindinis display tipas taikomas visiems vartotojo sukurtiems elementams. Jeigu sukuriame savo html
+        elementą, jo tipas bus
+        <strong>inline</strong>. Šis tipas pasako, kad elementas bus suvokiamas kaip tekstas. Elementai turintys šį tipą
+        negali turėti
+        aukščio ir pločios nustatymų. Jeigu nustatysite aukščio ar pločio nustatymus, jie paprasčiausiai neveiks.
+        <br><br>
+        Taip pat šiems elementams nekorektiškai veikia ir box-model savybės. Paraščių(margin) savybės veikia tik į
+        šonus, o kamšalo(padding)
+        saybės pritaikomos fonui, tačiau neturi įtakos elemnto kontūrų padidinimui.
+        <br><br>
+        Šį display tipą, turėtumėte naudoti tekstui, ikonoms arba nuotraukoms.
+        <br><br>
+        Tai vienintelis display tipas, kuris nėra keturkampis. Šio tipo elementai(tekstas) gali nusikelti per dvi ar
+        daugiau eilučių;
+        <br><br>
+        Naršyklės turi rekomenduojamus elementus, kuriems nustato šį tipą. <strong>Dažniausiai naudojami yra:</strong>
+        <br>
+      </p>
+      <ul>
+        <li class="pl-3">&lt;span&gt;</li>
+        <li class="pl-3">&lt;a&gt;</li>
+        <li class="pl-3">&lt;strong&gt;</li>
+        <li class="pl-3">&lt;em&gt;</li>
+      </ul>
+      <section class="my-3">
+        <h3 class="mb-3">Pavyzdžiai</h3>
+        <article>
+          <h4 class="mb-3">Nekorektiškas padding veikimas span elmentams</h4>
+          <div>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+            <span class="bg-primary p-2">span elementas</span>
+          </div>
+        </article>
+      </section>
+    </div>
+  </section>
+
+  <section class="my-5">
+    <div class="container">
+      <h2 class="h2 mb-2">Inline-block</h2>
+      <p>
+        Tai display tipas, kuris atvaizduoja elementus rašymo tvarka: iš kairės į dešinę (taip pat kaip ir inline).
+        Priešingai negu inline
+        tipas <strong>display: inline-block</strong> elementai gali turi dimensijų nustatymus, bei box-model savybes.
+        Kadangi tai yra blokai
+        jie negali būti keliose eilutės, t.y. Jeigu elementas pilnai netelpa į tėvinio elemento plotį, jis perkeliamas į
+        sekančią eilutę.
+        <br><br>
+        Naršyklės turi rekomenduojamus elementus, kuriems nustato šį tipą. <strong>Dažniausiai naudojami yra:</strong>
+        <br>
+      </p>
+      <ul>
+        <li class="pl-3">&lt;input&gt;</li>
+        <li class="pl-3">&lt;select&gt;</li>
+        <li class="pl-3">&lt;button&gt;</li>
+        <li class="pl-3">&lt;text-area&gt;</li>
+      </ul>
+      <section class="my-3">
+        <h3 class="mb-3">Pavyzdžiai</h3>
+        <article>
+          <h4 class="mb-3">Iš kairės į dešinę atvaizduojami blokai, kurie nusikelia į kitą eilutę</h4>
+          <span class="d-inline-block bg-primary h-100px w-200px"></span>
+          <span class="d-inline-block bg-primary h-100px w-200px"></span>
+          <span class="d-inline-block bg-primary h-100px w-200px"></span>
+          <span class="d-inline-block bg-primary h-100px w-200px"></span>
+          <span class="d-inline-block bg-primary h-100px w-200px"></span>
+          <span class="d-inline-block bg-primary h-100px w-200px"></span>
+          <span class="d-inline-block bg-primary h-100px w-200px"></span>
+          <span class="d-inline-block bg-primary h-100px w-200px"></span>
+        </article>
+      </section>
+    </div>
+  </section>
+
+  <section class="my-5">
+    <div class="container">
+      <h2 class="h2 mb-2">Block</h2>
+      <p>
+        Tai atvaizdavimo tipas <strong>display: block</strong>, kuris užsirezervuoja visą <strong>tėvinio elemento
+          plotį</strong>. To
+        pasekoje rašant <strong>display: block</strong> elementus vienas po kitos, jie atvaizduojami stulpeliu - lyg
+        namo aukštai. Net jeigu
+        elementui nurodome, kad jis užims ne pilną tėvinio elemento plotį, kiti elementai nepateks į užrezervuotą vietą.
+        Būtent todėl šie
+        elementai ir atsivaizduoja venas po kitu.
+        <br><br>
+        Šiems elementams galima nustatyti plotį(mažesnį nei tėvinio elemento) ir tuomet naudoti <strong>margin:
+          auto</strong> savybę
+        atsistumti nuo kairės pusės, dešnės pusės arba abiejų pusių vienu metu. Kuomet nustatote atstūmimą (<em>margin:
+          auto</em>) tiek iš
+        kairės, tiek iš dešinės pusės - elmentas atvaizduojamas per vidurį tėvinio elemento.
+        <br><br>
+        Naršyklės turi rekomenduojamus elementus, kuriems nustato šį tipą. <strong>Dažniausiai naudojami yra:</strong>
+        <br>
+      </p>
+      <ul>
+        <li class="pl-3">&lt;div&gt;</li>
+        <li class="pl-3">&lt;header&gt;</li>
+        <li class="pl-3">&lt;nav&gt;</li>
+        <li class="pl-3">&lt;section&gt;</li>
+        <li class="pl-3">&lt;footer&gt;</li>
+        <li class="pl-3">&lt;main&gt;</li>
+        <li class="pl-3">&lt;article&gt;</li>
+        <li class="pl-3">&lt;h1&gt; - &lt;h6&gt;</li>
+      </ul>
+      <section class="my-3">
+        <h3 class="mb-3">Pavyzdžiai</h3>
+        <article class="my-">
+          <h4 class="mb-3">Elementai vienas po kito</h4>
+          <div>
+            <div class="bg-primary h-50px mb-1"></div>
+            <div class="bg-primary h-50px mb-1"></div>
+            <div class="bg-primary h-50px mb-1"></div>
+            <div class="bg-primary h-50px mb-1"></div>
+            <div class="bg-primary h-50px mb-1"></div>
+            <div class="bg-primary h-50px mb-1"></div>
+            <div class="bg-primary h-50px mb-1"></div>
+            <div class="bg-primary h-50px mb-1"></div>
+          </div>
+        </article>
+        <article class="my-">
+          <h4 class="mb-3">Block elementas su margin-left: auto</h4>
+          <div>
+            <div class="bg-primary h-150px w-200px ml-auto"></div>
+          </div>
+        </article>
+        <article class="my-">
+          <h4 class="mb-3">Block elementas su margin-left: auto ir margin-right: auto</h4>
+          <div>
+            <div class="bg-primary h-150px w-200px mx-auto"></div>
+          </div>
+        </article>
+      </section>
+    </div>
+  </section>
+
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+Atlikti cao.lt 1 pamoką skaidant komponentais.
+Atlikti cao.lt 2 pamokos:
+  * Perksiatyti ir peržiūrėti - Kas yra komponentas?
+  * Perksiatyti ir atlikti ATSKIRAME PROJEKTE - Darome komponentus išmanesniais: Props?

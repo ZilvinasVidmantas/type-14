@@ -1,0 +1,35 @@
+1. [0.1] - pamokos darbo atkartojimas pažingsniui:
+  1.1 Išskaidyti Navbar komponentą į 2 komponentus - NavbarDesktopMenu, NavbarMobileMenu ir NavbarToggler
+    * Sukuriami failai - komponento ir stiliaus
+    * Sukuriamas komponentas
+    * Perkialiamas iškeliamo komponento turinys
+    * Sutvarkomi import'tai (įtraukiama tai ko reikia komponentui)
+    * Pagal trūkstamus kintamuosius aprašomi propsai ir priskiriami komponento tipui
+    * Panaudojami propsai
+    * Perkeliami stiliai į komponento stilių failą (jeigu jų yra)
+    * Sukurtas komponentas panaudojamas komponento iškėlimo vietoje, perduodant propsus
+
+    * Restruktūrizuokite navbar'ą,
+      *  bet kokx vaikų turinti komponentas, būtų atskirame aplanke
+      * pagindinis komponento failas turi vadintis - index.tsx
+
+    * Pervadinkite  NavbarMenuDropdownLink į NavbarMenuDropdownItem
+    * Naudodami savo aprašytus props'us įgalinkite arba Accdordion'o arba Link'o  atvaizdavimą
+    * Įgalinkite Accordion'o išlindimą naudodami max-height perėjimą
+  
+
+2. [0.1] - Sukurkite astkirus puslapius, kuriuose apibendrinsite straipsnio perskaitytą informaciją.
+  Kiekvienas puslapis turi turėti 3-5 sakinių JŪSŲ SUGALVOTĄ apibendrinimą. Taip pat 
+  įkelkite nuotrauką arba kodo pavyzdžį;
+  P.S. Sukurti puslapiai turi būti įdėti į navbar'ą.
+    * https://reactjs.org/docs/rendering-elements.html
+    * https://reactjs.org/docs/components-and-props.html
+    * https://reactjs.org/docs/state-and-lifecycle.html
+
+3. [0.1] - Išskaidykite NavbarMobileDropdownItem į 3 komponentus
+  * NavbarMobileDropdownItem - komponentas įgalinantis aukštį ir bendrus stilius
+  * NavbarMobileDropdownLink - komponentas apgauntas NavbarMobileDropdownItem ir turintis vidinį NavLink iš react-router-dom bibliotekos
+  * NavbarMobileDropdownAccordion - komponentas apgauntas NavbarMobileDropdownItem ir jūsų sukurtą Accordion komponento veikimą
+
+
+

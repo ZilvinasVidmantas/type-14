@@ -1,0 +1,22 @@
+1. Atkartoti pamokos darbą pažingsniui [0.1]
+  * Sutvarkykite navbar folder, kad komponentai pasiskirstytų į 2 folderius:
+    * navbar-mobile-menu
+    * navbar-desktop-menu
+  * Sukuriame naują komponentą - navbar-desktop-dropdown
+  * Bendrus NavbarDesktopDropdown ir NavbarDesktopLink stilius išsaugokite atskirame stilių faile ir panaudokite abiejuose komponentuose
+  * NavbarDesktopDropdown elementams pridėkite ikoną, jog matūtsi jog tai ne nuoroda, o nuorodų grupė
+  * Įgalinkite, kad atsidarytu Popper elementas paspaudus NavbarDesktopDropdown
+  * Įgalinkite kas NavbarDesktopDropdown'ų paspaudimai uždarytų viens kitą
+  * Įgalinkite ikonų apsukimą priklausomai nuo to ar atidarytas meniu
+  * atvaizduoti Kiekvienos nuorodų grupės nuorodas
+  * Įgalinti Aktyvios nuorodos paryškinimą
+  * Įgalinti drodpwn'ų uždarymą spaudžiant ne ant dropwdown'ų
+  * Uždaryti dropdown'ą, kuomet sumažėja ekrano dydis
+
+2. Atskiruose puslapiuose išsaugoti video turinį ir įdėti į navigavijos juostą [0.1]
+  https://www.youtube.com/watch?v=BHEPVdfBAqE&list=PLC3y8-rFHvwh-K9mDlrrcDywl7CeVL2rO&ab_channel=Codevolution
+  29-39
+
+3. Atskiruose puslapiuose išsaugoti video turinį ir įdėti į navigavijos juostą [0.1]
+  https://www.youtube.com/watch?v=BHEPVdfBAqE&list=PLC3y8-rFHvwh-K9mDlrrcDywl7CeVL2rO&ab_channel=Codevolution
+  40-46

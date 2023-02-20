@@ -1,0 +1,37 @@
+                                      Essentials - Pagrindai
+                                      
+value - reikšmė - programos vykdymo atmintyje išsaugoti duomenys
+identifier/variable - įvardinimas/kintamasis - programuotojo sukurtas simbolių darinys, kuriuo pasiekiama reikšmė
+array - masyvas -  rinkinys reikšmių, kurios numeruojamos indeksais, pradedant 0 -  []
+object - objektas - rakto ir reikšmės porų rinkinys - {}
+ternary operator(inline-if) - trumpasis If salyginis sakinys - salyga ? (vykdoma jei salyga->true): (vykdoma jei salyga->false)
+operator - operatorius - programavimo kalboje užrezervuotas simbolis skirtas atlikti operaciją - veiksmus
+scope - aplinka/terpė - programavimo terpė, kuri turi savo atskirą atmintį saugoti kintamuosius {}
+
+                                        Cycles - ciklai                                        
+iteration - iteracija - konkretus ciklo vykdomojo bloko veikimas
+iterate - iteruoti/cikluoti - pakartotinai vykdyti ciklo vykdomajį bloką
+iterator - iteratorius - kintamuoju pasiekiama reikšmė, kuri naudojama apspręsti ciklo baigtį ir žingsnį.
+
+                                      Functions - funkcijos
+function - funkcija - deklaruojama perpanaudojamas kodo blokas, kuri gali būti iškvietas daug kartų
+invocation/call - iškvietimas - funkcijos vykdymas
+parameters - parametrai - funkcijos iškvietimo metu sukuriami kintamieji, kurių reikšmės bus priskirtos pagal argumentus.
+arguments - argumentai - funkcijos iškvietimo metu perduodamos reikšmės, kurios bus įrašytos į parametrus.
+annonymous function - anoniminė funkcija - funkcijos reikšmė, kuri nepasiekiama kintamuoju.
+aukštesniojo lygio funkcija - tai funkcija kuri:
+  a) priima kitą funkciją parametru ir iškviečią ją pagal aprašyta logiką
+  b) grąžina dar kitą funkciją, kuri naudoja išorinė funkcijos parametrus ar iškvietimo atmintį.
+callback - parametru priimta funkcija - funkcija kurią naudoja aukštesniojo lygio funkcija.
+
+                                      Algorythms - algoritmai 
+algorythm - algoritmas - užduoties sprendimo principas aprašant veiksmų seką/kartojimus
+sorting - rikiavimas - reikšmių išdėstymas paeiliui, pagal kriterijų
+
+                                      OOP - objektiškai orientuotas programavimas
+class - šablonas kurti objektams naudojant tą patį prototipą
+encapsulation - inkapsuliacija - tiesioginis savybių pasiekiamumo ribojimas, kad užtikrinti savybių korektiškumą.
+paveldimumas - ryšys tarp klasių principu: klasė A yra klasė B. Paveldimumo tikslas - laikyti bendrą funkcionalumą tėvinėje klasėje.
+kompozicija - ryšys tarp klasių principu: klase A turi klasės B objektus/objektą. Kompozicijos tikslas - skirstyti funkcionalumą sudedamosiomis dalimis.
+polimorfizmas - iš pirmos pažiūros tų pačių komandų vykdymas, atliekantis skirtingas funkcijas/metodus.
+

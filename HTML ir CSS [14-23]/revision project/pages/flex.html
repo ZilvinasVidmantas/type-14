@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Šriftai, Ikonos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <!-- Mūsų rašyti stiliai -->
+  <link rel="stylesheet" href="../css/main.css">
+  <title>CSS pagrindai</title>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="container">
+      <nav>
+        <ul class="d-flex">
+          <li><a href="../index.html" class="navbar__link">Pagrindinis</a></li>
+          <li><a href="./css-basics.html" class="navbar__link">CSS pagrindai</a></li>
+          <li><a href="./display-types.html" class="navbar__link">Display tipai</a></li>
+          <li><a href="./box-model.html" class="navbar__link">Box model</a></li>
+          <li><a href="./typography.html" class="navbar__link">Typography</a></li>
+          <li><a href="" class="navbar__link active">Flex</a></li>
+          <li><a href="./grid.html" class="navbar__link">Grid</a></li>
+          <li><a href="./position.html" class="navbar__link">Position</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-navbar">
+    <div class="container py-4">
+      <h1 class="h1 mb-2">Flex</h1>
+      <p class="mb-3">
+        Tai atvaizdavimo tipas, kuris yra elementą veikia kaip <strong>display: block</strong>, tačiau papildomai gali
+        valdyti pirmo lygio(tiesioginių) vaikų išdėstymą. Elementai, kurie turi tiesioginį tėvą su <strong>display:
+          flex</strong> gali papildomai koreguoti savo išdėstymo nustatymus specialiomis <strong>flex-child</strong> CSS
+        savybėmis. Daugiau apie kiekvieną savybę galite paskaityti
+        <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="blank">šiame straipsnyje</a>:
+        <br>
+        <span class="pl-3"> Kairėje pusėje išvardintos savybės, kurias galite taikyti tėviniam elementui - tam kuriam
+          užstatėte <strong>display: flex</strong></span>
+        <br>
+        <span class="pl-3"> Dešinėje pusėje išvardintos savybės, kurias galite taikyti vaikiniam elementui - turinčiam
+          tiesioginį tėvą su CSS savybe <strong>display: flex</strong></span>
+      </p>
+      <iframe width="100%" height="614px" src="https://www.youtube.com/embed/u044iM9xsWU" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p class="my-4">
+        <strong class="h5">Išbandykite patys!</strong> <br>
+        <a class="pl-3" href="https://flexboxfroggy.com/" target="blank">Varlytės</a> <br>
+        <a class="pl-3" href="https://codingfantasy.com/games/flexboxadventure" target="blank">Nuotykis</a> <br>
+        <a class="pl-3" href="https://flexbox.netlify.app/" target="blank">Žaidimų aikštelė</a>
+      </p>
+    </div>
+  </main>
+
+  <section class="my-5">
+    <div class="container">
+      <h2 class="h2 mb-3">Dažniausi flex panaudojimo atvejai</h2>
+
+      <article class="my-4">
+        <h3>Elemento pozicionavimas centre tėvinio elemento</h3>
+        <div class="m-5 d-flex justify-content-center align-items-center border-black h-200px">
+          <div class="w-100px h-100px bg-primary"></div>
+        </div>
+      </article>
+
+      <article class="my-4">
+        <h3>Elementai pozicionuojami maksimaliu atstumu vienas nuo kito</h3>
+        <div class="m-5 d-flex justify-content-between align-items-center border-black p-3">
+          <div class="w-100px h-100px bg-primary"></div>
+          <div class="w-100px h-100px bg-primary"></div>
+        </div>
+      </article>
+
+      <article class="my-4">
+        <h3>Elementai užimantys visą likusią laisvą vietą</h3>
+        <div class="m-5 d-flex justify-content-between border-black">
+          <img src="https://unsplash.it/200/200">
+          <p class="bg-black text-white flex-grow-1 p-3">
+            Čia elementas kuris plečiasi
+          </p>
+        </div>
+      </article>
+
+      <article class="my-4">
+        <h3>Kompleksinis pavyzdys, elementų laisvos vietos kūrimas, derinat pagal didžiausią sesės/brolio aukštį</h3>
+        <div class="m-5 d-flex justify-content-between border-black p-3">
+          <div class="border-black p-3 w-200px d-flex flex-column justify-content-between">
+            <div>
+              <img src="https://unsplash.it/100/100">
+              <h4>Koretelė 1</h4>
+              <p>Du žodžiai</p>
+            </div>
+            <button class="btn btn-primary">Neverta mane spausti</button>
+          </div>
+          <div class="border-black p-3 w-200px d-flex flex-column justify-content-between">
+            <div>
+              <img src="https://unsplash.it/100/100">
+              <h4>Koretelė 2</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, id.</p>
+            </div>
+            <button class="btn btn-primary">Neverta mane spausti</button>
+          </div>
+          <div class="border-black p-3 w-200px d-flex flex-column justify-content-between">
+            <div>
+                <img src="https://unsplash.it/100/100">
+              <h4>Koretelė 1</h4>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas totam perferendis nam eveniet, quasi perspiciatis.</p>
+            </div>
+            <button class="btn btn-primary">Neverta mane spausti</button>
+          </div>
+
+        </div>
+      </article>
+    </div>
+  </section>
+
+
+</body>
+
+</html>

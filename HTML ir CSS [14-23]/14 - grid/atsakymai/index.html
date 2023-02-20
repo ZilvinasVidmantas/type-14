@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <title>lesson 6 - grid columns, rows and lines</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container h-100">
+      <div class="d-flex h-100 justify-content-between">
+        <a href="" class="navbar__logo-container">
+          <img src="https://unsplash.it/57/26">
+        </a>
+        <ul class="navbar__navigation">
+          <li><a class="navbar__link" href="#main">Grid</a></li>
+          <li><a class="navbar__link" href="#grid-template-columns">Columns</a></li>
+          <li><a class="navbar__link" href="#grid-template-rows">Rows</a></li>
+          <li><a class="navbar__link" href="#grid-column">Column</a></li>
+          <li><a class="navbar__link" href="#grid-row">Row</a></li>
+          <li><a class="navbar__link" href="#tasks">Tasks</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main" class="pt-navbar-height">
+    <div class="container container--narrow py-3">
+      <h1 class="pb-3">Grid</h1>
+      <p>
+        Grid, tai toks CSS savybės <strong>display</strong> tipas, kuris
+        gali valdyti pirmo lygio vaikų išdėstymą tiek vertikaliai, tiek
+        horiontaliai. <br>
+        Taikydami papildomas savybes tėviniam elementui
+        (tam, kuriam pritaikyta CSS savybė <strong>display: grid;</strong>)
+        galime kurti stulpelius, eilutes ir netgi plotų šablonus(kuriuos
+        nagrinėsime vėliau.) <br> Nustačius eilučių, stulpelių ar plotų
+        šablonus, elementai yra išdėstomi pagal šiuos šablonus. Taip pat
+        galima pirmo lygio vaikams nurodyti kokią "tinklelio" dalį/plotą jis
+        užims.
+      </p>
+
+      <section id="grid-template-columns" class="navbar-anchor-fix">
+        <div class="pt-4 pl-4">
+          <h2 class="mb-2">grid-template-columns</h2>
+          <p>
+            Ši savybė nusako į kiek, ir kokio pločio, stulpelių bus suskirstomas "grid" elementas.
+          </p>
+          <pre class="code">
+    ... {
+        display: grid;
+        grid-template-columns: 100px 200px 100px 50px;<span class="code__comment">
+        pirmojo stulpelio plotis ↗     ↗    ↗     ↗
+            antrojo stulpelio plotis ↗    ↗     ↗
+              trečiojo stulpelio plotis ↗     ↗
+                ketvirtojo stulpelio plotis ↗</span>
+    }</pre>
+        </div>
+      </section>
+
+      <section id="grid-template-rows" class="navbar-anchor-fix">
+        <div class="pt-4 pl-4">
+          <h2 class="mb-2">grid-template-rows</h2>
+          <p>
+            Ši savybė nusako į kiek, ir kokio pločio, eilučių bus suskirstomas "grid" elementas.
+          </p>
+          <pre class="code">
+    ... {
+        display: grid;
+        grid-template-rows: 100px 50px 100px;<span class="code__comment">
+   pirmosios eilutės aukštis ↗     ↗    ↗
+       antrosios eilutės aukštis ↗    ↗
+         trečiosios eilutės aukštis ↗ 
+    }</span></pre>
+        </div>
+      </section>
+
+      <section id="grid-column" class="navbar-anchor-fix">
+        <div class="pt-4 pl-4">
+          <h2 class="mb-2">grid-column</h2>
+          <p>
+            Ši CSS savybė nusako kiek stulplelių vaikinis elementas užims. <br>
+            Tai galima nurodyti rašant <strong>span x</strong>, kur x - stulpelų skaičius. <br>
+            Taip pat apibrėžti vaikinį elementą galima nurodant pradžios ir pabaigos stulpelių linijas. <br>
+            Linijos numeruojamos iš kairės į dešinę, pradedant vienetu: 1, 2, ... ,n; <br>
+            Taip pat linijos numeruojamos iš dešinės į kairę, tačiau su minuso ženklu: -1, -2, ...,-n;
+            Linijų kiekis (n) - visada vienetu didesnis nei stulpelių skaičius.
+          </p>
+          <pre class="code">
+    .father {
+      display: grid;
+      grid-template-columns: 100px 100px 100px 100px;
+    }
+
+    <span class="code__comment">/* vaikinis elementas užims 2 stulpelius */</span>
+    .child-1 {
+      grid-column: span 2; 
+    }
+    
+    <span class="code__comment">/* elementas prasidės nuo 2 linijos ir pasibaigs ties ketvirta */</span>
+    .child-2 {
+      grid-column: 2 / 4;
+    }
+    
+    <span class="code__comment">/* elementas prasidės nuo 2 linijos ir pasibaigs paskutine */</span>
+    .child-3 {
+      grid-column: 2 / -1;
+    }</pre>
+        </div>
+      </section>
+
+      <section id="grid-row" class="navbar-anchor-fix">
+        <div class="pt-4 pl-4">
+          <h2 class="mb-2">grid-row</h2>
+          <p>
+            Ši savybė aprašo kiek ir kokių eilučių užims "grid" vaikinis elementas. Principai veikia taip pat kaip ir
+            savybėje <strong><a href="#grid-column">grid-column</a></strong>
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <section id="tasks" class="navbar-anchor-fix">
+    <div class="container py-5">
+      <h2 class="mb-3">Užduotys</h2>
+      <div class="grid-task-container">
+        <div class="grid-task grid-task--1">
+          <div class="grid-task--1__child-1">1</div>
+          <div class="grid-task--1__child-2">2</div>
+          <div class="grid-task--1__child-3">3</div>
+          <div class="grid-task--1__child-4">4</div>
+          <div class="grid-task--1__child-5">5</div>
+          <div class="grid-task--1__child-6">6</div>
+        </div>
+
+        <div class="grid-task grid-task--2">
+          <div class="grid-task--2__child-1">1</div>
+          <div class="grid-task--2__child-2">2</div>
+          <div class="grid-task--2__child-3">3</div>
+          <div class="grid-task--2__child-4">4</div>
+          <div class="grid-task--2__child-5">5</div>
+          <div class="grid-task--2__child-6">6</div>
+        </div>
+
+        <div class="grid-task grid-task--3">
+          <div class="grid-task--3__child-1">1</div>
+          <div class="grid-task--3__child-2">2</div>
+          <div class="grid-task--3__child-3">3</div>
+          <div class="grid-task--3__child-4">4</div>
+          <div class="grid-task--3__child-5">5</div>
+          <div class="grid-task--3__child-6">6</div>
+        </div>
+
+        <div class="grid-task grid-task--4">
+          <div class="grid-task--4__child-1">1</div>
+          <div class="grid-task--4__child-2">2</div>
+          <div class="grid-task--4__child-3">3</div>
+          <div class="grid-task--4__child-4">4</div>
+          <div class="grid-task--4__child-5">5</div>
+          <div class="grid-task--4__child-6">6</div>
+          <div class="grid-task--4__child-7">7</div>
+          <div class="grid-task--4__child-8">8</div>
+          <div class="grid-task--4__child-9">9</div>
+          <div class="grid-task--4__child-10">10</div>
+          <div class="grid-task--4__child-11">11</div>
+        </div>
+
+        <div class="grid-task grid-task--5">
+          <div class="grid-task--5__child-1">1</div>
+          <div class="grid-task--5__child-2">2</div>
+          <div class="grid-task--5__child-3">3</div>
+          <div class="grid-task--5__child-4">4</div>
+          <div class="grid-task--5__child-5">5</div>
+          <div class="grid-task--5__child-6">6</div>
+          <div class="grid-task--5__child-7">7</div>
+          <div class="grid-task--5__child-8">8</div>
+          <div class="grid-task--5__child-9">9</div>
+          <div class="grid-task--5__child-10">10</div>
+        </div>
+
+        <div class="grid-task grid-task--6">
+          <div class="grid-task--6__child-1">1</div>
+          <div class="grid-task--6__child-2">2</div>
+          <div class="grid-task--6__child-3">3</div>
+          <div class="grid-task--6__child-4">4</div>
+          <div class="grid-task--6__child-5">5</div>
+          <div class="grid-task--6__child-6">6</div>
+        </div>
+
+        <div class="grid-task grid-task--7">
+          <div class="grid-task--7__child-1">1</div>
+          <div class="grid-task--7__child-2">2</div>
+          <div class="grid-task--7__child-3">3</div>
+          <div class="grid-task--7__child-4">4</div>
+          <div class="grid-task--7__child-5">5</div>
+          <div class="grid-task--7__child-6">6</div>
+        </div>
+
+        <div class="grid-task grid-task--8">
+          <div class="grid-task--8__child-1">1</div>
+          <div class="grid-task--8__child-2">2</div>
+          <div class="grid-task--8__child-3">3</div>
+          <div class="grid-task--8__child-4">4</div>
+          <div class="grid-task--8__child-5">5</div>
+          <div class="grid-task--8__child-6">6</div>
+        </div>
+
+        <div class="grid-task grid-task--9">
+          <div class="grid-task--9__child-1">1</div>
+          <div class="grid-task--9__child-2">2</div>
+          <div class="grid-task--9__child-3">3</div>
+          <div class="grid-task--9__child-4">4</div>
+          <div class="grid-task--9__child-5">5</div>
+          <div class="grid-task--9__child-6">6</div>
+          <div class="grid-task--9__child-7">7</div>
+          <div class="grid-task--9__child-8">8</div>
+          <div class="grid-task--9__child-9">9</div>
+          <div class="grid-task--9__child-10">10</div>
+          <div class="grid-task--9__child-11">11</div>
+        </div>
+
+        <div class="grid-task grid-task--10">
+          <div class="grid-task--10__child-1">1</div>
+          <div class="grid-task--10__child-2">2</div>
+          <div class="grid-task--10__child-3">3</div>
+          <div class="grid-task--10__child-4">4</div>
+          <div class="grid-task--10__child-5">5</div>
+          <div class="grid-task--10__child-6">6</div>
+          <div class="grid-task--10__child-7">7</div>
+          <div class="grid-task--10__child-8">8</div>
+          <div class="grid-task--10__child-9">9</div>
+          <div class="grid-task--10__child-10">10</div>
+          <div class="grid-task--10__child-11">11</div>
+          <div class="grid-task--10__child-12">12</div>
+        </div>
+
+        <div class="grid-task grid-task--11">
+          <div class="grid-task--11__child-1">1</div>
+          <div class="grid-task--11__child-2">2</div>
+          <div class="grid-task--11__child-3">3</div>
+          <div class="grid-task--11__child-4">4</div>
+          <div class="grid-task--11__child-5">5</div>
+          <div class="grid-task--11__child-6">6</div>
+        </div>
+
+        <div class="grid-task grid-task--12">
+          <div class="grid-task--12__child-1">1</div>
+          <div class="grid-task--12__child-2">2</div>
+          <div class="grid-task--12__child-3">3</div>
+          <div class="grid-task--12__child-4">4</div>
+          <div class="grid-task--12__child-5">5</div>
+        </div>
+
+        <div class="grid-task grid-task--13">
+          <div class="grid-task--13__child-1">1</div>
+          <div class="grid-task--13__child-2">2</div>
+          <div class="grid-task--13__child-3">3</div>
+          <div class="grid-task--13__child-4">4</div>
+          <div class="grid-task--13__child-5">5</div>
+        </div>
+
+        <div class="grid-task grid-task--14">
+          <div class="grid-task--14__child-1">1</div>
+          <div class="grid-task--14__child-2">2</div>
+          <div class="grid-task--14__child-3">3</div>
+          <div class="grid-task--14__child-4">4</div>
+          <div class="grid-task--14__child-5">5</div>
+          <div class="grid-task--14__child-6">6</div>
+          <div class="grid-task--14__child-7">7</div>
+          <div class="grid-task--14__child-8">8</div>
+          <div class="grid-task--14__child-9">9</div>
+          <div class="grid-task--14__child-10">10</div>
+          <div class="grid-task--14__child-11">11</div>
+          <div class="grid-task--14__child-12">12</div>
+        </div>
+
+        <div class="grid-task grid-task--15">
+          <div class="grid-task--15__child-1">1</div>
+          <div class="grid-task--15__child-2">2</div>
+          <div class="grid-task--15__child-3">3</div>
+          <div class="grid-task--15__child-4">4</div>
+          <div class="grid-task--15__child-5">5</div>
+          <div class="grid-task--15__child-6">6</div>
+          <div class="grid-task--15__child-7">7</div>
+          <div class="grid-task--15__child-8">8</div>
+          <div class="grid-task--15__child-9">9</div>
+          <div class="grid-task--15__child-10">10</div>
+          <div class="grid-task--15__child-11">11</div>
+          <div class="grid-task--15__child-12">12</div>
+          <div class="grid-task--15__child-13">13</div>
+          <div class="grid-task--15__child-14">14</div>
+        </div>
+
+        <div class="grid-task grid-task--16">
+          <div class="grid-task--16__child-1">1</div>
+          <div class="grid-task--16__child-2">2</div>
+          <div class="grid-task--16__child-3">3</div>
+          <div class="grid-task--16__child-4">4</div>
+          <div class="grid-task--16__child-5">5</div>
+          <div class="grid-task--16__child-6">6</div>
+          <div class="grid-task--16__child-7">7</div>
+          <div class="grid-task--16__child-8">8</div>
+        </div>
+
+        <div class="grid-task grid-task--17">
+          <div class="grid-task--17__child-1">1</div>
+          <div class="grid-task--17__child-2">2</div>
+          <div class="grid-task--17__child-3">3</div>
+          <div class="grid-task--17__child-4">4</div>
+          <div class="grid-task--17__child-5">5</div>
+          <div class="grid-task--17__child-6">6</div>
+          <div class="grid-task--17__child-7">7</div>
+        </div>
+
+        <div class="grid-task grid-task--18">
+          <div class="grid-task--18__child-1">1</div>
+          <div class="grid-task--18__child-2">2</div>
+          <div class="grid-task--18__child-3">3</div>
+          <div class="grid-task--18__child-4">4</div>
+          <div class="grid-task--18__child-5">5</div>
+          <div class="grid-task--18__child-6">6</div>
+          <div class="grid-task--18__child-7">7</div>
+          <div class="grid-task--18__child-8">8</div>
+        </div>
+
+        <div class="grid-task grid-task--19">
+          <div class="grid-task--19__child-1">1</div>
+          <div class="grid-task--19__child-2">2</div>
+          <div class="grid-task--19__child-3">3</div>
+          <div class="grid-task--19__child-4">4</div>
+          <div class="grid-task--19__child-5">5</div>
+          <div class="grid-task--19__child-6">6</div>
+          <div class="grid-task--19__child-7">7</div>
+          <div class="grid-task--19__child-8">8</div>
+          <div class="grid-task--19__child-9">9</div>
+          <div class="grid-task--19__child-10">10</div>
+          <div class="grid-task--19__child-11">11</div>
+          <div class="grid-task--19__child-12">12</div>
+        </div>
+
+        <div class="grid-task grid-task--20">
+          <div class="grid-task--20__child-1">1</div>
+          <div class="grid-task--20__child-2">2</div>
+          <div class="grid-task--20__child-3">3</div>
+          <div class="grid-task--20__child-4">4</div>
+          <div class="grid-task--20__child-5">5</div>
+          <div class="grid-task--20__child-6">6</div>
+          <div class="grid-task--20__child-7">7</div>
+          <div class="grid-task--20__child-8">8</div>
+          <div class="grid-task--20__child-9">9</div>
+          <div class="grid-task--20__child-10">10</div>
+          <div class="grid-task--20__child-11">11</div>
+          <div class="grid-task--20__child-12">12</div>
+        </div>
+      </div>
+
+      <div class="grid-task-container mt-5">
+        <div class="grid-columns-3 grid-rows-3">
+          <div>1</div>
+          <div class="grid-x-2">2</div>
+          <div class="grid-x-2">3</div>
+          <div>4</div>
+          <div>5</div>
+          <div class="grid-x-2">6</div>
+        </div>
+
+        <div class="grid-columns-3 grid-rows-3">
+          <div>1</div>
+          <div class="grid-y-2">2</div>
+          <div>3</div>
+          <div class="grid-y-2">4</div>
+          <div class="grid-y-2">5</div>
+          <div>6</div>
+        </div>
+
+        <div class="grid-columns-3 grid-rows-3">
+          <div class="grid-x-2 grid-y-2">1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+        </div>
+
+        <div class="grid-columns-5 grid-rows-4">
+          <div class="grid-x-2">1</div>
+          <div>2</div>
+          <div class="grid-x-2">3</div>
+          <div>4</div>
+          <div class="grid-x-3 grid-y-2">5</div>
+          <div>6</div>
+          <div>7</div>
+          <div>8</div>
+          <div class="grid-x-2">9</div>
+          <div>10</div>
+          <div class="grid-x-2">11</div>
+        </div>
+
+        <div class="grid-columns-6 grid-rows-6">
+          <div class="grid-x-2 grid-y-2">1</div>
+          <div class="grid-x-4 grid-y-2">2</div>
+          <div class="grid-x-2 grid-y-2">3</div>
+          <div>4</div>
+          <div>5</div>
+          <div class="grid-x-2 grid-y-2">6</div>
+          <div>7</div>
+          <div>8</div>
+          <div class="grid-x-4 grid-y-2">9</div>
+          <div class="grid-x-2 grid-y-2">10</div>
+        </div>
+
+        <div class="grid-columns-6 grid-rows-4">
+          <div class="grid-x-6 grid-y-2">1</div>
+          <div>2</div>
+          <div>3</div>
+          <div class="grid-x-2 grid-y-2">4</div>
+          <div class="grid-x-2 grid-y-2">5</div>
+          <div class="grid-x-2">6</div>
+        </div>
+
+        <div class="grid-columns-4 grid-rows-4">
+          <div class="grid-x-3 grid-y-2">1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div class="grid-x-3 grid-y-2">5</div>
+          <div>6</div>
+        </div>
+
+        <div class="grid-columns-3 grid-rows-4">
+          <div class="grid-x-3 grid-y-2">1</div>
+          <div>2</div>
+          <div class="grid-y-2">3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+        </div>
+
+        <div class="grid-columns-5 grid-rows-6">
+          <div class="grid-x-2 grid-y-3">1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div class="grid-x-3 grid-y-3">5</div>
+          <div>6</div>
+          <div>7</div>
+          <div class="grid-x-2 grid-y-2">8</div>
+          <div class="grid-x-2 grid-y-2">9</div>
+          <div>10</div>
+          <div>11</div>
+        </div>
+
+        <div class="grid-columns-6 grid-rows-6">
+          <div class="grid-x-3 grid-y-2">1</div>
+          <div>2</div>
+          <div class="grid-x-2 grid-y-2">3</div>
+          <div>4</div>
+          <div class="grid-x-2 grid-y-2">5</div>
+          <div>6</div>
+          <div class="grid-x-3 grid-y-2">7</div>
+          <div>8</div>
+          <div class="grid-x-3 grid-y-2">9</div>
+          <div>10</div>
+          <div class="grid-x-2 grid-y-2">11</div>
+          <div>12</div>
+        </div>
+
+        <div class="grid-columns-5 grid-rows-5">
+          <div class="grid-x-5 grid-y-4">1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+        </div>
+
+        <div class="grid-columns-5">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+        </div>
+
+        <div>
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+        </div>
+
+        <div class="grid-columns-4 grid-rows-6">
+          <div>1</div>
+          <div>2</div>
+          <div class="grid-y-3">3</div>
+          <div>4</div>
+          <div class="grid-x-2 grid-y-2">5</div>
+          <div>6</div>
+          <div>7</div>
+          <div class="grid-y-3">8</div>
+          <div>9</div>
+          <div class="grid-x-2 grid-y-3">10</div>
+          <div>11</div>
+          <div>12</div>
+        </div>
+
+        <div class="grid-columns-12 grid-rows-4">
+          <div class="grid-x-4">1</div>
+          <div class="grid-x-4">2</div>
+          <div class="grid-x-4">3</div>
+          <div class="grid-x-3">4</div>
+          <div class="grid-x-3">5</div>
+          <div class="grid-x-3">6</div>
+          <div class="grid-x-3">7</div>
+          <div class="grid-x-4">8</div>
+          <div class="grid-x-4">9</div>
+          <div class="grid-x-4">10</div>
+          <div class="grid-x-3">11</div>
+          <div class="grid-x-3">12</div>
+          <div class="grid-x-3">13</div>
+          <div class="grid-x-3">14</div>
+      </div>
+
+      <div class="grid-columns-4 grid-rows-6">
+        <div class="grid-x-4 grid-y-2">1</div>
+        <div class="grid-x-4 grid-y-2">2</div>
+        <div class="grid-y-2">3</div>
+        <div>4</div>
+        <div class="grid-y-2">5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+      </div>
+
+      <div class="grid-columns-4 grid-rows-4">
+        <div class="grid-x-2 grid-y-4">1</div>
+        <div class="grid-x-2">2</div>
+        <div>3</div>
+        <div>4</div>
+        <div class="grid-x-2">5</div>
+        <div>6</div>
+        <div>7</div>
+      </div>
+
+      <div class="grid-columns-3 grid-rows-6">
+        <div class="grid-y-2">1</div>
+        <div class="grid-y-3">2</div>
+        <div class="grid-y-2">3</div>
+        <div class="grid-y-2">4</div>
+        <div class="grid-y-2">5</div>
+        <div class="grid-y-3">6</div>
+        <div class="grid-y-2">7</div>
+        <div class="grid-y-2">8</div>
+      </div>
+
+      <div class="grid-columns-6 grid-rows-6">
+        <div class="grid-x-4 grid-y-4">1</div>
+        <div class="grid-x-2 grid-y-2">2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div class="grid-x-2 grid-y-2">7</div>
+        <div>8</div>
+        <div>9</div>
+        <div class="grid-x-2 grid-y-2">10</div>
+        <div>11</div>
+        <div>12</div>
+      </div>
+
+      <div class="grid-columns-4 grid-rows-3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

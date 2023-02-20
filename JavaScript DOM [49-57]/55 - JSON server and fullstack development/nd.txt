@@ -1,0 +1,22 @@
+Pagal 'client/' aplanke esantį kodą nupiešti programos veikimo schemą
+
+I dalis:
+  Susiraskite ir internete perskaitykite apie reikiamas temas, kad atsakyti į klausimus(raštu):
+    * Kas yra "Single responsibility" principas?
+    * Kas yra "Inversion of control" principas?
+    * Kas yra "Loose coupling" ir jo priešingybė "Tight coupling" programose?
+
+II dalis:
+  Raštu atsakykite į klausimus (raštu) (apie JS aplikaciją):
+    * Kokios yra aplikacijos sudedamosios dalys?
+      * Kokios kiekvienos sudedamosios dalies atsakomybės?
+    * Kurs prasideda kodo vykdymas?
+      * Už ką atsakingas failas, kuriame viskas prasidėjo vykdytis?
+
+III dalis:
+  Vaizdiškai (geriausia ant lapo, tinka ir su programa) atvaizduokite, kaip bendrauja JS aplikacijos
+  sudedamosios dalys.
+
+Namų darbus pateikime "general" kanale -> post'e - "55 pamokos namų darbai" iki rytojaus 13:00
+
+Nepateikus namų darbų, -1 balas nuo atsiskaitymo.

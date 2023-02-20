@@ -1,0 +1,17 @@
+1. [0.1] - pamokos darbo atkartojimas pažingsniui:
+  * NavbarMobileMenuItem - komponentas įgalinantis aukštį ir bendrus stilius
+  * NavbarMobileMenuLink - komponentas apgauntas NavbarMobileMenuItem ir turintis viduje NavLink iš react-router-dom bibliotekos
+  * NavbarMobileMenuAccordion - komponentas apgaubtas NavbarMobileMenuItem ir jūsų sukurtą Accordion komponento veikimą
+  * Sukurkite savo stilius akordianionams ir nuorodoms
+  
+2. [0.1] - Sukurkite astkirus puslapius, kuriuose apibendrinsite straipsnio perskaitytą informaciją.
+  Kiekvienas puslapis turi turėti 3-5 sakinių JŪSŲ SUGALVOTĄ apibendrinimą. Taip pat 
+  įkelkite nuotrauką arba kodo pavyzdžį;
+  P.S. Sukurti puslapiai turi būti įdėti į navbar'ą.
+  * https://reactjs.org/docs/handling-events.html
+  * https://reactjs.org/docs/conditional-rendering.html
+  * https://reactjs.org/docs/lists-and-keys.html
+  
+3. [0.2] - Panaudokite src\components\partials\navbar\index.tsx sukurtus linksData ir linksGroups duomenis, kad
+  * Sukurkite išsleidžiamus meniu dideliame ekrane
+  * Komponentai turi būti išskaidyti analogiška tvarka kaip ir <navar-mobile-menu>

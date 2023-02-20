@@ -1,0 +1,101 @@
+﻿--------------------------- WWW -----------------------------
+1. Kas yra internetas?
+2. Kas yra IP?
+3. Kas yra HTTP protokolas?
+4. Kokių tipų HTTP užklausas žinote?
+5. Kas yra serveris (backend)?
+6. Kas yra klientas (frontend)?
+
+---------------- Frontend - client side ---------------------
+1. Kas yra HTML? Kodėl ir kaip jis naudojamas?
+2. Kam skirta <head>...</head> dalis?
+3. Kam skirta <body>...</body> dalis?
+4. Kas yra HTML elemento atributas?
+5. Kokius žinote savaime užsidarančius HTML elementus?
+6. Kuom HTML'e skiriasi vaikas nuo palikuonio?
+7. Kiek tėvų gali turėti HTML elementas?
+8. Kam skirta HTML forma? Kokiu HTTP metodus galite jos deka formuoti ir siųsti?
+9. Kokio tipo input'us žinote?
+10. Kokio atributo deka galite suformuoti duomenis <form> tago viduje?
+
+--------------------------- CSS --------------------------
+0. Kas yra CSS? Panaudojimo būdai? Prioritetai?
+1. Kas yra css savybė?
+2. Kas yra css selektorius?
+3. Išvardinkite jums žinomas display savybes ir skirtumus.
+4. Išvardinkite bent 3 jums žinomus bootstrap komponentus ir išvardinkite, ką jie daro.
+5. Kokius žinote position tipus? 
+6. Kuom skiriasi margin nuo padding?
+7. Ką daro box-sizing css savybė?
+8. Ką daro float? Kokie float display reikalavimai?
+9. Kaip išligiuoti bloką vidurį konteinerio horizontaliai?
+10. Kaip išligiuoti bloką vidurį konteinerio vertikaliai?
+
+----------------------- Javascript ------------------------
+1. Kas yra javascript? Kokia jo paskirtis internetinėje naršyklėje?
+2. Kokius žinote javascript framework'us?
+3. Kas yra framework'as?
+4. Kas yra kintamasis?
+5. let vs var vs const?
+6. Kokie yra kintamūjų tipai?
+7. Kas yra objektas?
+8. Kas yra masyvas?
+9. Kas yra ciklas ir kokie yra jų tipai?
+  - for
+  - while
+  - do... while
+10. Kas yra funkcija? 
+11. Kam reikalingi funkcijos parametrai?
+12. Ką daro direktyva 'return'?
+13. Kas yra funkcijos aprašymas?
+14. Kas yra funkcijos kvietinys?
+15. Kam naudojami Array klasės iteravimo metodai: 
+  - forEach 
+  - map 
+  - filter 
+  - reduce 
+  https://codeburst.io/array-methods-explained-filter-vs-map-vs-reduce-vs-foreach-ea3127c6d319
+16. Kas yra ir kaip veikia salyginis sakinys?
+17. Kas yra tęstiniai salyginiai sakiniai (else if, else if ...) ir kaip juos naudoti?
+18. Koks switch panašumas su tęstiniais salyginiais sakiniais?
+19. Referencs ir primitive type kintamieji, skirtumai
+20. Kas yra prototipas?
+21. Kas yra event'as?
+22. Kas yra event listener'is?
+23. Kaip vadinamas kintamasis, kuriame yra viso puslapio HTML objektų medis?
+24. Kas yra AJAX?
+25. Kaip įgalinamas ir naudojamas method-chaining?
+
+----------------------- React ------------------------
+
+1. Kas yra JSX?
+2. Kaip kokius žinote React komponentus?
+3. Kas yra React komponento props'ai (savybės)?
+4. Kas yra React komponento state'as (būsena)?
+5. Kas yra controlled components?
+6. Ką reiškia savoka lifting state up?
+7. Kas yra react kontekstas?
+8. Kokios yra 3 React komponento gyvavimo fazės?
+9. Išvardinkite bent 3 React gyvavimo ciklų metodus, ir ką jie daro?
+10. Kam skirtas hook'sas useState?
+11. Kam skirtas hook'sas useEffect?
+12. Kam skirtas hook'sas useMemo?
+13. Kam skirtas hook'sas useRef?
+14. Kas yra Redux, ir kam jis naudojamas?
+15. Nupieškite Redux veikimo diagramą.
+16. Parašykite bent 3 funkcijas/komponentus kuriuos suteikia "react-router-dom" biblioteka ir apibūdinkite kam jie skirti.
+17. Parašykite Material-ui bibliotekos 5 komponentus ir kam jie skirti.
+18. Kam panaudoti Material-ui stiliaus temą ir kaip ją keisti?.
+19. Kam skirta Formik biblioteka?.
+20. Parašykite bent 3 funkcijas/komponentus kuriuos suteikia "formik" biblioteka ir apibūdinkite kam jie skirti.
+21. Kokius kintamuosius turime/galime nustatyti Formik kontektui? Išvardinkite bent 3.
+22. Kokius kintamuosius galime naudoti turėdami Formik kontakstą? Išvardinkite bent 5.
+23. Kam skirta "yup" biblioteka?.
+
+----------------------- Express ------------------------
+
+1. Kas yra Middleware?
+2. Kas yra router'is ir kam jis skirtas?
+3. Kokios yra MVC dizaino šablono sudemosios dalys?
+4. Kas yra port'as?
+5. Kokius žinoti Express Middleware'us? Išvardinkite bent 3 ir juos aprašykite.

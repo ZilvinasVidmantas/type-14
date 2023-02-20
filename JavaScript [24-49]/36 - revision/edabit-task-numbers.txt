@@ -1,0 +1,24 @@
+https://edabit.com/challenges
+Dificulty: Very Easy
+Tags: Algorythms
+
+1   Paulius Kišonas
+2   Elvinas Augaitis
+3   Antanas Ivaškevičius
+4   Petro Pyrohov
+5   AIDAS SINDARAS
+6   Karolis Dorofejevas
+7   Aivaras Rožukas
+8   Joana Mastianica
+9   Viltė Meškė
+10	Loreta Maslova
+11	Dominykas Šumskus
+12	Vadim Tabelskij
+13	Ervinas Mitkevičius
+14	Evelina Pundziūtė
+15	Grantas Joniškis
+16	Meda Šulskytė
+17	Nojus Stankevičius
+18	Rokas Vertelis
+19	Tomas Bobinas
+20	Viltė Akkoc

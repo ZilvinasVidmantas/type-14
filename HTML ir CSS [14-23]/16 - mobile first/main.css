@@ -1,0 +1,153 @@
+:root {
+  /* colors */
+  --color-dark: #3333aa;
+
+  /* navbar */
+  --navbar-height: 60px;
+  --navbar-padding: 10px;
+  --navbar-content-height: calc(var(--navbar-height) - var(--navbar-padding) * 2);
+  --navbar-mobile-link-animation-offset: 25px;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.navbar {
+  height: var(--navbar-height);
+}
+
+/* bendros paskirties */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.navbar>.container {
+  position: relative; /* atspirties taškas išlendančiam meniu */
+  padding: 0;
+}
+
+.navbar__layout {
+  position: relative;
+  background-color: var(--color-dark);
+  padding: var(--navbar-padding) 1rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.logo-container {
+  display: inline-flex;
+}
+
+.logo-container > img {
+  height: var(--navbar-content-height);
+}
+
+.bi.bi-list {
+  display: inline-grid;
+  place-items: center;
+  font-size: calc(var(--navbar-content-height) - 10px);
+  color: #fff;
+  width: var(--navbar-content-height);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Išlendantis meniu */
+.navbar__nav {
+  position: absolute;
+  top: -200px;
+  left: 0;
+  width: 100%;
+  padding-top: var(--navbar-height);
+  background-color: #252525bb;
+  z-index: 5;
+  transition: top 0.4s ease-in-out;
+}
+
+.navbar__nav > ul {
+  margin: 0;
+  padding: 1rem ;
+  list-style-type: none;
+}
+
+.navbar__nav li {
+  overflow: hidden;
+} 
+
+.navbar__nav a {
+  position: relative;
+  left: calc(var(--navbar-mobile-link-animation-offset) * -1);
+  display: block;
+  color: #ddd;
+  text-decoration: none;
+  padding: 0.5em;
+  transition: left 0.3s ease-in-out;
+}
+
+.navbar__nav a:before {
+  display: inline-block;
+  content: '▶';
+  width: var(--navbar-mobile-link-animation-offset);
+}
+
+.navbar__nav a:hover {
+  color: #fff;
+  left: 0;
+}
+
+.navbar__nav.show {
+  top: 0;
+}
+
+@media screen and (min-width: 700px) {
+  .navbar {
+    background-color: var(--color-dark);
+  }
+
+  .bi.bi-list {
+    display: none;
+  }
+
+  .navbar__layout {
+    z-index: 0;
+  }
+  
+  .navbar__nav {
+    top: 0;
+    right: 1rem;
+    background-color: initial;
+    left: initial;
+    width: initial;
+    padding: 0;
+  }
+
+  .navbar__nav ul {
+    display: inline-flex;
+    padding: 0;
+  }
+
+  .navbar__nav a {
+    display: inline-grid;
+    place-items: center;
+    left: 0;
+    height: var(--navbar-height);
+    padding: 1rem;
+    font-size: 1.1em;
+  }
+
+  .navbar__nav a:hover {
+    background-color: #ffffff22;
+  }
+
+  .navbar__nav a:before {
+    display: none;
+  }
+}

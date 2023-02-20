@@ -1,0 +1,16 @@
+.link {
+  display: inline-grid;
+  place-items: center;
+  height: 100%;
+  padding: 0 1.25em;
+  color: $shade;
+  font-size: 1.2rem;
+  letter-spacing: 0.07em;
+  &:hover {
+    color: $white;
+    background: $dark-hover;
+  }
+  &.active {
+    box-shadow: inset 0 -4px 0 $white;
+  }
+}

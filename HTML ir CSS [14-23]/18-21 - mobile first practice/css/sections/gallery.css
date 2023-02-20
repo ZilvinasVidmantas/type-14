@@ -1,0 +1,48 @@
+.gallery-grid {
+  display: grid;
+  /* row-gap: 0.5rem; */
+}
+
+.gallery-img-container {
+  position: relative;
+}
+
+.gallery-img-container:after {
+  display: grid;
+  place-items: center;
+  content: "\F52A";
+  font-size: 3rem;
+  font-family: bootstrap-icons;
+  color: var(--color-white);
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-primary-trasparent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+
+}
+
+.gallery-img-container:hover:after {
+  opacity: 1;
+}
+
+.gallery-img-container>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

@@ -1,0 +1,18 @@
+.container {
+  padding-left: var(--spacing-4);
+  padding-right: var(--spacing-4);
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    width: 760px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1140px;
+    margin: auto;
+  }
+}

@@ -1,0 +1,13 @@
+.container {
+  padding-left: var(--spacing-4);
+  padding-right: var(--spacing-4);
+  max-width: 1170px;
+  margin: auto;
+}
+
+@media (min-width: 992px) {
+  .container {
+    padding-left: var(--spacing-5);
+    padding-right: var(--spacing-5);
+  }
+}

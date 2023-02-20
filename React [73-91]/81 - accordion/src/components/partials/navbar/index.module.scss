@@ -1,0 +1,18 @@
+.navbar {
+  background-color: $dark;
+  height: $navbar-height;
+  padding: 0 1rem;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: $z-index-navbar;
+  @media (min-width: $navbar-expand-breakpoint) {
+    justify-content: flex-start;
+  }
+}
+
+:export {
+  breakpoint: $navbar-expand-breakpoint;
+}

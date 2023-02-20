@@ -1,0 +1,14 @@
+Padaryti Plain CSS/SCSS (bre framework'ų) projektą jūsų pasirinktą tema;
+
+  iki 11-21 13:00 atsiųsti tokiu formatu:
+    vardas-pavarde.zip
+  1. Bent 3 atskiri puslapiai arba didelės sekcijos
+  2. Navbar (sticky arba fixed)
+  3. Footer'is
+  4. Panaudotos ikonos
+  5. Panaudoti šriftai
+  6. Panaudoti kintamieji
+  7. Panaudotas Flex
+  8. CSS stiliai parašyti mažomis perpanaudojamomis klasėmis ir pagal BEM standartą
+  9. Panaudoti Grid
+  10. Responsive layout, bent 3 breakpontai.

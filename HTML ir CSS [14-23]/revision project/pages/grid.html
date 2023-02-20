@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Šriftai, Ikonos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <!-- Mūsų rašyti stiliai -->
+  <link rel="stylesheet" href="../css/main.css">
+  <title>CSS pagrindai</title>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="container">
+      <nav>
+        <ul class="d-flex">
+          <li><a href="../index.html" class="navbar__link">Pagrindinis</a></li>
+          <li><a href="./css-basics.html" class="navbar__link">CSS pagrindai</a></li>
+          <li><a href="./display-types.html" class="navbar__link">Display tipai</a></li>
+          <li><a href="./box-model.html" class="navbar__link">Box model</a></li>
+          <li><a href="./typography.html" class="navbar__link">Typography</a></li>
+          <li><a href="./flex.html" class="navbar__link">Flex</a></li>
+          <li><a href="" class="navbar__link  active">Grid</a></li>
+          <li><a href="./position.html" class="navbar__link">Position</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-navbar">
+    <div class="container py-4">
+      <h1 class="h1 mb-2">Grid</h1>
+      <p class="my-3">
+        Tai atvaizdavimo "<strong>display</strong>" tipas, kuris kontroliuoja <strong>pirmo</strong> lygio vaikų išdėstymą dvejomis
+        kryptimis. Taip pat šis atvaizdavimo tipas, gali turėti plotų šablonus. Šie plotų šablonai gali būti įvardinami plotų pavadinimais,
+        arba aprašomi pagal <strong>grid</strong> linijų ribojamą plotą.
+        <br>
+        Apie atskiras Grid savybes galite paskaityti <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="blank">šiame
+          straipsnyje</a>.
+      </p>
+
+      <div class="h5 mb-3">Išbandykite patys</div>
+      <div class="d-flex flex-column g-2 pl-3">
+        <li><a href="https://grid.layoutit.com/" target="blank">Smėlio dėžė</a></li>
+        <li><a href="https://cssgridgarden.com/" target="blank">Grid sodas</a></li>
+        <li><a href="https://codingfantasy.com/games/css-grid-attack" target="blank">Grid žaidimas</a></li>
+      </div>
+      <div class="grid-video my-4">
+        <div class="d-flex flex-column">
+          <h2 class="h5 mb-2">1. Grid linijos</h2>
+          <iframe src="https://www.youtube.com/embed/J5GWyiWU2H8" title="YouTube video player" frameborder="0" class="flex-grow-1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="d-flex flex-column">
+          <h2 class="h5 mb-2">2. Grid įdėtas į Grid</h2>
+          <iframe src="https://www.youtube.com/embed/211A79O_jX8?list=PL4cUxeGkcC9itC4TxYMzFCfveyutyPOCY" title="YouTube video player"
+            frameborder="0" class="flex-grow-1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="d-flex flex-column">
+          <h2 class="h5 mb-2">3. Grid Plotai</h2>
+          <iframe src="https://www.youtube.com/embed/Vb9-8uuonAY" title="YouTube video player" frameborder="0" class="flex-grow-1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="d-flex flex-column">
+          <h2 class="h5 mb-2">4. Grid visiems ekrano dydžiams</h2>
+          <iframe src="https://www.youtube.com/embed/sKFW3wek21Q" title="YouTube video player" frameborder="0" class="flex-grow-1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section class="py-5">
+    <div class="container">
+      <h2 class="h2 mb-3">Grid task 1</h2>
+      <div class="grid-task-1-container">
+        <div class="grid-task-1 grid-task-1--1">
+          <div></div>
+          <div class="xs-2 xe-4"></div>
+          <div class="xs-1 xe-3"></div>
+          <div></div>
+          <div></div>
+          <div class="xs-2 xe-4"></div>
+        </div>
+        <div class="grid-task-1 grid-task-1--2">
+          <div></div>
+          <div class="xs-2 ys-1 ye-3"></div>
+          <div></div>
+          <div class="ys-2 ye-4"></div>
+          <div></div>
+          <div class="ys-2 ye-4"></div>
+        </div>
+        <div class="grid-task-1 grid-task-1--3"></div>
+        <div class="grid-task-1 grid-task-1--4"></div>
+        <div class="grid-task-1 grid-task-1--5"></div>
+        <div class="grid-task-1 grid-task-1--6"></div>
+        <div class="grid-task-1 grid-task-1--7"></div>
+        <div class="grid-task-1 grid-task-1--8"></div>
+        <div class="grid-task-1 grid-task-1--9"></div>
+        <div class="grid-task-1 grid-task-1--10"></div>
+        <div class="grid-task-1 grid-task-1--11"></div>
+        <div class="grid-task-1 grid-task-1--12"></div>
+        <div class="grid-task-1 grid-task-1--13"></div>
+        <div class="grid-task-1 grid-task-1--14">
+          <div></div>
+          <div></div>
+          <div class="xs-3 ys-1 ye-4"></div>
+          <div></div>
+          <div class="xs-1 xe-3 ys-2 ye-4"></div>
+          <div></div>
+          <div></div>
+          <div class="ys-4 ye-7"></div>
+          <div></div>
+          <div class="xs-3 xe-5 ys-4 ye-7"></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="grid-task-1 grid-task-1--15"></div>
+        <div class="grid-task-1 grid-task-1--16"></div>
+        <div class="grid-task-1 grid-task-1--17"></div>
+        <div class="grid-task-1 grid-task-1--18"></div>
+        <div class="grid-task-1 grid-task-1--19"></div>
+        <div class="grid-task-1 grid-task-1--20"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <h2 class="h2 mb-3">Grid task 2</h2>
+      <div class="grid-task-2">
+        <div class="bg-yellow-pink"></div>
+        <div class="bg-violet-barbie xs-2 xe-5 ys-1 ye-3"></div>
+        <div class="bg-blue-cyan xs-5 xe-7"></div>
+        <div class="bg-yellow-pink"></div>
+        <div class="bg-cyan-blue xs-5 xe-7"></div>
+        <div class="bg-yellow-pink"></div>
+        <div class="bg-yellow-pink"></div>
+        <div class="bg-barbie-violet xs-3 xe-5 ys-3 ye-5"></div>
+        <div class="bg-yellow-pink"></div>
+        <div class="bg-yellow-pink"></div>
+        <div class="bg-yellow-pink"></div>
+        <div class="bg-yellow-pink"></div>
+        <div class="bg-yellow-pink"></div>
+        <div class="bg-yellow-pink"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <h2 class="h2 mb-3">Grid task 3</h2>
+      <div class="grid-task-3">
+        <div class="area-1"></div>
+        <div class="area-2"></div>
+        <div class="area-3"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <h2 class="h2 mb-3">Grid task 4</h2>
+      <div class="grid-task-4">
+        <div class="grid-task-4__header">header</div>
+        <div class="grid-task-4__menu">menu</div>
+        <div class="grid-task-4__hero">hero</div>
+        <div class="grid-task-4__main">main</div>
+        <div class="grid-task-4__banner">banner</div>
+        <div class="grid-task-4__extra">extra</div>
+        <div class="grid-task-4__image">image</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <h2 class="h2 mb-3">Grid task 5</h2>
+      <p>Kai užaugsiu būsiu padaryta užduotis.</p>
+      <div class="grid-task-5">
+      </div>
+    </div>
+  </section>
+
+  <section id="task-6" class="py-5">
+    <div class="container">
+      <h2 class="h2 mb-3">Grid task 6</h2>
+      <div class="grid-task-6">
+        <img src="https://unsplash.it/300/300" class="grid-task-6__img img-1">
+        <img src="https://unsplash.it/300/301" class="grid-task-6__img img-2">
+        <img src="https://unsplash.it/300/302" class="grid-task-6__img img-3">
+        <img src="https://unsplash.it/300/303" class="grid-task-6__img img-4">
+        
+        <div class="card card--1">
+          <div class="card__date mb-2">October 31, 2016</div>
+          <div class="card__header">Benefits of reading books regulary</div>
+          <div class="card__decoration my-3"></div>
+          <p class="card__text mb-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ad sint nostrum eos maiores in praesentium dicta?
+          </p>
+          <a href="" class="card__link">Continue reading</a>
+        </div>
+        <div class="card card--2">
+          <div class="card__date mb-2">October 31, 2016</div>
+          <div class="card__header">Benefits of reading books regulary</div>
+          <div class="card__decoration my-3"></div>
+          <p class="card__text mb-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ad sint nostrum eos maiores in praesentium dicta?
+          </p>
+          <a href="" class="card__link">Continue reading</a>
+        </div>
+        <div class="card card--3">
+          <div class="card__date mb-2">October 31, 2016</div>
+          <div class="card__header">Benefits of reading books regulary</div>
+          <div class="card__decoration my-3"></div>
+          <p class="card__text mb-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ad sint nostrum eos maiores in praesentium dicta?
+          </p>
+          <a href="" class="card__link">Continue reading</a>
+        </div>
+        <div class="card card--4">
+          <div class="card__date mb-2">October 31, 2016</div>
+          <div class="card__header">Benefits of reading books regulary</div>
+          <div class="card__decoration my-3"></div>
+          <p class="card__text mb-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ad sint nostrum eos maiores in praesentium dicta?
+          </p>
+          <a href="" class="card__link">Continue reading</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.grid>* {
+  /* position: relative; */
+  aspect-ratio: 1;
+  background-color: red;
+  /* font-size: 0; */
+}
+
+.grid>*>img {
+  /* position: absolute; */
+  /* top: 0; */
+  /* right: 0; */
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,56 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: 0;
+}
+
+.page-section {
+  height: 100vh;
+}
+
+.page-section--home {
+  background-color: blue;
+}
+
+.page-section--about {
+  background-color: red;
+}
+
+.page-section--team {
+  background-color: green;
+}
+
+.page-section--contacts {
+  background-color: yellow;
+}
+
+.page-nav {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.page-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style-type: none;
+  padding: 1rem
+}
+
+.page-nav a {
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  border: 2px solid black;
+}

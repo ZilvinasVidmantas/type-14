@@ -1,0 +1,33 @@
+1. Atkartoti pamokos darbą pažingsniui [0.1]
+  1.1 - Projekto šablonas [0.05]
+  * Pašalinti visus maršrutus
+  * Pašalinti visus puslapius
+  * Pašalinti visus komponentus
+  * Pašalinti visus stilius ir nanaudojamas nuotraukas
+  * Pašalinti visus senas (sass) bibliotekas
+  * Įsirašyti mui bibliotekas
+    * @mui/material
+    * @emotion/react
+    * @emotion/styled
+    * @mui/@mui/icons-material 
+  * Susikonfiguruoti  vite.config.ts, jog būtų galimą naudoti glbalius tsconfig kelius pagal 
+    tsconfig.json  baseUrl savybę
+  * Sukurti pradinį puslapį, kuriame panaudosite paprasčiausius mui komponentus
+  * Išklelti šį šabloninį puslapį į atskirą aplanką
+  * panaudokite <CssBaseline> komponentą main.tsx faile
+
+  1.2 Navigacija [0.05]
+    * Sukurti bent 2 pavyzdinius puslapius ir aprašykite jū maršrutus faile __routes.ts__
+    * Sukurti Navbar komponentą
+    * Sukurti NavbarLayout komponentą kuris naudos Navbar ir <Outlet> iš react-router-dom
+    * Apgaubkite savo sukurtus puslapius Layout'u faile __router.tsx__
+    * Sukurkite Navbar Dizainą
+    * Sukurkite Stilizuotą NavbarDesktopLink komponentą
+      * Komponento pagrindas - NavLink iš 'react-router-dom'
+      * Komponento stilizavimas naudojas styled iš '@mui/material'
+    * Išsaugokite nuorodų duomenis atskirame faile
+
+2. Atskiruose puslapiuose išsaugoti video turinį ir įdėti į navigavijos juostą
+  https://www.youtube.com/watch?v=BHEPVdfBAqE&list=PLC3y8-rFHvwh-K9mDlrrcDywl7CeVL2rO&ab_channel=Codevolution
+  1-10
+

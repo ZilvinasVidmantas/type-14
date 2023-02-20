@@ -1,0 +1,9 @@
+Gražiai atvaizduoti savo duomenis išsaugotus JSON serveryje:
+  * Sukurti naują puslapį
+  * Apsirašyti duomenų tipą
+  * Parsisiųsti duomenis
+  * Sukurti duomenų įrašo atvaizdavimo komponentą
+  * Su kiekvienu įrašu sukurti duomenų įrašo atvaizdavimo komponentą
+  * Išlygiuoti duomenų įrašų kolekciją naudojant tėvinį elementą
+
+STILIAI RAŠOMI NAUDOJANT SCSS MODULINIUS FAILUS

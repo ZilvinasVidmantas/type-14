@@ -1,0 +1,13 @@
+.navbar-reference-fix {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+#carouselMain .carousel-item {
+  height: 85vh;
+}
+
+#carouselMain .carousel-item img {
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,27 @@
+1. Atkartoti pamokos darbą pažingsniui [0.1]
+  * Sukurti nuorodų grupių duomenis faile src\components\partials\navbar\navbar-data.ts
+  * Panaudoti nuorodų grupių duomenis, kad su kiekviena grupe atvaizduoti Accordion elementą
+  * Panaikinti akordeono kampų užapvalinimą ir papildomą aukštį išsiskleidus
+  * Atvaizduoti akordenų nuorodas naudojant patobulintą NavbarMobileLink
+    * priimams neprivalomas props'as <indent> nurodyti atstumimui iš kairės
+    * <indent>  prop'sas perduodamas Link komponentui (kuris sukurtas su styled funkcija)
+    * styled funkcijos panaudojime reikia tipu įvardinti gautą prop'są ir pagal jį pritaikyti papildomą stilizavimą
+  * faile src\navigation\routes.ts aprašykite ir exportuokite tipus:
+    * Routes - routes objekto tipas
+    * RouteLink - nuorodos tipas (tik tokie stringai kurie aprašyti routes objekte)
+  * faile src\components\partials\navbar\navbar-data.ts aprašykite ir exportuokite tipus:
+    * Link - Nuorodos objekto tipas naudojamas Navbar'e atvaizduoti vienai nuorodai
+    * LinksGroup - Nuorodų objekto tipas naudojamas Navbar'e atvaizduoti nuorodų grupei
+    * Sukūrę tipus panaudokite juos, kad tipais aprašyti:
+      * mainLinks
+      * linksGroups
+  * Nuorodų grupės atvaizdavimą iškelkite į komponentą NavbarMobileMenuAccordion
+
+  * Sukontroliuoti akordionus taip, kad:
+    * Atidarius vieną, užsidaro kiti
+    * Atidarius NavbarMobileMenu, turi būti atidarytas tas, kurio viduje yra aktyvi nuoroda
+    * Accordion'as turintis viduje aktyvią nuorodą, turi būti paryškintas
+
+2. Atskiruose puslapiuose išsaugoti video turinį ir įdėti į navigavijos juostą [0.1]
+  https://www.youtube.com/watch?v=BHEPVdfBAqE&list=PLC3y8-rFHvwh-K9mDlrrcDywl7CeVL2rO&ab_channel=Codevolution
+  21-28

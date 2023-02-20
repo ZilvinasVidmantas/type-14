@@ -1,0 +1,65 @@
+.card {
+  box-shadow: 0 2px 3px 1px #0005;
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+  width: 100%;
+  aspect-ratio: 1.42;
+  object-fit: cover;
+}
+
+.content {
+  flex-grow: 1;
+  width: 100%;
+  padding: 0.5rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  float: right;
+  text-align: right;
+}
+
+.details {
+  flex-grow: 1;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.location {
+  color: $muted;
+  font-size: 1.1rem;
+}
+
+.price {
+  font-size: 1.3rem;
+  color: $primary;
+  font-weight: 600;
+}
+
+.rating {
+  display: inline-flex;
+  align-items: flex-end;
+  font-size: 1.3rem;
+  gap: 0.1em;
+  font-weight: 600;
+  &:after {
+    content: "★";
+  }
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  & > * {
+    flex-grow: 1;
+  }
+}

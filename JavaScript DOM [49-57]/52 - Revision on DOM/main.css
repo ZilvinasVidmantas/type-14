@@ -1,0 +1,12 @@
+.task-form{
+  width: 400px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px 2px #0005;
+}
+
+.star-container {
+  display: inline-grid;
+  place-items: center;
+  height:16px;
+  width: 16px;
+}

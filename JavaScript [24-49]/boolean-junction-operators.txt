@@ -1,0 +1,16 @@
+falsy reikšmės:
+  false, null, undefined, 0, '', NaN
+truethy reikšmės:
+  visos kurios nėra falsy;
+
+|| grąžina pirmą operandą, jei jis yra truethy - kitu atveju grąžina antrą operandą;
+  false || 'antras' -> 'antras'
+  0 || 'antras' -> 'antras'
+  7 || 'antras' -> 7
+  [] || 'antras' -> [];
+
+&& grąžina pirmą operandą, jei jis yra falsy - kitu atveju grąžina antrą operandą;
+  false && 'antras' -> false
+  0 && 'antras' -> 0
+  7 && 'antras' -> 'antras'
+  [] && 'antras' -> 'antras'

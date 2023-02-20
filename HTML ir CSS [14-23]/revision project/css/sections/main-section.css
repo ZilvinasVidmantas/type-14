@@ -1,0 +1,80 @@
+.main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../img/hero-xs.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.main__logo {
+  height: 80px;
+}
+
+.main__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 45vh;
+  width: 300px;
+}
+
+.main__btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main__icon-down-container {
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.main__icon-down {
+  animation: pulse 1.73s linear infinite normal;
+  bottom: 30px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: 2px solid var(--color-black);
+}
+
+.main__icon-down:after {
+  display: block;
+  content: '';
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(35% 10%, 65% 10%, 65% 55%, 85% 55%, 50% 90%, 15% 55%, 35% 55%);
+  background: var(--color-black);
+}
+
+/* Nuo 1000px */
+@media screen and (min-width: 800px) {
+  .main {
+    background-image: url(../../img/hero-lg.jpg);
+    align-items: flex-start;
+  }
+
+  .main__header {
+    font-size: 2rem;
+    color: var(--color-white);
+  }
+
+  .main__content {
+    margin-top: 25vh;
+    height: 30vh;
+    width: 400px;
+  }
+
+  .main__btn-container {
+    flex-direction: row;
+  }
+}

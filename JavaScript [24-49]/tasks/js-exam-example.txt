@@ -1,0 +1,34 @@
+1. Sukurkite klasę Car, kuri turėtų savybes ir priskirtų jas naudojant konstruktorių:
+  brand,
+  model,
+  year,
+  color,
+  fuelTypes: [] 
+  price // eurais
+
+2. Sukurkite masyvą sudarytą iš 8 Car klasės mašinų
+
+3. Klasėje Car sukurkite metodą getFuelType, kuris grąžintų mašinos kurų tipus (fuelTypes)
+   kaip 'string'ą atskirtą '/'.
+
+4. Atspausdinkite kiekvieno automobilio pavadinimą ir 3 punktu sukurto metodo rezultatą, pvz:
+  Tayota Corola - dysel/electric
+  Nisan Bajam - petrol/gas
+  Kanagi BaBa - uranus
+            ...
+
+5. Atrinkite tik elektrinius automobilius
+
+6. Atrinkite tik benzininius automobilius, naujesnius nei 2016 metai
+
+7. Atrinkite audi tipo automobilius nuo 2012 iki 2016, kurie nėra dyzeliniai  
+
+8. Suskaičiuokite 5 punkte gautų automobilių kainos vidurkį
+
+9. Suskaičiuokite 6 punkte gautų automobilių bendrą vertę
+
+10. Panaudokite pradinį Car objektų masyvą performuoti duomenis į tokių objektų masyvą:
+  * brand,
+  * model,
+  * price, // kaina doleriais [Number]
+  * fuelType // kuro tipas kaip string'as. galite naudoti 3 punktu sukurtą metodą

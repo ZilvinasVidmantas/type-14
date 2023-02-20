@@ -1,0 +1,36 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+
+/* Variables */
+@import './variables.css';
+
+/* Base */
+@import './base/reset.css';
+@import './base/typography.css';
+
+/* Utilities */
+@import './utilities/spacing.css';
+@import './utilities/flex.css';
+@import './utilities/grid.css';
+@import './utilities/backgrounds.css';
+@import './utilities/displays.css';
+@import './utilities/floats.css';
+@import './utilities/borders.css';
+@import './utilities/position.css';
+
+/* Components */
+@import './components/buttons.css';
+@import './components/cards.css';
+@import './components/containers.css';
+@import './components/sections.css';
+
+/* Partials */
+@import './partials/navbar.css';
+@import './partials/footer.css';
+
+/* Sections */
+@import './sections/hero.css';
+@import './sections/about.css';
+@import './sections/services.css';
+@import './sections/tours.css';
+@import './sections/gallery.css';
+@import './sections/contacts.css';

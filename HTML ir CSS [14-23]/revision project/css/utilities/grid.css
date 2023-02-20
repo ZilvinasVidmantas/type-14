@@ -1,0 +1,50 @@
+.d-grid { display: grid; }
+
+.xs-1 { grid-column-start: 1;}
+.xs-2 { grid-column-start: 2;}
+.xs-3 { grid-column-start: 3;}
+.xs-4 { grid-column-start: 4;}
+.xs-5 { grid-column-start: 5;}
+.xs-6 { grid-column-start: 6;}
+.xs-7 { grid-column-start: 7;}
+.xs-8 { grid-column-start: 8;}
+.xs-9 { grid-column-start: 9;}
+.xs-10 { grid-column-start: 10;}
+.xs-11 { grid-column-start: 11;}
+
+.xe-2 { grid-column-end: 2;}
+.xe-3 { grid-column-end: 3;}
+.xe-4 { grid-column-end: 4;}
+.xe-5 { grid-column-end: 5;}
+.xe-6 { grid-column-end: 6;}
+.xe-7 { grid-column-end: 7;}
+.xe-8 { grid-column-end: 8;}
+.xe-9 { grid-column-end: 9;}
+.xe-10 { grid-column-end: 10;}
+.xe-11 { grid-column-end: 11;}
+.xe-12 { grid-column-end: 12;}
+
+.ys-1 { grid-row-start: 1;}
+.ys-2 { grid-row-start: 2;}
+.ys-3 { grid-row-start: 3;}
+.ys-4 { grid-row-start: 4;}
+.ys-5 { grid-row-start: 5;}
+.ys-6 { grid-row-start: 6;}
+.ys-7 { grid-row-start: 7;}
+.ys-8 { grid-row-start: 8;}
+.ys-9 { grid-row-start: 9;}
+.ys-10 { grid-row-start: 10;}
+.ys-11 { grid-row-start: 11;}
+
+.ye-2 { grid-row-end: 2;}
+.ye-3 { grid-row-end: 3;}
+.ye-4 { grid-row-end: 4;}
+.ye-5 { grid-row-end: 5;}
+.ye-6 { grid-row-end: 6;}
+.ye-7 { grid-row-end: 7;}
+.ye-8 { grid-row-end: 8;}
+.ye-9 { grid-row-end: 9;}
+.ye-10 { grid-row-end: 10;}
+.ye-11 { grid-row-end: 11;}
+.ye-12 { grid-row-end: 12;}
+

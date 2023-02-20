@@ -1,0 +1,7 @@
+.links {
+  display: none;
+  height: $navbar-height;
+  @media (min-width: $navbar-expand-breakpoint) {
+    display: flex;
+  }
+}

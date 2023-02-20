@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Šriftai, Ikonos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <!-- Mūsų rašyti stiliai -->
+  <link rel="stylesheet" href="../css/main.css">
+  <title>CSS pagrindai</title>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="container">
+      <nav>
+        <ul class="d-flex">
+          <li><a href="../index.html" class="navbar__link">Pagrindinis</a></li>
+          <li><a href="./css-basics.html" class="navbar__link">CSS pagrindai</a></li>
+          <li><a href="./display-types.html" class="navbar__link">Display tipai</a></li>
+          <li><a href="./box-model.html" class="navbar__link">Box model</a></li>
+          <li><a href="./typography.html" class="navbar__link">Typography</a></li>
+          <li><a href="./flex.html" class="navbar__link">Flex</a></li>
+          <li><a href="./grid.html" class="navbar__link">Grid</a></li>
+          <li><a href="" class="navbar__link active">Position</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-navbar">
+    <div class="container py-4">
+      <h1 class="h1 mb-2">Position</h1>
+      <p>
+        Standarkiškai(default), jeigu nepasakome kitaip, visi elementai turi nustatytą CSS savybę <strong>position: static</strong>. Tai
+        reiškia kad elementai yra nekintačios tėkmės (static flow). <strong>Static flow</strong> - tai elementų pozicionavimas iš kairės į
+        dešinę, o kuomet elementai nebetelpa į tėvinio elemento plotį, perkeliami į sekančią eilutę.
+        <br><br>
+        Yra ir kitų posicionavimo tipų: <strong>relative</strong>, <strong>fixed</strong>, <strong>absolute</strong> ir
+        <strong>sticky</strong>. Šie pozicionavimo tipai gali atsispirti nuo kitų elementų arba nuo jų nekintančios (static) vietos. Tai
+        daroma naudojant savybes: <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong> ir <strong>left</strong>.
+        <strong>Static</strong> yra vienintelis pozicionavimo tipas, kuriam neturi įtakos savybės <strong>top</strong>,
+        <strong>right</strong>, <strong>bottom</strong> ir <strong>left</strong>. Todėl jis ir yra vadinamis <strong>static</strong>.
+      </p>
+    </div>
+  </main>
+
+  <section class="py-5">
+    <div class="container">
+      <h2 class="h2 mb-2">Static</h2>
+      <p class="my-3">
+        <strong>Static</strong> elementai nepriklauso nuo saybių <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong> ir
+        <strong>left</strong> ir yra atvaizduojami pagal nekintančią tėkmę(static flow).
+        <br><br>
+        <strong>Static flow</strong> - tai elementų pozicionavimas iš kairės į
+        dešinę, o kuomet elementai nebetelpa į tėvinio elemento plotį, perkeliami į sekančią eilutę.
+      </p>
+      <div class="example-container p-3 ">
+        <div class="square bg-yellow">1</div>
+        <div class="square bg-yellow">2</div>
+        <div class="square bg-yellow">3</div>
+        <div class="square bg-yellow">4</div>
+        <div class="square bg-yellow">5</div>
+        <div class="square bg-yellow">6</div>
+        <div class="square bg-yellow">7</div>
+        <div class="square bg-yellow">8</div>
+        <div class="square bg-yellow">9</div>
+        <div class="square bg-yellow">10</div>
+        <div class="square bg-yellow">11</div>
+        <div class="square bg-yellow">12</div>
+        <div class="square bg-yellow">13</div>
+        <div class="square bg-yellow">14</div>
+        <div class="square bg-yellow">15</div>
+        <div class="square bg-yellow">16</div>
+        <div class="square bg-yellow">17</div>
+        <div class="square bg-yellow">18</div>
+        <div class="square bg-yellow">19</div>
+        <div class="square bg-yellow">20</div>
+        <div class="square bg-yellow">21</div>
+        <div class="square bg-yellow">22</div>
+        <div class="square bg-yellow">23</div>
+        <div class="square bg-yellow">24</div>
+        <div class="square bg-yellow">25</div>
+        <div class="square bg-yellow">26</div>
+        <div class="square bg-yellow">27</div>
+        <div class="square bg-yellow">28</div>
+        <div class="square bg-yellow">29</div>
+        <div class="square bg-yellow">30</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="my-5">
+    <div class="container">
+      <h2 class="h2 mb-2">Relative</h2>
+      <p class="my-3">
+        Tai toks elemento pozicionavimas, kuomet naudojant savybes <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong> ir
+        <strong>left</strong> gali paslinti elementą nuo jo menamos <strong>static</strong> pozicijos.
+      </p>
+
+      <div class="example-container p-3 ">
+        <div class="square bg-yellow">1</div>
+        <div class="square bg-yellow">2</div>
+        <div class="square bg-yellow">3</div>
+        <div class="square bg-yellow">4</div>
+        <div class="square bg-yellow">5</div>
+        <div class="square bg-yellow">6</div>
+        <div class="square bg-yellow">7</div>
+        <div class="square bg-red p-relative top-5 left-5">8</div>
+        <div class="square bg-yellow">9</div>
+        <div class="square bg-yellow">10</div>
+        <div class="square bg-yellow">11</div>
+        <div class="square bg-red p-relative bottom-3">12</div>
+        <div class="square bg-yellow">13</div>
+        <div class="square bg-yellow">14</div>
+        <div class="square bg-yellow">15</div>
+        <div class="square bg-yellow">16</div>
+        <div class="square bg-blue p-relative top-7">17</div>
+        <div class="square bg-yellow">18</div>
+        <div class="square bg-yellow">19</div>
+        <div class="square bg-yellow">20</div>
+        <div class="square bg-yellow">21</div>
+        <div class="square bg-green p-relative bottom-8">22</div>
+        <div class="square bg-yellow">23</div>
+        <div class="square bg-yellow">24</div>
+        <div class="square bg-yellow">25</div>
+        <div class="square bg-blue p-relative left">26</div>
+        <div class="square bg-yellow">27</div>
+        <div class="square bg-yellow">28</div>
+        <div class="square bg-yellow">29</div>
+        <div class="square bg-yellow">30</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="my-5">
+    <div class="container">
+      <h2 class="h2 mb-3">Fixed</h2>
+      <p class="my-3">
+        Tai toks pozicionavimo būdas kuomet naudodami savybes <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong> ir
+        <strong>left</strong> gali 'atsispirti' nuo matomos turinio dalies (viewport). Užstančius elementui <strong>position: fixed</strong>
+        jis dingsta iš static flow. Greta esantys elementai jo nemato, taip pat ir tėvinis elementas. <strong>position: fixed</strong>
+        elementai išsižada savo tėvų, brolių ir sesių ir atsispira nuo <strong>viewport</strong>.
+      </p>
+      <div class="example-container p-3 ">
+        <div class="square bg-yellow">1</div>
+        <div class="square bg-yellow">2</div>
+        <div class="square bg-yellow">3</div>
+        <div class="square bg-yellow">4</div>
+        <div class="square bg-yellow">5</div>
+        <div class="square bg-yellow p-fixed bottom-3 left-3">fixed<br> 6</div>
+        <div class="square bg-yellow">7</div>
+        <div class="square bg-yellow">8</div>
+        <div class="square bg-yellow">9</div>
+        <div class="square bg-yellow">10</div>
+        <div class="square bg-yellow">11</div>
+        <div class="square bg-yellow">12</div>
+        <div class="square bg-yellow">13</div>
+        <div class="square bg-yellow p-fixed bottom-3 right-3">fixed<br> 14</div>
+        <div class="square bg-yellow">15</div>
+        <div class="square bg-yellow">16</div>
+        <div class="square bg-yellow">17</div>
+        <div class="square bg-yellow">18</div>
+        <div class="square bg-yellow">19</div>
+        <div class="square bg-yellow">20</div>
+        <div class="square bg-yellow">21</div>
+        <div class="square bg-yellow">22</div>
+        <div class="square bg-yellow">23</div>
+        <div class="square bg-yellow">24</div>
+        <div class="square bg-yellow">25</div>
+        <div class="square bg-yellow">26</div>
+        <div class="square bg-yellow">27</div>
+        <div class="square bg-yellow">28</div>
+        <div class="square bg-yellow">29</div>
+        <div class="square bg-yellow">30</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="my-5">
+    <div class="container">
+      <h2 class="h2 mb-3">Absolute</h2>
+      <p class="my-3">
+        Postion absolute naudoja savybes <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong> ir <strong>left</strong> kad
+        atsipirti nuo <strong>pirmo tėvinės hierarchijos elemento, kurio CSS savybė position NĖRA static.</strong>. Atsipirdamas nuo surasto
+        <strong>NE STATIC</strong> elemento, <strong>position: absolute</strong> elementas dingsta iš <strong>static flow</strong>, todėl
+        kiti elementai jo nebemato.
+        <br><br>
+        Dažniausiai praktikoje naudojame <strong>position: relative</strong> kad sukurti elementui atspirties tašką. Taip daroma todėl, kad
+        jeigu <strong>position: relative</strong> elementui nenurodote poslinkio/atspirties savybių jis nepakinta ir elgiasi kaip
+        <strong>position: static</strong>
+        <br><br>
+        Jeigu elementas <strong>position: absolute</strong> neranda atspirties taško (tėvinės hierarchijos elemento su position - NE
+        STATIC),
+        tuomet atsispiria nuo puslapio viršaus viewport kontūrų. Kitaip tariant, atsispirmia nuo šakninio puslapio elemento
+        <strong>&lt;html&gt;</strong>
+      </p>
+    </div>
+    <img src="../img/examples/position-absolute.png" width="1500px" class="d-block mx-auto my-5">
+    <div class="container">
+      <div class="example-container p-3 p-relative">
+        <div class="square bg-yellow">1</div>
+        <div class="square bg-yellow">2</div>
+        <div class="square bg-yellow">3</div>
+        <div class="square bg-yellow">4</div>
+        <div class="square bg-yellow">5</div>
+        <div class="square bg-yellow">6</div>
+        <div class="square bg-yellow">7</div>
+        <div class="square bg-yellow">8</div>
+        <div class="square bg-yellow">9</div>
+        <div class="square bg-yellow">10</div>
+        <div class="square bg-yellow">11</div>
+        <div class="square bg-yellow">12</div>
+        <div class="square bg-red p-absolute bottom-0 right-0">13</div>
+        <div class="square bg-yellow">14</div>
+        <div class="square bg-yellow">15</div>
+        <div class="square bg-yellow">16</div>
+        <div class="square bg-yellow">17</div>
+        <div class="square bg-yellow">18</div>
+        <div class="square bg-yellow">19</div>
+        <div class="square bg-yellow">20</div>
+        <div class="square bg-yellow">21</div>
+        <div class="square bg-yellow">22</div>
+        <div class="square bg-yellow">23</div>
+        <div class="square bg-yellow">24</div>
+        <div class="square bg-yellow">25</div>
+        <div class="square bg-yellow">26</div>
+        <div class="square bg-yellow">27</div>
+        <div class="square bg-yellow">28</div>
+        <div class="square bg-yellow">29</div>
+        <div class="square bg-yellow">30</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="my-5">
+    <div class="container">
+      <h2 class="h2 mb-3">Sticky</h2>
+      <p class="my-3">
+        Šis pozicionavimo tipas ieško pirmo tėvinės hierarchijos elemento, kuris yra paslankus <strong>scrollable</strong> ir atsispira nuo
+        jo kontūrų naudojant savybes <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong> ir <strong>left</strong>;
+      </p>
+      <div class="example-container fixed-height-scrollable">
+        <div class="p-3">
+          <div class="square bg-yellow">1</div>
+          <div class="square bg-yellow">2</div>
+          <div class="square bg-yellow">3</div>
+          <div class="square bg-yellow">4</div>
+          <div class="square bg-yellow">5</div>
+          <div class="square bg-yellow">6</div>
+          <div class="square bg-yellow">7</div>
+          <div class="square bg-yellow">8</div>
+          <div class="square bg-yellow">9</div>
+          <div class="square bg-yellow">10</div>
+          <div class="square bg-yellow">11</div>
+          <div class="square bg-green p-sticky top-0">12</div>
+          <div class="square bg-yellow">13</div>
+          <div class="square bg-yellow">14</div>
+          <div class="square bg-yellow">15</div>
+          <div class="square bg-yellow">16</div>
+          <div class="square bg-yellow">17</div>
+          <div class="square bg-yellow">18</div>
+          <div class="square bg-yellow">19</div>
+          <div class="square bg-yellow">20</div>
+          <div class="square bg-yellow">21</div>
+          <div class="square bg-yellow">22</div>
+          <div class="square bg-yellow">23</div>
+          <div class="square bg-yellow">24</div>
+          <div class="square bg-yellow">25</div>
+          <div class="square bg-yellow">26</div>
+          <div class="square bg-yellow">27</div>
+          <div class="square bg-yellow">28</div>
+          <div class="square bg-yellow">29</div>
+          <div class="square bg-yellow">30</div>
+          <div class="square bg-yellow">31</div>
+          <div class="square bg-yellow">32</div>
+          <div class="square bg-yellow">33</div>
+          <div class="square bg-yellow">34</div>
+          <div class="square bg-yellow">35</div>
+          <div class="square bg-yellow">36</div>
+          <div class="square bg-yellow">37</div>
+          <div class="square bg-yellow">38</div>
+          <div class="square bg-yellow">39</div>
+          <div class="square bg-yellow">40</div>
+          <div class="square bg-yellow">41</div>
+          <div class="square bg-yellow">42</div>
+          <div class="square bg-yellow">43</div>
+          <div class="square bg-yellow">44</div>
+          <div class="square bg-green p-sticky bottom-0">45</div>
+          <div class="square bg-yellow">46</div>
+          <div class="square bg-yellow">47</div>
+          <div class="square bg-yellow">48</div>
+          <div class="square bg-yellow">49</div>
+          <div class="square bg-yellow">50</div>
+          <div class="square bg-yellow">51</div>
+          <div class="square bg-yellow">52</div>
+          <div class="square bg-yellow">53</div>
+          <div class="square bg-yellow">54</div>
+          <div class="square bg-yellow">55</div>
+          <div class="square bg-green p-sticky bottom-0">56</div>
+          <div class="square bg-yellow">57</div>
+          <div class="square bg-yellow">58</div>
+          <div class="square bg-yellow">59</div>
+          <div class="square bg-yellow">60</div>
+          <div class="square bg-yellow">61</div>
+          <div class="square bg-yellow">62</div>
+          <div class="square bg-yellow">63</div>
+          <div class="square bg-yellow">64</div>
+          <div class="square bg-yellow">65</div>
+          <div class="square bg-yellow">66</div>
+          <div class="square bg-green p-sticky bottom-0">67</div>
+          <div class="square bg-yellow">68</div>
+          <div class="square bg-yellow">69</div>
+          <div class="square bg-yellow">70</div>
+          <div class="square bg-yellow">71</div>
+          <div class="square bg-yellow">72</div>
+          <div class="square bg-yellow">73</div>
+          <div class="square bg-yellow">74</div>
+          <div class="square bg-yellow">75</div>
+          <div class="square bg-yellow">76</div>
+          <div class="square bg-yellow">77</div>
+          <div class="square bg-yellow">78</div>
+          <div class="square bg-yellow">79</div>
+          <div class="square bg-yellow">80</div>
+          <div class="square bg-yellow">81</div>
+          <div class="square bg-yellow">82</div>
+          <div class="square bg-yellow">83</div>
+          <div class="square bg-yellow">84</div>
+          <div class="square bg-yellow">85</div>
+          <div class="square bg-yellow">86</div>
+          <div class="square bg-yellow">87</div>
+          <div class="square bg-yellow">88</div>
+          <div class="square bg-yellow">89</div>
+          <div class="square bg-yellow">90</div>
+          <div class="square bg-yellow">91</div>
+          <div class="square bg-yellow">92</div>
+          <div class="square bg-yellow">93</div>
+          <div class="square bg-yellow">94</div>
+          <div class="square bg-yellow">95</div>
+          <div class="square bg-yellow">96</div>
+          <div class="square bg-yellow">97</div>
+          <div class="square bg-yellow">98</div>
+          <div class="square bg-yellow">99</div>
+          <div class="square bg-yellow">100</div>
+          <div class="square bg-yellow">101</div>
+          <div class="square bg-yellow">102</div>
+          <div class="square bg-yellow">103</div>
+          <div class="square bg-yellow">104</div>
+          <div class="square bg-yellow">105</div>
+          <div class="square bg-yellow">106</div>
+          <div class="square bg-yellow">107</div>
+          <div class="square bg-yellow">108</div>
+          <div class="square bg-yellow">109</div>
+          <div class="square bg-yellow">110</div>
+          <div class="square bg-yellow">111</div>
+          <div class="square bg-yellow">112</div>
+          <div class="square bg-yellow">113</div>
+          <div class="square bg-yellow">114</div>
+          <div class="square bg-yellow">115</div>
+          <div class="square bg-yellow">116</div>
+          <div class="square bg-yellow">117</div>
+          <div class="square bg-yellow">118</div>
+          <div class="square bg-yellow">119</div>
+          <div class="square bg-yellow">120</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-5 mb-8">
+    <div class="container">
+      <h2 class="h2 mb-3">Pavyzdžiai</h2>
+      <p class="my-3">
+        Paprastesniu būdu atliksime <strong>grid-task-6</strong> atvaizdavimą.
+      </p>
+      <article>
+        <h3 class="h3">Grid task 6</h3>
+        <div class="grid-task-6-with-position-container my-4">
+
+          <div class="card--alternative">
+            <img src="https://unsplash.it/300/300" class="card--alternative__image">
+            <div class="card--alternative__content card--alternative__content--left">
+              <div class="card__date mb-2">October 31, 2016</div>
+              <div class="card__header">Benefits of reading books regulary</div>
+              <div class="card__decoration my-3"></div>
+              <p class="card__text mb-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ad sint nostrum eos maiores in praesentium dicta?
+              </p>
+              <a href="" class="card__link">Continue reading</a>
+            </div>
+          </div>
+          
+          <div class="card--alternative">
+            <img src="https://unsplash.it/300/301" class="card--alternative__image">
+            <div class="card--alternative__content card--alternative__content--right">
+              <div class="card__date mb-2">October 31, 2016</div>
+              <div class="card__header">Benefits of reading books regulary</div>
+              <div class="card__decoration my-3"></div>
+              <p class="card__text mb-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ad sint nostrum eos maiores in praesentium dicta?
+              </p>
+              <a href="" class="card__link">Continue reading</a>
+            </div>
+          </div>
+          
+          <div class="card--alternative">
+            <img src="https://unsplash.it/300/302" class="card--alternative__image">
+            <div class="card--alternative__content card--alternative__content--left">
+              <div class="card__date mb-2">October 31, 2016</div>
+              <div class="card__header">Benefits of reading books regulary</div>
+              <div class="card__decoration my-3"></div>
+              <p class="card__text mb-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ad sint nostrum eos maiores in praesentium dicta?
+              </p>
+              <a href="" class="card__link">Continue reading</a>
+            </div>
+          </div>
+          
+          <div class="card--alternative">
+            <img src="https://unsplash.it/300/303" class="card--alternative__image">
+            <div class="card--alternative__content card--alternative__content--right">
+              <div class="card__date mb-2">October 31, 2016</div>
+              <div class="card__header">Benefits of reading books regulary</div>
+              <div class="card__decoration my-3"></div>
+              <p class="card__text mb-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ad sint nostrum eos maiores in praesentium dicta?
+              </p>
+              <a href="" class="card__link">Continue reading</a>
+            </div>
+          </div>
+
+          
+          <div class="card--alternative">
+            <img src="https://unsplash.it/300/300" class="card--alternative__image">
+            <div class="card--alternative__content card--alternative__content--left">
+              <div class="card__date mb-2">October 31, 2016</div>
+              <div class="card__header">Benefits of reading books regulary</div>
+              <div class="card__decoration my-3"></div>
+              <p class="card__text mb-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ad sint nostrum eos maiores in praesentium dicta?
+              </p>
+              <a href="" class="card__link">Continue reading</a>
+            </div>
+          </div>
+          
+          <div class="card--alternative">
+            <img src="https://unsplash.it/300/301" class="card--alternative__image">
+            <div class="card--alternative__content card--alternative__content--right">
+              <div class="card__date mb-2">October 31, 2016</div>
+              <div class="card__header">Benefits of reading books regulary</div>
+              <div class="card__decoration my-3"></div>
+              <p class="card__text mb-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ad sint nostrum eos maiores in praesentium dicta?
+              </p>
+              <a href="" class="card__link">Continue reading</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+</body>
+
+</html>

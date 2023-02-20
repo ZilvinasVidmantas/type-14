@@ -1,0 +1,44 @@
+.contacts {
+  padding-top: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contacts>* {
+  flex: 1 0 calc(50% - 0.5rem);
+}
+
+.contacts__form {
+  display: flex;
+  height: 48px;
+  background-color: var(--color-white);
+  padding: 1px;
+}
+
+.contacts__input {
+  background-color: var(--color-white);
+  width: 100%;
+  padding: 0 1rem;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.contacts__input:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.contacts__btn {
+  background-color: var(--color-light-grey);
+  padding: 0 1rem;
+  transition: all 0.4s ease-in;
+  cursor: pointer;
+}
+
+.contacts__btn:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}

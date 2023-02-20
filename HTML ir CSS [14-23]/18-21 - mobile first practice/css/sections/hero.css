@@ -1,0 +1,41 @@
+.hero {
+  display: grid;
+  place-items: center;
+  height: 90vh;
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero__title {
+  text-transform: uppercase;
+}
+
+.hero__text {
+  line-height: 2.2rem;
+  letter-spacing: 0.08em;
+  max-width: 600px;
+}
+
+@media (min-width: 992px) {
+  .hero {
+    background:
+      linear-gradient(var(--color-primary-trasparent), var(--color-black-trasparent)),
+      url(../../assets/hero-desktop.avif);
+    background-size: cover;
+    background-position: 0 10%;
+  }
+
+  .hero__title {
+    font-size: 4rem;
+    letter-spacing: 0.1em;
+  }
+}

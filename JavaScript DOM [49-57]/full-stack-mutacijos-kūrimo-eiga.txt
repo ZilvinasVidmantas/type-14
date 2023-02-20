@@ -1,0 +1,19 @@
+Client-side(FE):
+  1. Sukuriame vartotojo sasają  - atlikti veiksmui (Mygtukas, Dropdown'as ir t.t...)
+  2. Reaguojame į vartotojo veiksmą ir surenkame duomenis reikalingus siųsti užklausai 
+  3. Siunčiame užklausa su suformuotais duomenimis
+
+Server-side(BE): || Kadangi naudojame JSON-Server nieko daryti nereikia ||
+  1. Reaguojame į gautą užklausą
+  2. Panaudojame užklausos duomenis kad suformuoti Duomenų bazės mutaciją
+  3. Vykdant mutaciją:
+    1. Viskas pavyko - Siunčiame pakeisto įrašo naujausią versiją
+    2. Įvyko klaida - Siunčiame Client-side(FE) klaidos žinutę
+
+Client-side(FE):
+  4. Sulaukiame atsakymo:
+    1. Gautas teigiamas atsakymas: 
+      * Per naujo parsiunčia visus duomenis, susijusius su pakeitimu:
+      * Per naujo atvaizduojame mutacijos įtakotus duomenis, kurie šiuo metu matomi vartotojui
+    2. Gautas neigiamas atsakymas:
+      * Atvaizduojame klaidą

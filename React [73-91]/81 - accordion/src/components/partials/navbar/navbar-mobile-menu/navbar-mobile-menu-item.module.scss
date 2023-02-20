@@ -1,0 +1,32 @@
+.item {
+  display: block;
+  font-size: 1.2rem;
+  letter-spacing: 0.065em;
+  color: $black;
+  padding: 0.75rem 1.5rem;
+  &:nth-of-type(2n) {
+    background: $striped;
+  }
+  &.active {
+    color: $dark;
+    font-weight: 600;
+  }
+}
+
+.accordionWrapper {
+  max-height: 50px;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  &.open {
+    max-height: 500px;
+  }
+}
+
+.accordionContent {
+  padding: 0.75rem 1.5rem;
+  padding-left: 3rem;
+}
+
+.accordionCaret {
+  float: right;
+}

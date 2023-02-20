@@ -1,0 +1,25 @@
+ Mažiems projektams patogesnis struktūrizavimas:
+      stilius visiems ekrano dydžiams
+      
+      atskiras failas sm ekrano dydžiui
+
+      atskiras failas md ekrano dydžiu
+
+      atskiras failas lg ekrano dydžiu
+
+      ...
+
+
+  Dideliems projektasx patogesnis struktūrizavimas:
+    tema1.css [containers.css]
+      visų dydžių stiliai kurie susiję su konteineriais
+
+    tema2.css 
+      visų dydžių stiliai kurie susiję su tema2
+
+    tema3.css 
+      visų dydžių stiliai kurie susiję su tema3
+
+    ...
+
+    PS. breakpoint'ai turi būti tų pačių dydžių

@@ -1,0 +1,38 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 5rem 1rem;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.footer__nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer__nav a {
+  text-decoration: none;
+}
+
+.footer__nav--page a {
+  color: var(--color-white);
+  transition: color 0.4s ease-in-out;
+}
+
+.footer__nav--page a:hover {
+  color: var(--color-primary);
+}
+
+.footer__nav--social a {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+}
+
+.footer__nav--social a:hover {
+  color: var(--color-primary-light);
+}

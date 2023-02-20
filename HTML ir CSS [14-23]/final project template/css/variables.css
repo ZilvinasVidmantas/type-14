@@ -1,0 +1,41 @@
+:root {
+  --color-white: #fff;
+  --color-white-hover: #ddd;
+  --color-black: #000;
+  --color-black-tranparent: #000000de;
+  --color-shadow: #0003;
+  --color-black-hover: #222;
+  --color-primary: #009e5a;
+  --color-primary-light: #2bcc86;
+  --color-primary-hover: #018b4f;
+
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 1rem;
+  --spacing-4: 1.5rem;
+  --spacing-5: 3rem;
+  --spacing-6: 5rem;
+  --spacing-7: 7rem;
+  --spacing-8: 10rem;
+
+  --breakpoint-sm: 580px;
+  --breakpoint-md: 800px;
+  --breakpoint-lg: 1200px;
+  --breakpoint-xl: 1440px;
+
+  --border-radius: 4px;
+
+  --font-decoration: 'Bitter', serif;
+  --font-ui: 'Red Hat Mono', monospace;
+  --font-general: Roboto;
+
+  --h1: 3rem;
+  --h2: 2.5rem;
+  --h3: 1.8rem;
+  --h4: 1.55rem;
+  --h5: 1.3rem;
+  --h6: 1rem;
+
+  --navbar-height: 56px;
+}

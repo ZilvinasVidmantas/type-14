@@ -1,0 +1,45 @@
+:root {
+  --color-white: #fff;
+  --color-white-hover: #eee;
+
+  --color-light-grey: #f8fafc;
+
+  --color-black: #222;
+  --color-black-trasparent: #000000b3;
+  --color-shadow: #0002;
+
+  --color-primary: #645cff;
+  --color-primary-light: #a19cfa;
+  --color-primary-hover: #5952e6;
+  --color-primary-trasparent: #4a3fdab3;
+
+  --shadow: 0 1px 1px 1px var(--color-shadow);
+  --shadow-xl: 0 8px 12px 1px var(--color-shadow);
+
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 1rem;
+  --spacing-4: 1.5rem;
+  --spacing-5: 3rem;
+  --spacing-6: 5rem;
+  --spacing-7: 7rem;
+  --spacing-8: 10rem;
+
+  --breakpoint-lg: 992px;
+
+  --border-radius: 4px;
+
+  --font-decoration: 'Bitter', serif;
+  --font-ui: Roboto;
+  --font-general: Roboto;
+
+  --h1: 3rem;
+  --h2: 2.5rem;
+  --h3: 1.8rem;
+  --h4: 1.55rem;
+  --h5: 1.3rem;
+  --h6: 1rem;
+
+  --navbar-height: 56px;
+}

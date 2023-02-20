@@ -1,0 +1,24 @@
+.container {
+  display: grid;
+  width: 1200px;
+  height: 900px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 30px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #000;
+  overflow: hidden;
+}
+
+.square {
+  position: relative;
+  width: 100%;
+  right: -1500px;
+  background-color: magenta;
+  transition: right 0.6s cubic-bezier(.14, 1.01, .66, .95);
+}
+
+.square.show {
+  right: 0;
+}

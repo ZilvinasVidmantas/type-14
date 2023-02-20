@@ -1,0 +1,176 @@
+Write two binary functions, add and mul, that take two numbers and return their sum and product. 
+
+add(3, 4);    //  7  
+mul(3, 4);    // 12  
+Write a function that takes an argument and returns a function that returns that argument.  
+var idf = identityf (3);  
+idf ();                  // 3  
+
+Write a function that adds from two invocations.  
+addf (3)(4);             // 7  
+Write a function that takes a binary function, and makes it callable with two invocations.  
+var addf = applyf (add);  
+addf (3)(4);             // 7  
+applyf (mul)(5)(6);      // 30  
+Write a function that takes a function and an argument, and returns a function that can supply a second argument.  
+var add3 = curry(add, 3);  
+add3(4);                // 7  
+curry(mul , 5)(6);      // 30  
+Without writing any new functions, show three ways to create the inc function.
+
+inc(5);  // 6 
+inc(10); // 11
+inc(13); // 14
+
+Write a function twice that takes a binary function and returns a unary function that passes its argument to the binary function twice. 
+
+var double = twice(add);  
+double(11);            // 22  
+var square = twice(mul);  
+square(11);            // 121  
+Write a function composeu that takes two unary functions and returns a unary function that calls them both. 
+
+composeu (double, square)(3);    // 36  
+Write a function composeb that takes two binary functions and returns a function that calls them both.  
+composeb (add, mul)(2, 3, 5);    // 25
+
+Write a factory function that returns two functions that implement an up/down counter.  
+var counter = counterf (10);  
+counter.inc();    // 11  
+counter.dec();    // 10  
+Make an array wrapper object with methods get, store, and append, such that an attacker cannot get access to the private array.  
+var myVector = vector(); 
+myVector.append(7); 
+myVector.store(1, 8); 
+myVector.get(0);        // 7 
+myVector.get(1);        // 8
+
+Write a function that adds from many invocations, until it sees an empty invocation.
+
+addg(3)(4)(5)();     // 12 
+addg(1)(2)(4)(8)();  // 15
+
+Write a function that will take a binary function and apply it to many invocations.
+
+applyg(add)(3)(4)(5)();     // 12 
+applyg(add)(1)(2)(4)(8)();  // 15
+
+Make a function that returns a function that will return the next fibonacci number.
+
+var fib = fibonaccif(0, 1);  
+fib();    // 0  
+fib();    // 1  
+fib();    // 1  
+fib();    // 2  
+fib();    // 3  
+fib();    // 5
+
+Create a generic iterator function each(array, function(element, index)), which can be used to iterate over arrays. 
+
+var testArray = [0, 5, 2, 7, 12];
+each(testArray, function(element, index){
+	console.log("[" + index + "]="+ element);
+	
+     if(index === 2){ 
+          return false;
+     }
+});
+
+// [0]=0
+// [1]=5
+// [2]=2
+
+
+
+
+
+
+
+
+
+
+Make a function that makes a publish/subscribe object. It will reliably deliver all publications to all subscribers in the right order.
+
+var myPubsub = pubsub(); 
+myPubsub.subscribe(function(data){
+    console.log('Subscriber one says: ' + data);
+});
+myPubsub.subscribe(function(message){
+    console.log('Subscriber two says: ' + message);
+}); 
+myPubsub.subscribe(function(message){
+    console.log('Subscriber three says: ' + message);
+}); 
+ 
+myPubsub.publish('hello!'); 
+
+// 'Subscriber one says: hello!'
+// 'Subscriber two says: hello!'
+// 'Subscriber three says: hello!'
+
+Make a function that use pubsub to crete event manager. That attach an event handler function for one or more events. 
+
+       var manager = eventManager();
+
+manager.on('event1', function(data){
+    console.log('event1_handler1 says: ' + data);
+});
+manager.on('event2', function(data){
+	    console.log('event2_handler1 says: ' + data);
+});
+manager.on('event2', function(data){
+    console.log('event2_handler2 says: ' + data);
+});
+manager.on('event3', function(data){
+	    console.log('event3_handler1 says: ' + data);
+});
+manager.on('event2', function(data){
+    console.log('event2_handler3 says: ' + data);
+});
+
+// execute all handlers only for event2
+manager.fire('event2', 'hello!');
+
+// 'event2_handler1 says: hello!'
+// 'event2_handler2 says: hello!'
+// 'event2_handler3 says: hello!'
+
+Make posible to remove an event handler by name.
+
+manager.off('event2');
+manager.fire('event2', 'hello!');
+// no handlers are executed
+Make posible to call fluently.
+
+var manager = eventManager();
+
+manager
+	    .on('event1', function(data){/* code */})
+	    .on('event2', function(data){/* code */})
+	    .on('event2', function(data){/* code */})
+	    .on('event3', function(data){/* code */})
+	    .on('event2', function(data){/* code */})
+	    .off('event1')
+	    .fire('event2', 'hello!');
+
+// 'event2_handler1 says: hello!'
+// 'event2_handler2 says: hello!'
+// 'event2_handler3 says: hello!'
+
+Make posible to provide context.
+
+var obj = { separator: '*' };
+var manager = eventManager(obj);
+
+manager
+    .on('event1', function(data){
+        var self = this;
+        var message = ['event1_handler1','says', ':', data];
+        
+        console.log(message.join(self.separator));
+        console.log(self === obj);
+    })
+    .fire('event1', 'hello!');
+
+// 'event1_handler1*says*:*hello!'
+// true

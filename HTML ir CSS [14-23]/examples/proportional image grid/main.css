@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.grid__square {
+  position: relative;
+  padding-top: 100%;
+}
+
+.grid__square>img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

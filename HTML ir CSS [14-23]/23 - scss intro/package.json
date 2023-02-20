@@ -1,0 +1,15 @@
+{
+  "name": "scss-intro",
+  "version": "1.0.0",
+  "description": "labai geras gaidas",
+  "main": "public/index.html",
+  "scripts": {
+    "compile": "sass scss/main.scss public/css/main.css",
+    "watch": "sass --watch scss/main.scss public/css/main.css"
+  },
+  "author": "Zilvinas Vidmantas",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.56.1"
+  }
+}

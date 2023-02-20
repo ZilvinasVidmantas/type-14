@@ -1,0 +1,6 @@
+Jeigu reikia kaupti/formuoti reikšmę su kiekvienu masyvo elementu, naudojama metodologija:
+1. padeklaruojamas pradinis elementas
+2. Pradedamas ciklas
+ 2.1 Kiekviena iteracija papildo/keičia padeklaruotą kintamajį [1.]
+3. atliekamas galutinis formavimas (nebūtinas)
+4. grąžinama/spausdinama reikšmė 

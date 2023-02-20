@@ -1,0 +1,3 @@
+1. "celebration-encapsulation.js" atlikti anglų kalba vardinant kintamuosius, klasės savybes ir metodus
+
+2. "tasks/task.js" Atlikti užduotis anglų kalba vardinant kintamuosius, klasės savybes ir metodus

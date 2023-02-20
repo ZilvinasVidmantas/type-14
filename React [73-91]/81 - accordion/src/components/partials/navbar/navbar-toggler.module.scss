@@ -1,0 +1,18 @@
+.toggler {
+  display: inline-grid;
+  place-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  font-size: 26px;
+  color: $white;
+  background: $action;
+  cursor: pointer;
+  &:hover {
+    background: $action-hover;
+  }
+
+  @media (min-width: $navbar-expand-breakpoint) {
+    display: none;
+  }
+}

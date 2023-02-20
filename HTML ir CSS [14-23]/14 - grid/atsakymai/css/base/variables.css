@@ -1,0 +1,28 @@
+:root {
+    /* colors */
+    --black: #000;
+    --dark: #252525;
+    --dark-transparent: #252525ee;
+    --white: #fff;
+    --light: #eee;
+    --light-transparent: #eeee;
+    --shadow-color: #0005;
+    --primary: #fdd301;
+    --primary-darken: #fbc902;
+
+    /* typography */
+    --main-font:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-color-light: var(--light); 
+    --font-color-dark: var(--dark); 
+
+    /* components */
+    --navbar-height: 56px;
+
+    /* shadows */
+    --shadow-sm: 0 1px 2px 1px var(--shadow-color);
+    --shadow: 0 2px 4px 2px var(--shadow-color);
+    --shadow-xl: 0 3px 6px 3px var(--shadow-color);
+
+    /* z-index */
+    --z-index-navbar: 1000;
+}

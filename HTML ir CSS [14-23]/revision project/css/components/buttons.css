@@ -1,0 +1,36 @@
+.btn {
+  text-decoration: none;
+  padding: 0.75em 1em;
+  letter-spacing: 0.075em;
+  border-radius: var(--border-radius);
+}
+
+/* Juodas mygtukas */
+.btn.btn-black {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.btn.btn-black:hover {
+  background-color: var(--color-black-hover);
+}
+
+/* Baltas mygtukas */
+.btn.btn-white {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.btn.btn-white:hover {
+  background-color: var(--color-white-hover);
+}
+
+/* Pagrindinis mygtukas */
+.btn.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}

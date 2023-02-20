@@ -1,0 +1,8 @@
+privalomas:
+  * Išanalizuoti pamokos kodą
+  * Suformuoti klausimus
+  * Pasibraižyti (sau) veikimo schemą / duomenų trasavimą.
+  * Pasidaryti CRUD aplikacijos pradžią - duomenų parsiuntimą ir atvaizdavimą lentele;
+
+papildomai:
+  pabaigti atlikti visas uduotis cao.lt

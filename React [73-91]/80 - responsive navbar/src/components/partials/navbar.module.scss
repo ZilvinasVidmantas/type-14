@@ -1,0 +1,64 @@
+$expand-breakpoint: $lg;
+$z-index: 500;
+
+.navbar {
+  background-color: $dark;
+  height: $navbar-height;
+  padding: 0 1rem;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: $z-index;
+  @media (min-width: $expand-breakpoint) {
+    justify-content: flex-start;
+  }
+}
+
+.links {
+  display: none;
+  height: $navbar-height;
+  @media (min-width: $expand-breakpoint) {
+    display: flex;
+  }
+}
+
+.toggler {
+  display: inline-grid;
+  place-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  font-size: 26px;
+  color: $white;
+  background: $action;
+  cursor: pointer;
+  &:hover {
+    background: $action-hover;
+  }
+
+  @media (min-width: $expand-breakpoint) {
+    display: none;
+  }
+}
+
+.navbarMenu {
+  position: fixed;
+  top: $navbar-height;
+  right: 0;
+  left: 0;
+  width: 100%;
+  background: rgba($white, 0.96);
+  box-shadow: $shadow;
+  z-index: $z-index - 1;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  &.open {
+    transform: translateY(0);
+  }
+}
+
+:export {
+  breakpoint: $expand-breakpoint;
+}

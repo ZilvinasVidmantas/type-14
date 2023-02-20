@@ -1,0 +1,22 @@
+0.1 - pamokos darbo atkartojimas pažinsniui:
+  1. Sukurkite Navbar Toggler'į ir jį stilizuokite.
+  2. Padarykite, jog matytūsi tik jūsų nuorodos arba toggleris, pasiekus lūžio tašką
+  3. Padarykite lankstų Container dizainą:
+    * t.y. - pradedant MD lūžio tašku išlaikomas vienodas plotis iki sekančio lūžio taško
+  4. Sukurkite meniu, kurio atidarymą būtų galima valdyti su būsenos(useState) kintamuoju
+  5. Atvaizduokite Navigacijos nuorodas išlendančiame meniu
+  6. Aktyvi nuoroda tu išsiskirti stiliumi
+  7. Pakeiskite toggler'io iknoą, priklausomai nuo to ar yra atidarytas meniu
+  8. Įgalinkite, kad po nuorodos pasirinkimo, būtų uždaromas meniu
+  9. Įgalinkite, jog atidarius meniu mažame ekrane, pasikeitus į didelį ekrano dydį meniu susiskleistų
+  
+
+0.1 - Sukurkite astkirus puslapius, kuriuose apibendrinsite straipsnio perskaitytą informaciją.
+  Kiekvienas puslapis turi turėti 3-5 sakinių JŪSŲ SUGALVOTĄ apibendrinimą. Taip pat 
+  įkelkite nuotrauką arba kodo pavyzdžį;
+  P.S. Sukurti puslapiai turi būti įdėti į navbar'ą.
+    * https://reactjs.org/docs/hello-world.html
+    * https://reactjs.org/docs/introducing-jsx.html
+
+
+

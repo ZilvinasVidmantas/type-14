@@ -1,0 +1,18 @@
+.chip {
+  display: inline-block;
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--border-radius);
+}
+
+.chip--sm{
+  font-size: 0.85rem;
+}
+
+.chip--xl{
+  font-size: 1.15rem;
+}
+
+.chip-primary {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>50 - Events and DOM manipulation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/1.js" defer></script>
+  <script src="js/2.js" defer></script>
+  <script src="js/3.js" defer></script>
+  <script src="js/4.js" defer></script>
+  <script src="js/5.js" defer></script>
+  <script src="js/6.js" defer></script>
+  <script src="js/7.js" defer></script>
+  <script src="js/8.js" defer></script>
+  <script src="js/9.js" defer></script>
+  <script src="js/10.js" defer></script>
+</head>
+
+<body>
+  <main class="container py-5">
+    <h1>DOM manipuliavimo užduotys</h1>
+    <p>
+      Kiekvieną užduotį reikia atlikti atskirame JS faile, pagal užduoties numerį. Kiekvienas
+      failas,
+      turi turėti savo aplinką, nekonfliktuojančią su kitais failais. Tam naudokite IIFE;
+      <br><br>
+      Nors užduotys labai panašios, siūlyčiau išvengti kopijavimo, nes jūs mokotės, o ne dirbate.
+      Jūsų tikslas išmokti, o ne greit padaryti. Rašymas yra vienas geriausiu būdų mokytis.
+    </p>
+  </main>
+
+
+  <section class="container py-5">
+    <h2>1. Pakeisti kvadrato spalvą</h2>
+    <p>
+      Sukurkite mygtuką ir pilką kvadratą. Paspaudus mygtuką, turi pasikeisti kvadrato spalva.
+    </p>
+    <button class="js-btn-1">Pakeisti spalvą</button>
+    <div>
+      <span class="js-square-1 square"></span>
+    </div>
+  </section>
+  <hr>
+
+  <section class="container py-5">
+    <h2>2. Pakeisti kvadrato spalvą 2</h2>
+    <p>
+      Sukurkite pilką kvadratą. Paspaudus kvadrat1, turi pasikeisti kvadrato spalva.
+    </p>
+    <div>
+      <span class="js-square-2 square"></span>
+    </div>
+  </section>
+  <hr>
+
+  <section class="container py-5">
+    <h2>3. Besikeičianti kvadrato spalva </h2>
+    <p>
+      Sukurkite pilką kvadratą. Paspaudus kvadratą, turi pasikeisti kvadrato spalva. Paspaudus jį
+      vėl, spalva turi dingti (kvadratas vėl pilkas)
+    </p>
+    <span class="js-square-3 square"></span>
+  </section>
+  <hr>
+
+  <section class="container py-5">
+    <h2>4. Besikeičianti kvadrato spalva 2</h2>
+    <p>
+      Sukurkite pilką kvadratą. Paspaudus kvadratą, turi pasikeisti kvadrato spalva tokiu būdų:
+    </p>
+    <ul>
+      <li>Pilkas kvadratas virsta geltonu</li>
+      <li>geltonas kvadratas virsta žaliu</li>
+      <li>žalias kvadratas virsta raudonu</li>
+      <li>raudonas kvadratas virsta pilku</li>
+    </ul>
+
+    <span class="js-square-4 square"></span>
+  </section>
+  <hr>
+
+  <section class="container py-5">
+    <h2>5. Besikeičianti kvadrato spalva pagal įvesties lauko reikšmę</h2>
+    <p>
+      Sukurkite pilką kvadratą ir įvesties lauką įvesti spalvai. Paspaudus kvadratą, turi pasikeisti
+      kvadrato spalva pagal įvesties lauke pasirinktą spalvą.
+    </p>
+    <input class="js-color-input-5" type="color">
+    <div>
+      <span class="js-square-5 square"></span>
+    </div>
+  </section>
+
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+
+  <section class="container py-5">
+    <h2>Elementų manipuliavimas naudojant target.classList</h2>
+    <p>
+      Šių užduočių tikslas manipuliuoti elemento klasėmis.
+      <br>
+      Kiekvienas HTMLElement'as turi savybę <strong>classList</strong>, kurioje yra išsaugotos visos
+      to elemento klasės. Jos išsaugotos specialiame prototipe: <strong>DOMTokenList</strong>. Jis
+      pasižymi tokiais pagrindiniais metodais:
+    </p>
+    <ul>
+      <li>add</li>
+      <li>remove</li>
+      <li>contains</li>
+      <li>replace</li>
+      <li>toggle</li>
+    </ul>
+    <p>
+      Naudodami šiuos metodus atlikite sekančias užduotis. Visos užduotys atliekamos manipuliuojant
+      CSS klasėmis (kurias jums reikės apsirašyti main.css faile).
+    </p>
+
+    <article>
+      <h3>6. Sukurkite kvadračiuką. Jį paspaudus pasikeičia jo spalva į raudoną. Paspaudus dar katą
+        - spalva grįžta į pilką</h3>
+      <div>
+        <span class="js-square-6 square"></span>
+      </div>
+    </article>
+    <hr>
+
+
+    <article>
+      <h3>7. Sukurkite kvadračiuką ir mygtuką. Paspaudus mygtuką, kvadratas dingsta. Paspaudus
+        mygtuką dar kartą, kvadratas atsiranda. Taip pat keiskite ir mygtuko tekstą, taip
+        sufleruojant ką darys mygtuko paspaudimas.</h3>
+      <button class="js-btn-7">slepti</button>
+      <div>
+        <span class="js-square-7 square"></span>
+      </div>
+    </article>
+    <hr>
+
+    <article>
+      <h3>8. Sukurkite kvadračiuką, select'ą ir mygtuką. Paspaudus mygtuką susikuria kvadračiukas su
+        spalva nurodyta select'e (3 options)</h3>
+      <select class="js-select-8">
+        <option value="bg-red">Raudona</option>
+        <option value="bg-blue">Mėlyna</option>
+        <option value="bg-green">Žalia</option>
+      </select>
+      <button class="js-btn-8">Kurti</button>
+      <div class="js-container-8">
+        <span class="js-square-8 square"></span>
+      </div>
+    </article>
+    <hr>
+
+    <article>
+      <h3>9. Sukurkite kvadračiuką, select'ą ir mygtuką. Paspaudus mygtuką susikuria kvadračiukas su
+        dydžiu nurodytu select'e (3 options - sm, md, lg)</h3>
+    </article>
+    <hr>
+
+    <article>
+      <h3>10. Sukurkite kvadračiuką, mygtuką ir 2 select'us (po 3 option). Vienas selektas skirtas
+        pasirinkti kvadračiuko spalvai, kitas dydžiui. Paspaudus mygtuką turi susikurti kvadračiukas
+        nuropdytas pagal pasirinkimus selektuose </h3>
+    </article>
+  </section>
+
+</body>
+
+</html>

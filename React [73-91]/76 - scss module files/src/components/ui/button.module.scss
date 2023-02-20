@@ -1,0 +1,49 @@
+$perc: 0.7;
+
+.button {
+  cursor: pointer;
+  background: transparent;
+  border-radius: 4px;
+
+  &.contained {
+    box-shadow: 0 2px 4px 1px #0005;
+    &.primary {
+      background: linear-gradient(to bottom, $primary, rgba($primary, $perc));
+      &:hover {
+        background: linear-gradient(to top, $primary, rgba($primary, $perc));
+      }
+    }
+    &.secondary {
+      background: linear-gradient(to bottom, $secondary, rgba($secondary, $perc));
+      &:hover {
+        background: linear-gradient(to top, $secondary, rgba($secondary, $perc));
+      }
+    }
+  }
+
+  &.outlined {
+    border: 2px solid transparent;
+    &.primary {
+      border-color: $primary;
+      &:hover {
+        background: $primary;
+      }
+    }
+    &.secondary {
+      border-color: $secondary;
+      &:hover {
+        background: $secondary;
+      }
+    }
+  }
+
+  &.normal {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+
+  &.large {
+    padding: 1rem 1.5rem;
+    font-size: 1.3rem;
+  }
+}

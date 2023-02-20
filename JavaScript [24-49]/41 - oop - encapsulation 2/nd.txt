@@ -1,0 +1,3 @@
+1. "nd.js" perrašyti inkapsuliavimo logiką naudojant naują set'erių ir get'erių logiką
+2. https://www.youtube.com/watch?v=UJcbFIV4JSQ&list=PLxvooGgpi4NeugSB4Pk546MXTPmGqPdc4&index=1&ab_channel=IAmDevGrant
+3. https://www.youtube.com/watch?v=qkAb-4ZR5Yw&ab_channel=ColtSteele

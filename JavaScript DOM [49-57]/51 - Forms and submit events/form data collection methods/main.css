@@ -1,0 +1,8 @@
+.center-children {
+  display: grid;
+  place-items: center;
+}
+
+.w-400px {
+  width: 400px;
+}

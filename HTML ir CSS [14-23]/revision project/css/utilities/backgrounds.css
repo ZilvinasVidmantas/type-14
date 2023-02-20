@@ -1,0 +1,11 @@
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.bg-black {
+  background-color: var(--color-black);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}

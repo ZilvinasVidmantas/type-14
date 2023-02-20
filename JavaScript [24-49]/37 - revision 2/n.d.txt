@@ -1,0 +1,15 @@
+Pagal faile esančius metodų aprašymus nupiešti/nubraižyti iliustracijas.
+Visos iliustracijos piešiamos ranka, su jūsų pasirinktomis spalvomis ir/arba kitais žymėjimas;
+
+Kiekvienoje iliustracijoje turi matytis:
+  * Žodinis paaiškinimas
+  * Iteracinio metodo kodas
+  * iteracinio metodo panaudojimas
+
+Iš viso turi būti 4 brėžiniai:
+  * Array.prototype.forEach
+  * Array.prototype.map
+  * Array.prototype.filter
+  * Array.prototype.reduce
+
+Visus keturis bėžinius reikia įkelti nufotografavus į Post'o "ND - Array iteracinių metodų iliustracijos" komentarus

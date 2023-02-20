@@ -1,0 +1,108 @@
+$spacer: 16px;
+
+$primary: #b140b5;
+$secondary: #40b55f;
+$warning: #b5ad40;
+$danger: #b54040;
+$light: #d7d7d7;
+$dark: #222222;
+$white: #fff;
+$black: #000;
+
+$colors: (
+  primary: $primary,
+  secondary: $secondary,
+  warning: $warning,
+  danger: $danger,
+  light: $light,
+  dark: $dark,
+  white: $white,
+  black: $black,
+);
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$sizes: (
+  0: 0,
+  1: 0.25 * $spacer,
+  2: 0.5 * $spacer,
+  3: 1 * $spacer,
+  4: 1.5 * $spacer,
+  5: 3 * $spacer,
+  6: 5 * $spacer,
+  7: 7 * $spacer,
+);
+
+$sides: (
+  m: "margin",
+  p: "padding",
+);
+
+@mixin create-spacing($br-name) {
+}
+
+@each $br-name, $br-value in $breakpoints {
+
+  $modifier: '#{$br-name}-';
+  @if $br-name == xs {
+    $modifier: "";
+  } 
+
+  @media (min-width: $br-value) {
+    @each $name, $size in $sizes {
+      @each $x, $prop in $sides {
+        .#{$x}-#{$modifier}#{$name} {
+          #{$prop}: $size;
+        }
+
+        .#{$x}x-#{$modifier}#{$name} {
+          #{$prop}-right: $size;
+          #{$prop}-left: $size;
+        }
+
+        .#{$x}y-#{$modifier}#{$name} {
+          #{$prop}-top: $size;
+          #{$prop}-bottom: $size;
+        }
+
+        .#{$x}t-#{$modifier}#{$name} {
+          #{$prop}-top: $size;
+        }
+
+        .#{$x}r-#{$modifier}#{$name} {
+          #{$prop}-right: $size;
+        }
+
+        .#{$x}b-#{$modifier}#{$name} {
+          #{$prop}-bottom: $size;
+        }
+
+        .#{$x}l-#{$modifier}#{$name} {
+          #{$prop}-left: $size;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  padding: 10px;
+  border-radius: 4px;
+
+  @each $color-name, $color in $colors {
+    &--#{$color-name} {
+      background: $color;
+      border: 1px solid darken($color, 20);
+      &:hover {
+        background: lighten($color, 5);
+      }
+    }
+  }
+}

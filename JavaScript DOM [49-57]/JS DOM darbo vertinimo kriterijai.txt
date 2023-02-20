@@ -1,0 +1,21 @@
+1. Tvarkinga repozitorija su .gitignore, package.json ir readme.md failais [1]
+2. Išskaidytas kodas [2]
+  * ApiService - daromos užklausos [0.5]
+  * components/ - aprašomas atvaizdavimas [1]
+  * main.js - aprašomas ApiService ir komponentų apjungimas [0.5] 
+3. ApiService aprašytos užklausos perpanaudojant serverio adresą ir bendrus užklausų nustatymus [1]
+4. Vieninga komponentų (components) struktūra [1]
+  * taip pat vadinama savybė, kurioje saugomas komponento HTML elementas [0.5]
+  * vienodu principu priimami konstruktoriaus parametrai (objektu, jį destruktūrizuojant) [0.5]
+5. Veikiantys CRUD veiksmai [5]
+  * Atvaizdavimas [1]
+  * Sukūrimas [1]
+  * Ištrynimas [1]
+  * Atnaujinimas [2]
+
+Pateikimas:
+  * Atsiųsti nuorodą į savo PUBLIC repozitoriją
+  * atsiųsti gif'ą, pademonstruojant VISUS veikiančius CRUD veiksmus (-2)
+    * viena iš daugelio gif programų: https://www.screentogif.com/
+
+Nepateikus gif'o. -2 balai.

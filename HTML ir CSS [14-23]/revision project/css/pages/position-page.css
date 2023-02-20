@@ -1,0 +1,136 @@
+.example-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  background-color: #f1f1f1;
+  box-shadow: 0 1px 3px #00000011;
+}
+
+.fixed-height-scrollable {
+  height: 400px;
+  overflow: auto;
+}
+
+.square {
+  display: inline-grid;
+  place-items: center;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
+
+/* Grid task alternative */
+.grid-task-6-with-position-container {
+  display: grid;
+  grid-template-columns: auto;
+  background-color: rgb(230, 230, 230);
+  padding: 50px 0;
+  gap: 20px;
+}
+
+.card--alternative {
+  position: relative;
+  justify-self: center;
+  width: 350px;
+  height: 350px
+}
+
+.card--alternative__image,
+.card--alternative__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.card--alternative__image {
+  z-index: 0;
+}
+
+.card--alternative__content {
+  padding: 1.5em;
+  background-color: #fffc;
+  font-size: 1.25rem;
+  box-shadow: 0 5px 10px #0005;
+  z-index: 1;
+}
+
+@media screen and (min-width: 700px) {
+  .grid-task-6-with-position-container {
+    grid-template-columns: auto auto;
+    gap: 95px 2px;
+    padding: 30px 0 70px;
+  }
+
+  .card--alternative {
+    width: 260px;
+    height: 260px;
+  }
+
+  .card--alternative:nth-of-type(2n - 1) {
+    justify-self: right;
+  }
+
+  .card--alternative:nth-of-type(2n) {
+    justify-self: left;
+  }
+
+  .card--alternative__content {
+    padding: 1.1em;
+    font-size: 1rem;
+    top: 40px;
+  }
+
+  .card--alternative__content--left {
+    left: initial;
+    right: 40px;
+  }
+
+  .card--alternative__content--right {
+    left: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .grid-task-6-with-position-container {
+    grid-template-columns: auto auto;
+    gap: 120px 2px;
+    padding: 30px 0 105px;
+  }
+
+  .card--alternative {
+    width: 300px;
+    height: 300px;
+  }
+
+  .card--alternative__content {
+    padding: 1.25em;
+    font-size: 1.1rem;
+    top: 75px;
+  }
+
+  .card--alternative__content--left {
+    right: 75px;
+  }
+
+  .card--alternative__content--right {
+    left: 75px;
+  }
+}

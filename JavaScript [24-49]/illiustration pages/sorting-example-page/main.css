@@ -1,0 +1,31 @@
+.container {
+  width: 900px;
+  margin: 2rem auto;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 1rem 0;
+}
+
+.input-group>select,
+.input-group>input,
+.input-group>textarea {
+  width: 200px;
+}
+
+.numbers-container {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.number-cell {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 1px 2px 1px #0005;
+}

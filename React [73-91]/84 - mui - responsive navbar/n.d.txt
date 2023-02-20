@@ -1,0 +1,23 @@
+1. Atkartoti pamokos darbą pažingsniui [0.1]
+  * Sukurti temą ir panaudoti ją apgaubiant aplikacija su ThemeProvider
+  * Sukurti bendruose duomenyse "src\components\partials\navbar\navbar-data.ts" saugomą lūžio tašką
+  * Panaudoti lūžio tašką, kad:
+    * iki lūžio taško matoma meniu ikona dešinėje navbar'o
+    * už lūžio taško matomos nuorodos kairėje navbaro
+  * globalioje temoje, nustatyti, kad AppBar komponento matomumas būtų didesnis nei Drawer'io
+  * Navbar'e sukurti state kintamajį, kurį naudosite drawer'io atidarymui valdyti
+  * Drawer'io viduje panaudokite tuščią Toolbar komponentą, kad atpirkti navbar'o užimama turinį
+
+  * Padaryti Navbar'ą fixed, ir panaudoti Tollbar komponentą NavbarLayout, kad kompensuoti turinio dalį
+  * Atvaizduoti Nuorodas išskleidžiamame meniu
+  * Įgalinti išskleidžiamo menu paslepimą keičiantis ekrano dydžiui
+  * Sukurti NavbarMobileMenu komponentą, kuriame matytūsi aktyvi nuoroda
+  * Išskaidyti Navbar'o turinį į 3 komponentus:
+    * NavbarDesktopMenu
+    * NavbarMobileMenu
+    * NavbarToggler
+
+2. Atskiruose puslapiuose išsaugoti video turinį ir įdėti į navigavijos juostą [0.1]
+  https://www.youtube.com/watch?v=BHEPVdfBAqE&list=PLC3y8-rFHvwh-K9mDlrrcDywl7CeVL2rO&ab_channel=Codevolution
+  11-20
+

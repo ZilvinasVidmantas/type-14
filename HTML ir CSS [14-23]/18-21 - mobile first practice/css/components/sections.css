@@ -1,0 +1,10 @@
+.section {
+  padding: 5rem 0;
+}
+
+.section__heading {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 3rem;
+}

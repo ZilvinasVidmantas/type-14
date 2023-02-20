@@ -1,0 +1,8 @@
+Array.prototype
+  .filter
+  .map
+  .forEach
+  .reduce
+  .some
+  .every
+Pavyzdžiai su gilios struktūros objektais 

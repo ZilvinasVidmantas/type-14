@@ -1,0 +1,28 @@
+1.
+  Sukurkite savo puslapiui Navigavimo juostą, kurioje būtų pasiekiami
+  2 jūsų puslapiai.
+
+2.
+  Nuorodoms naudokite NavLink elementą iš react-router-dom bibliotekaos, kad:
+    * įgalinti front-end routing'ą
+    * įgalinti active klasės pridėjimą pagal URL
+
+3.
+   Stilizuokite Navbar'ą ir NavbarLink elementus jums pirimtinu būdu
+
+4. Sukurkite navigation/routes.ts faile visus savo puslapio maršrutus
+
+5. Navigacijos juostos nuorodų duomenis išsaugokite masyve ir atvaizduokite generuojant
+  Nuorodų komponentus naudojant Array.prototype.map metodą
+
+6. Sukurkite visų puslapių nuorodos elementus navigacijos juostoje
+
+7. Sukurkite Išdėstymo komponentą <Layout> naudojant <Outlet /> iš react-router-dom bibliotekaos
+
+8. Pritaikykite [7.] punktu sukurtą išdėstymo komponentą visiems savo puslapiam, tai aprašant
+  src/navigation/router.tsx faile
+
+9. Padarykite savo duomenų atvaizdavimo puslapį responsive
+
+Papildomai ------------------------  + 0.1    ---------------------------------
+10. Padarykite Navbar responsive ant mažesnių eskrano dydžių

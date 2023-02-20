@@ -1,0 +1,23 @@
+$black: #000;
+$muted: #666;
+$shade: #eee;
+$white: #fff;
+
+$primary: #c6a900;
+$secondary: #00cd56;
+$dark: #005b67;
+$dark-hover: darken($dark, 3);
+
+$colors: (
+  primary: $primary,
+  secondary: $secondary,
+  dark: $dark,
+);
+
+$navbar-height: 60px;
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1440px;

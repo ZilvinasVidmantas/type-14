@@ -1,0 +1,48 @@
+.page-entering-animation-examples {
+  display: flex;
+  gap: 30;
+}
+
+.page-entering-animation-examples > * {
+  flex-grow: 1;
+}
+
+.anim-fade-in {
+  animation: fade-in 1s forwards;
+  opacity: 0;
+}
+
+.anim-slide-up {
+  position: relative;
+  animation: slide-up 1s forwards;
+  top: 30px;
+  opacity: 0;
+}
+
+.delay-1 {
+  animation-delay: 0.5s;
+}
+
+.delay-2 {
+  animation-delay: 1s;
+}
+
+.delay-3 {
+  animation-delay: 1.5s;
+}
+
+@keyframes fade-in {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    top: 30px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}

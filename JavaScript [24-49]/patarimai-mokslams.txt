@@ -1,0 +1,22 @@
+Studentui:
+  bendravimas su kolegomis, grupiniai darbai
+
+  spręsti daug mažų problemų
+
+  tarpinių rezultatų rašymas
+
+  daug įdirbio ir darbo - 50val per savaitę
+
+  kodo rašymas NEKOPIJUOJANT ir analizuojant kiekvieną žodį/komandą.
+
+  išmokti terminus, kas yra kas.
+
+  Griežtas poilsis. Išsiskirti dieną, kurią nieko nedarysite.
+
+_____________________________________________________________________
+Dėstytojui:
+  paaiškinti uždavinio salygos detaliau
+
+  pateikti atsakymus, pagal kuriuos galima būtų pasitikrinti
+
+  terminų žodynas

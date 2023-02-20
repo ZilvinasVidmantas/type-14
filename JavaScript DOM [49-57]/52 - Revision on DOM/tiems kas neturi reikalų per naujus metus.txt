@@ -1,0 +1,5 @@
+Pežiūrėti playlist'ą apie Promises ir async funkcijas:
+  * https://www.youtube.com/watch?v=QO4NXhWo_NM&list=PLRqwX-V7Uu6bKLPQvPRNNE65kBL62mVfx&ab_channel=TheCodingTrain
+  
+Peržiūrėti playlist'ą apie JSON serverį
+  * https://www.youtube.com/watch?v=_1kNqAybxW0&list=PLC3y8-rFHvwhc9YZIdqNL5sWeTCGxF4ya&ab_channel=Codevolution

@@ -1,0 +1,12 @@
+.link {
+  color: $black;
+  height: 50px;
+  &.child {
+    padding-left: 3rem;
+  }
+  &.active {
+    color: $dark;
+    font-weight: 600;
+    box-shadow: inset 12px 0 0 $dark;
+  }
+}

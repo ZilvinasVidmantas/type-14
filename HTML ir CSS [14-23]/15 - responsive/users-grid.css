@@ -1,0 +1,54 @@
+.user-section {
+  background: #eee;
+}
+
+.user-grid {
+  padding: 3rem 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.user-card {
+  width: 300px;
+  box-shadow: 0 4px 6px 2px #0005;
+  background-color: #fff;
+}
+
+.user-card__body {
+  text-align: center;
+  padding: 0.75rem
+}
+
+.user-card__name {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.user-card__title {
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 600px) {
+  .user-grid {
+    width: 580px;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    gap: 20px;
+  }
+
+  .user-card {
+    width: 100%;
+  }
+  .user-card__img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .user-grid {
+    width: 880px;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

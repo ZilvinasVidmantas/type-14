@@ -1,0 +1,35 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-black-tranparent);
+  z-index: 5;
+  height: var(--navbar-height);
+}
+
+.navbar__link {
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--navbar-height);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1.1rem;
+  color: var(--color-white);
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar__link.active {
+  color: var(--color-primary-light);
+  box-shadow: inset 0 -3px 0 var(--color-primary-light);
+}
+
+.navbar__link:hover {
+  color: var(--color-primary-light);
+}
+
+.pt-navbar{
+  padding-top: var(--navbar-height);
+}

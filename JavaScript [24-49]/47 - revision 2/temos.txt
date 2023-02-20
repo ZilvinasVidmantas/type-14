@@ -1,0 +1,7 @@
+Array.prototype.reduce
+Pavyzdžiai su gilios struktūros objektais
+Destruktūrizacija
+  * PERSKAITYKIT FAILĄ!!!
+  * funkcijos rest parametrai: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
+  * likę masyvo elementai ir likę objekto elementai: https://v8.dev/features/object-rest-spread
+  * atnaujinimas naudojant spread operatorių: https://stackoverflow.com/questions/49491393/using-spread-operator-to-update-an-object-value

@@ -1,0 +1,103 @@
+html {
+  font-family: var(--font-general);
+  /* font-size: 16px; */
+}
+
+input, textarea, select, option {
+  font-family: var(--font-ui);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-decoration);
+}
+
+p {
+  line-height: 1.5em;
+}
+
+.h1 {
+  font-size: var(--h1);
+}
+
+.h2 {
+  font-size: var(--h2);
+}
+
+.h3 {
+  font-size: var(--h3);
+}
+
+.h4 {
+  font-size: var(--h4);
+}
+
+.h5 {
+  font-size: var(--h5);
+}
+
+.h6 {
+  font-size: var(--h6);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+.text-black {
+  color: var(--color-black);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.text-overflow--1 {
+  -webkit-line-clamp: 1;
+}
+
+.text-overflow--2 {
+  -webkit-line-clamp: 2;
+}
+
+.text-overflow--3 {
+  -webkit-line-clamp: 3;
+}
+
+.text-overflow--4 {
+  -webkit-line-clamp: 4;
+}
+
+.text-overflow--5 {
+  -webkit-line-clamp: 5;
+}
+
+.text-overflow--6 {
+  -webkit-line-clamp: 6;
+}
+
+.text-overflow--7 {
+  -webkit-line-clamp: 7;
+}
+
+.text-overflow--8 {
+  -webkit-line-clamp: 8;
+}

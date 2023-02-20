@@ -1,0 +1,33 @@
+$black: #000;
+$muted: #666;
+$shade: #eee;
+$white: #fff;
+$shadow-color: #0005;
+
+$striped: #0000000f;
+$action: #0003;
+$action-hover: #0005;
+
+$primary: #c6a900;
+$secondary: #00cd56;
+$dark: #005b67;
+$dark-hover: darken($dark, 3);
+
+$colors: (
+  primary: $primary,
+  secondary: $secondary,
+  dark: $dark,
+);
+
+$shadow: 0 2px 3px 1px $shadow-color;
+
+$navbar-height: 60px;
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1440px;
+
+$z-index-navbar: 500;
+$navbar-expand-breakpoint: $lg;

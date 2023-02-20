@@ -1,0 +1,7 @@
+Ranka, ant popieriaus, su skirtingom spalvom nupieškite rūšiavimo algoritmo schemą.
+Pavydį rasite faile 'n.d.js'.
+
+Nupieštą iliustraciją nuskanuokite arba nufotografuokite su telefonu.
+Nupieštą iliustraciją reikia atsiųsti iki pamokos (su dėstytoju) pradžios.
+
+Nuotrauką reikia atsiųsti į 'skelbimą'(post)  "Namų darbas - iliustracija" General kanale

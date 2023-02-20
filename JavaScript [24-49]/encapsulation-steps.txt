@@ -1,0 +1,6 @@
+Norint inkapsuliuoti savybę:
+  1. padaryti savybę privačią
+  2. aprašyti get'erio logiką
+    2.1 grąžinti privačią reikšmę.
+  3. aprašyti set'etio logiką
+    3.1 tikrinti naują reikšmę, jie yra nekorektiškumų atspausdinti klaidą ir nutraukti funkciją

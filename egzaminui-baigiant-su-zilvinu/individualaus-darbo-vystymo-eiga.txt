@@ -1,0 +1,320 @@
+-------------------------------------------------- [1] -------------------------------------------------
+                                              Puslapio idėja
+
+* Kaip sprendžia prendžia realią problemą arba uždirba pinigus
+* apimtis, 1-2 puslapiai, su 2-4 sekcijomis
+
+-------------------------------------------------- [2] -------------------------------------------------
+                                  Puslapių skaičius, struktūra, sekcijos
+
+* Kaip atrodys?
+* Ką galima paspaust?
+* Ar bus galima prisijungti?
+  * Ką matys/galės paspausti/naudoti prisijungęs vartotojas?
+  * ką matys/galės paspausti/naudoti administratorius?
+  * ką matys/galės paspausti/naudoti neprisijungęs?
+* Mobili versija?
+  * Kaip ji atrodys?
+  * Kuom ji skirsis nuo darbalaukio versijos?
+
+* Nusibraižyti ant popieriaus/ar su programa apytikslį puslapio vaizdą
+
+-------------------------------------------------- [3] -------------------------------------------------
+                              Duomenų bazės schema ir ryšiai tarp esybių
+
+* Išsivardinti visas esybes, su strukrūtomos, kurios bus naudojamos puslapyje
+* Sudaryti duomenų bazės schemą ir ryšius tarp jų
+  * one-to-one 1:1
+  * one-to-many 1:N
+  * many-to-many M:M
+
+-------------------------------------------------- [4] -------------------------------------------------
+                        Sukurti React aplikaciją naudojant react-create-app biblioteką
+* instaliavimas:
+  * npm i -g create-react-app
+  * Naudojant šią biblioteką galite sukurti pradinį savo puspalį pagal aplikacijos šabloną.
+    Standartiškai (be parametrų) sukuriama vanilaJS React.js aplikacija su minimaliomis bibliotekomis.
+    Visgi galima naudoti --template nustatymus, jeigu iškart norite sukurti aplikaciją kuri naudoja papildomas bibliotekas.
+    Šablonų yra daug ir atsiranda vis naujų. Po šių kursų rekomenduojama jų naršyti čia, kad nereikėtų visko įrašinėti patiems:
+      https://www.npmjs.com/search?q=cra-template-*
+    pvz.:
+      $create-react-app app-pavadinimas --template typescript - iškart sukuria aplikaciją naudojant typescript
+      $create-react-app app-pavadinimas --template redux-typescript - iškart sukuria aplikaciją naudojant typescript Ir reduk toolkit
+  * Visgi mokymosi tikslais STIPRIAI NEREKOMENDUOJAMA kurti aplikacijos su šablonais, nes praleidžiate progą įsigilinti kaip viskas veikia
+    Rokomenduojama visas bibliotekas parsisiųsti ir sukonfiguruoti savarankiškai, kad suprastumėte kas ką daro ir kas už ką atsakingas:
+    $create-reat-app app-pavadinimas
+  * Nauja React aplikacija yra sukuriama atskirame aplanke, todėl reikia komandinės eilutės vietą pakeisti į sukurto aplanko vietą
+    Tai galite padaryti pakeitę komandinės eilutės vietą:
+      $cd app-pavadinimas
+    arba atsidarė sukurtą app-pavadinimas/ aplanką su VSCode. Taip komandinės eilutės pagrindinis kelias bus projekto kelias.
+
+-------------------------------------------------- [5] -------------------------------------------------
+                            Bibliotekų parsiuntimas ir pasiruošimas darbui
+
+* Bibliotekos instaliuojamos tokiu būdu:
+  Produkciam kodui(react-router-dom, redux, immer, ...):
+    $npm i bibliotekos-pavadinimas1 bibliotekos-pavadinimas2 bibliotekos-pavadinimas3
+  Vystymui(eslint, typescript, @types/react-redux, ...):
+    $npm i -D bibliotekos-pavadinimas1 bibliotekos-pavadinimas2 bibliotekos-pavadinimas3
+* Baigiamojo darbo FE aplikacijos daliai jums bus reikalingos tokios PAGRINDINĖS bibliotekos:
+  * eslint - Kodo kokybė ir sistemingumą užtikrinanti biblioteka
+    * "eslint-config-airbnb" - standartizuotas Airbnb kompanijos taisyklių rinkinys
+    * "eslint-plugin-import" - papildomų nustatymų konfigūravimui 
+    * "eslint-plugin-jsx-a11y" - jsx nustatymų konfigūravimui 
+    * "eslint-plugin-react" - react nustatymų konfigūravimui 
+    * "eslint-plugin-react-hooks" - react hooks konfigūravimui
+    * ir t.t.
+
+  * Material UI - Komponentų biblioteka leidžianti greičiau kurti turinį ir jį stilizuoti
+    * "@mui/material" - Pagrindinė komponenetų biblioteka
+    * "@emotion/react" - stiliaus objektų kūrimui naudojant JSX logiką reikalinga biblioteka
+    * "@emotion/styled" - styled ir sx atributo logikai reikalinga biblioteka
+    * "@mui/icons-material" - Material UI ikonos
+
+  * "axios" - pagalbinė biblioteka supaprastinti http/https užklausomų aprašymui
+
+  * Redux - Globalios aplikacijos būsenos valdymui:
+    * "react-redux" - React.js ir Redux bibliotekos apjungimui
+    * "redux-devtools-extension" - vystymo metu naudinga biblioteka, kad matyti pakitimus
+    Naudojant primityvią versiją:
+      * "redux" - standartinės Redux funkcijos
+      * "immer" - paprastesniam globalios būsenos(state) keitimui naudojant reducer'ius
+    Naudojant naują "toolkit" versiją
+      * "@reduxjs/toolkit"
+
+  * "react-router-dom" - Kliento pusės navigacijai 
+
+  * Formik - validacijai
+    * "formik" - validacijos apdorojimas anudojant React.js aplikacijas
+    * "yup" - validacijos schemų sudarymas
+  
+  * "typescript" - biblioteka typescript sintaksės sugriežtinimui
+    * !!! naudojant TypeScript, reikia papildomai parsiųsti visų kitų bibliotekų tipus, pvz.:
+      * "@types/react"
+      * "@types/react-redux"
+      * ir t.t.
+
+  * Galite laisvai naudoti bet kokias bibliotekas, kurios jums palengvina darbą ar vystymo procesus, pvz.:
+    * "uuid" - id generavimas
+    * "react-scroll" - slinkimui į tam tikrą sekciją
+    * ir t.t.
+
+-------------------------------------------------- [6] -------------------------------------------------
+                                            Puslapio navigacija
+
+* Pagal [2] dalyje sudarytą puslapio idėją sukurtite puslapio navigaciją app.jsx faile
+  * Visiems puslapiams(ir autorizuotiems) sukurkite puslapius(su puslapio pavadinimu) aplanke "/pages" ir susiekite juos su <Route /> komponentais
+  * Surašykite visus routus, ir sugrupuokite juos pagal <PAVADINIMASLayout /> komponentus
+  * Sukurkite Navigacijos meniu (arba kelis, priklausomai nuo projekto), kuriame būtų naviguojama į atitinkamus puslapius
+  * Sukurkite nerasto puslapio <Route />
+* Sukurkite "routing/" aplanką sukurkite Navigacijai reikalingas funkcijas bei duomenis
+  * faile "routing/types.js" sukurkite route'ų tipus, pagal tai kokie yra reikalingi jūsų aplikacijai
+  * faile "routing/routes.js" sukurkite route'ų objektus su atitinkamais tipais iš failo "routing/types.js"
+  * Navigaciojos meniu (Navbar'e) ir app.js failuose pakeiskite į'hard-code'intas route'ų nuorodas - tipais, kurie yra išsaugoti "routing/routes.js"
+  * faile "routing/index.js" sukurkite 
+
+Pabaigią šią užduotį, turite galėti nueiti į bet kokį puslapį kurį planuojate turėti
+
+-------------------------------------------------- [7] -------------------------------------------------
+                                      Turinio kūrimas ir stilizavimas
+
+Tai daugiausiai laiko užimanti projekto vystymo dalis, bet ją atlikus, nereikės rūpintis atvaizdavimu atliekant inžinerinius darbus.
+
+* Sukurkite <CssBaseline> visai aplikacijai - https://mui.com/components/css-baseline/
+* Sukurkite <ThemeProvider> visai aplikacijai - https://mui.com/customization/theming/
+  * temos konfigūracija turi būti išsaugota faile "styles/theme.js" ir panaudota <ThemeProvider> kontekste
+* Pradedant mažiausiu ekrano dydžiu, sukurkite visiems puslapiams atvaizdavimą visiems ekrano dydžiams
+  * Kuriant turinį naudokite stiliaus temos savybes, kurias gaunate iš  <ThemeProvider>, 
+    tokiu būdų vėliau galėsite lengvai pakoreguoti stilius keičiant temos kintamuosius.
+    Jeigu temoje esančių kintamųjų neužtenka, arba jie netinka, keiskite "styles/theme.js" faile esančios temos nustatymus.
+  * Patogiausia stilius keisti naudojant:
+    * MUI komponentų sx prop'są: https://mui.com/system/the-sx-prop/
+    * styled funkciją: https://mui.com/system/styled/
+      * Naudodami styled funkciją įsitikinkite, jog naudojate ją iš "@mui/material" paketo, o ne iš "@mui/core".
+        Naudojant styled funkciją iš "@mui/core" paketo nepasisavinsite temos pakitimų aprašytų faile "styles/theme.js".
+
+-------------------------------------------------- [8] -------------------------------------------------
+                                          Kliento pusės struktūros
+
+* Kiento puslapio vietas, kurose bus naudojami duomenys iš serverio pakeiskite duomenimis aprašytais virš komponenetų
+* Surašę dirbtinius duomenis, pagalvokite kurie iš jų bus naudojami tarp skirtingų jūsų aplikacijos puslapių
+  * Duomenis kurie naudojami tarp skirtingų aplikacijos puslapių perkelkite į Globalią saugyklą (global store),
+    Tam galite naudoti Redux, Reduk Toolkit arba React Kontekstą. Panaudokite Globalio saugyklos duomenis puslapiuose.
+
+Užkrovus duomenis iš globalios saugyklos reikia įgalinti veiksmų atlikimą. Priežingai negu mokantis,
+duomenys visada yra keičiami serverio pusėje, o kliento pusėje tik atvaizduojama jų reprezentacija.
+Pirmiausiai reikėtų suderinti pilną duomenų užkrovimą iš serverio aplikacijos. Todėl šį funkcionalumą atidėsime vėliasniam laikui.
+
+* Peržiūrėję globalios saugyklos duomenis, ir puslapiuose naudojamus duomenis, sudarykite reikalingų duomenų struktūras.
+type User {
+  id: string,
+  name: string,
+  surname: string,
+  email: string,
+  mobile: number,
+  ... etc.
+};
+
+type Car {
+  id: string,
+  brand: string,
+  model: string,
+  year: number,
+  user: User,
+  ...etc.
+};
+
+...etc.
+
+* Susirašykite kokiais serverio adresais pasieksite duomenis, pavyzdžiui:
++----------------------------------------------------------------------------------------------------+
+| Method | Address           | auth        | Success response structure | Failure response structure |
++----------------------------------------------------------------------------------------------------+
+| GET    | /api/cars         | none        | {                          | {                          |
+|        |                   |             |    data: Car[],            |   message: string          |
+|        |                   |             |    total: number,          | }                          |
+|        |                   |             | }                          |                            |
++----------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------+
+| GET    | /api/users        | ADMIN       | {                          | {                          |
+|        |                   |             |    data: User[],           |   message: string          |
+|        |                   |             |    total: number,          | }                          |
+|        |                   |             | }                          |                            |
++----------------------------------------------------------------------------------------------------+ 
+...etc.
+
+* Sukurkite failą "/services/api-service.js" ir aprašykite funkcijas, kurios parsiųstų šiuos duomenis iš (dar nesukurto) serverio
+
+-------------------------------------------------- [9] -------------------------------------------------
+                              Serverio pusės autentifikacija ir autorizacija
+
+Serverio tikslas - tiekti duomenis kliento pusės aplikacijai.
+Šiame kurse kuriamos aplikacijos tipas yra - one-page-application.
+One-page-application - reiškia, kad pirminis duomenų užkrovimas vyksta vieną kartą, kurio metu atsiunčiamas
+praktiškai tuščias HTML failas, su JavaScript kodu, kuris užpildo visą aplikacijos turinį. Visi duomenys
+yra parsiunčiami darant XML/XHR dalines užklausas, kurios parsiunčia tik duomenis, neperkraudamos puslapio,
+o jį atnaujina su kliento pusėje esančiu JavaScript programiniu kodu.
+
+Autentifikacija - atpažinimas, identifikavimas
+Autorizacija - privilegijos gauti duomenims, ar atlikti veiksmams
+
+Dalis duomenų, kuriuos teikia serveris, dažnai vadinamas API (application programming interface), turi
+būt pasiekiami tik puslapio vartotojams, kurie turi priegą, t.y. :
+Yra autentifikuoti, ir turi autorizacijos lygmenį kuris suteikia prieigą prie duomenų.
+Praktikoje tai daroma tokiu būdų:
+  * Serverio pusėje sukuriame duomenų bazę, kurioje saugome vartotojų duomenis ir prisijungimus, bei autorizacijos roles.
+    * Duomenų bazę užpildome duomenimis, kurie įgalins prisijungimus.
+    * Priklausomai nuo pasiriktos Duomenų bazės, reikės tai daryti dvejopai
+      * Realiacinėms DB(MySQL, OracleSQL, MSSQL ir t.t.) - kurti duomenų modelius, ir naudojantis jomis kurti migracijas
+      !!! ŠIO KURSO METU NAUDOSIME - MongoDB
+      * Nereliacinėms DB(MongoDB) - kurti duomenų modelius, ir susieti juo ryšiais serverio pusės aplikacijoje
+  * Sulaukus prisijungimo užklausos, identifikuojame vartotoją, kuris bandė prisijungti, ir esant sėkmingui prisijungimui
+    siunčiame užšifruotus duomenis, su vėliau atšifravimui reikalinga informacija - token'ą
+  * Visas sekančias užklausas vartotojas turi daryti atsiųsdamas autentifikacijos token'ą, kad serveris
+    galėtų patikrinti, ar vartotojas daręs užklausą turi autorizacijos teises gauti duomenis
+  
+Autentifikacijos ir autorizacijos logikos sukūrimas:
+  * Prijungiame prie serverio duomenų bazę, kad būtų galima pasiekti duomenis ir jais manipuliuoti.
+  * Sukuriame autentifikacijos užklausas .../login ir .../register, kurių sekmės atveju išsiunčiame kliento pusės
+    aplikacijai užšifruotą token'ą, kurį tikėsimės gauti su sekančiomis vartotojo užklausomis.
+  * Sukuriamia autentifikacijos-autorizacijos funkcijas (middlewares) kurios tikrintų token'ą
+    * Šios funkcijijos turi surasti token'ą
+    * Atšifruoti token'e esančius duomenis
+    * Patikrinti ar token'e esantys duomenys atitinka autorizaciją (patikrinti rolę), jei reikia
+    * Jeigu šie veiksmai pavyko, leidžiame užklausai praeiti apsaugą ir vykdyti norimą užklausą, bei suteikti
+      kliento pusei norimus užklausos rezultatus
+    * Jeigu funkcijoje yra klaidų, siunčiame į kliento pusės aplikaciją klaidos pranešimą
+
+-------------------------------------------------- [10] -------------------------------------------------
+                                Kliento pusės autentifikacija ir autorizacija
+
+Pirmiausia turime autentifikuotis ir gauti token'ą. Dažniausiai tai daroma registracijos arba prisijungimo metu.
+Sėkmingai atlikus autentifikacijos duomenis, turime gauti:
+  * duomenis apie prisijungusį vartotoją
+  * autentifikacijos token'ą
+Gavus šiuos duomenis, turime juos panaudoti, kad suteikti puslapiui papildomą funkcionalumą.
+Jeigu jūsų puslapio logikoje yra keli autorizacijos lygiai(rolės), privalote tai užtikrinti.
+
+PIRMIAUSIAI gavę sėkmingos autentifikacijos duomenis:
+  * Pridedame ApiService objektui atutentifikacijos token'ą į užklausų parametrus (headers)
+    * Nepamirškite, kad atsijungus reikia pašalinti autentifikacijos token'ą iš užklausų parametrų (headers)
+  * Išsaugome autentifikacijos metu gautus duomenis į globalią būseną (Redux || Context)
+  * Išsaugome autentifikacijos metu gautus duomenis į naršyklės atmintį (SessionStorage || LocalStorage)
+  * Įgaliname funkcionalumą, jog globalioje būsenoje esantys duomenys būtų visuomet sinchronizuojami
+    su duomenimis kurie yra naršyklės atmintyje (SessionStorage || LocalStorage)
+
+Atlikus viršuje esančioje pastraipoje esančius veiksmus, turime įgalinti autorizaciją(matomą turinį/funkcionalumą pagal rolę):
+  * Pagal serverio pusėje esančias roles sukuriame puslapio navigacijos apsaugas
+  * Pagal roles slepiame nuorodas ir puslapius
+
+Po šių veiksmų atlikimo, puslapis turi būti pilnai autorizuotas, pagal prisijungusio vartotojo duomenis.
+
+-------------------------------------------------- [11] -------------------------------------------------
+                                     Serverio pusės modelių kūrimas
+
+Pilnai sukūrus puslapio vaizdą ir įgalinus autentifikacijos ir autorizacijos procesus, reikėtų dar kartą peržvelgti
+savo duomenų struktūras kurtas [2] punktu ir Kliento pusės struktūras [8] punktu.
+
+Greitai pastebėsite, kad jos skiriasi. Taip ir turi būti.
+Duomenų bazėje saugomos struktūros turi būti pavienės, ir ryšiai su kitomis struktūromis turi būti sudaromi
+papildomų struktūrų pagalba. Kliento pusėje, mums reikia jau apjungtų-susietų struktūrų.
+
+Šį iššūkį sprendžiame tokia tvarka:
+  * Peržvelgiame savo duomenis dar kartą, ir sudarome galutinę Duomenų bazės schemą su ryšiais.
+  * Sukuriame pavienius duomenų Modelius serverio pusėje.
+  * Įgaliname ryšius tarp Modelių, pagal DB schemą.
+  * Pagal [8] punkto užklausų lentelę sukuriame užklausas ir jose apjungiame Modelius, bei grąžiname duomenis.
+  * Uždedame užklausoms [9] punktu kurtas autorizacijos apsaugas 
+
+-------------------------------------------------- [12] -------------------------------------------------
+                                    Serverio pusės duomenų manipuliacija
+
+Serveris turi ne tik tiekti duomenis, bet ir įgalinti jų kūrimą, atnaujinimą ir trynimą.
+Tvarkingai šiems veiksmams taikome tokius HTTP užklausų tipus:
+
+GET - duomenims gauti
+POST - duomenims kurti
+PUT - duomenims sukeisti
+PATCH - duomenims atnaujinti
+DELETE - duomenims trinti
+
+Peržvelkite savo Kliento pusės aplikaciją, ir sudarykite lentelę, kokius duomenis, ir kas gali keisti.
++--------------------------------------------------------------------------------------------------------------------------+
+| Method | Address           | auth        | body                 |Success response structure | Failure response structure | 
++--------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+| GET    | /api/users/:id    | ADMIN       | userID               | User                      | {                          |
+|        |                   |             |                      |                           |   message: string          |
+|        |                   |             |                      |                           | }                          |
+|        |                   |             |                      |                           |                            |
++--------------------------------------------------------------------------------------------------------------------------+ 
++--------------------------------------------------------------------------------------------------------------------------+
+| PATCH  | /api/users/:id    | ADMIN       | partialUser          | User                      | {                          |
+|        |                   |             |                      |                           |   message: string          |
+|        |                   |             |                      |                           | }                          |
+|        |                   |             |                      |                           |                            |
++--------------------------------------------------------------------------------------------------------------------------+ 
++--------------------------------------------------------------------------------------------------------------------------+
+| GET    | /api/profile      | ADMIN       | userId               | User                      | {                          |
+|        |                   | USER        |                      |                           |   message: string          |
+|        |                   |             |                      |                           | }                          |
+|        |                   |             |                      |                           |                            |
++--------------------------------------------------------------------------------------------------------------------------+ 
+...etc.
+Pagal šios lentelės duomenis turėtumėte suprasti, kad:
+  * Vartotojo duomenis, adresu '/api/users/:id', gali gauti, tik adminas
+  * Vartotojo duomenis, adresu '/api/users/:id', gali atnaujinti, tik adminas
+  * Vartotojo duomenis, adresu '/api/profile', gali gauti, vartotojas ir adminas papildomai perdavęs vartotojoId
+
+Tokių Pilnai sudarytų užklausų jūsų aplikacijoje turi būti apie 15-30
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+.courses-cards-container {
+  display: grid;
+  grid-template-columns: auto;
+  gap: var(--spacing-4);
+}
+
+@media screen and (min-width: 800px) {
+  .courses-cards-container {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .courses-cards-container {
+    grid-template-columns: auto auto auto;
+  }
+}

@@ -1,0 +1,26 @@
+.container {
+  display: block;
+  margin: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @media (min-width: $md) {
+    width: $md;
+  }
+
+  @media (min-width: $lg) {
+    width: $lg;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: $xl) {
+    width: $xl;
+  }
+
+  @media (min-width: $xxl) {
+    width: $xxl;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

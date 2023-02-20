@@ -1,0 +1,44 @@
+$perc: 0.9;
+
+.button {
+  cursor: pointer;
+  background: transparent;
+  letter-spacing: 0.07em;
+
+  &.contained {
+    box-shadow: 0 2px 4px 1px #0005;
+    @each $name, $color in $colors {
+      &.#{$name} {
+        color: contrastText($color);
+        background: linear-gradient(to bottom, $color, rgba($color, $perc));
+        &:hover {
+          background: linear-gradient(to top, $color, rgba($color, $perc));
+        }
+      }
+    }
+  }
+
+  &.outlined {
+    border: 2px solid transparent;
+    @each $name, $color in $colors {
+      &.#{$name} {
+        border-color: $color;
+        color: $color;
+        &:hover {
+          background: $color;
+          color: contrastText($color);
+        }
+      }
+    }
+  }
+
+  &.normal {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+
+  &.large {
+    padding: 1rem 1.5rem;
+    font-size: 1.3rem;
+  }
+}
