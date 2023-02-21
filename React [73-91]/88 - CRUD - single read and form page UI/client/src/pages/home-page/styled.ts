@@ -4,8 +4,7 @@ export const HousesGrid = styled('div')(({ theme }) => ({
   display: 'grid',
   gridTemplateColumns: 'repeat(1, 1fr)',
   gap: theme.spacing(2),
-  padding: theme.spacing(2),
-  maxWidth: theme.breakpoints.values.xl,
+  padding: theme.spacing(2, 0),
   margin: 'auto',
   [theme.breakpoints.up('sm')]: {
     gridTemplateColumns: 'repeat(2, 1fr)',

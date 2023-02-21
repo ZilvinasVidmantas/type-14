@@ -2,6 +2,7 @@ const singleHousePageRoot = '/house/';
 
 const routes = {
   HomePage: '/',
+  HouseFormPage: '/create-house',
   SingleHousePage: {
     path: `${singleHousePageRoot}:id`,
     createLink: (id: string | number) => `${singleHousePageRoot}${id}`,

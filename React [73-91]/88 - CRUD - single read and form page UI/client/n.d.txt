@@ -9,6 +9,11 @@ Pamokos darbas [0.1]
   * Vieno įrašo puslapyje užkraukite duomenis
   * Pateikite duomenis bet kokiu formatu matomame ekrane - gražiai atvaizduosite - darant namų darbus.
 
+  * Sukukite naują puslapį kurti vienam įrašui
+  * Aprašykite jo maršrutą
+  * Home page'e sukurkite mygtuką vedantį į naujai sukurtą formos puslapį
+  * Formos puslapyje sukurkite formą, pritaikytą jūsų įrašo duomenims
+
 Namų darbas [0.1]
   Padaryti Vieno įrašo atvaizdavimą ant visų ekrano dydžių.
   Nuotraukoms atvaizduoti panaudokite Swiper.js biblioteką.

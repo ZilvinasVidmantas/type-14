@@ -38,8 +38,8 @@ const HouseCard: React.FC<HouseCardProps> = ({
 
         <Button
           color="primary"
-          variant="contained"
-          sx={{ mt: 3 }}
+          variant="outlined"
+          sx={{ mt: 1 }}
           onClick={() => navigate(routes.SingleHousePage.createLink(id))}
         >
           View
