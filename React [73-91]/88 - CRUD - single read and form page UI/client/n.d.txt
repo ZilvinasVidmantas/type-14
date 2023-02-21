@@ -1,0 +1,28 @@
+Pamokos darbas [0.1]
+  1. Projekto pradžia
+    1. Susikurkite repozitoriją pavadinimu: react-crud ir pasiklonuokite ją
+    2. Pasikopijuokit 87 pamokos pradinį projektą ir įkelkite į repozitoriją
+    3. Įsirašykite savo duomenis į server/db.json ir server/db-backup.json failus
+      * Jeigu savo duomenų neturite, naudokite pavyzdinius ir po pamokos susikurkite savo 
+    4. Paviešinkite savo projektą repozitorijoje
+    5. Sukurkite PAGRINDIIAME REPOZITORIJOS APLANKE readme.md failą ir detaliai aprašykite
+      * Kokių programų reikia(su nuorodomis)
+      * Kaip psiruošti paleidimui (client ir server)
+      * Kaip pasileisti programą
+      * Nuoroda į repozitorijos kodo peržiūra (repozitorijos nuoroda su plėtiniu ***.dev***)
+    6. Pasidalinkite nuoroda MS Teams programos Assignment'e -> "React pagrindų atsiskaitymas"
+
+  2. Duomenų atvaizdavimas
+    1. Sukuriame ApiService, kuriame naudosime axios biblioteką daryti užklausoms
+      * Sukuriame axios instance
+      * Sukuriame savo įrašo tipą - modelį. Aplanke /models
+      * Aprašome metodą fetch<įrašo-pavadinimas-daugiskaita> ir įrašome į ApiService
+    
+    2. Pagrindiniame puslapyje (HomePage) naudodami ApiService parsisiunčiame
+    visus įrašus ir atvaizduojame juos 4 ekrano dydžiams
+      * Pakopijuokite savo ankstesnių darbų gridą'ą (jei neturite padarysite po pamokos, pradėkite dabar)
+      * Perrašykite visus stilius naudojant mui stilizavimo būdus:
+        * mažiau nei 4 css savybės -> naudokite "sx" prop'są
+        * daugiau nei 3 css savybės -> iškelkite komponentą į styled.ts failą ir stilizuokite naudodami mui styled funkciją
+
+      
