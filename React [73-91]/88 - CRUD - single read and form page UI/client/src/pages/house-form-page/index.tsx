@@ -16,7 +16,7 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 const HouseFormPage = () => (
   <Stack sx={{
-    py: { xs: 2, md: 6, xl: 10 },
+    py: { xs: 2, sm: 6, xl: 10 },
     px: 2,
     alignItems: 'center',
   }}
