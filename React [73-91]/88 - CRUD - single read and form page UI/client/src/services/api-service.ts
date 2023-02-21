@@ -15,8 +15,15 @@ const fetchHouses = async () => {
   return response.data;
 };
 
+const fetchHouse = async (id: string | number) => {
+  const response = await api.get<HouseModel>(`/houses/${id}`);
+
+  return response.data;
+};
+
 const ApiService = {
   fetchHouses,
+  fetchHouse,
 };
 
 export default ApiService;
