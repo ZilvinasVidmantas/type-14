@@ -44,7 +44,9 @@ const NavbarMobileMenu: React.FC<NavbarMobileMenuProps> = ({
       <Toolbar />
       <MenuList sx={{ p: 0 }}>
         {mainLinks.map(({ to, text }) => (
-          <NavbarMobileLink key={to} to={to} onClick={handleMainLinkClick}>{text}</NavbarMobileLink>
+          <NavbarMobileLink key={to} to={to} onClick={handleMainLinkClick}>
+            {text}
+          </NavbarMobileLink>
         ))}
         {linksGroups.map(({ title, links }) => (
           <NavbarMobileAccordion
