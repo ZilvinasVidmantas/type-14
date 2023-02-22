@@ -5,7 +5,7 @@ const RatingField = () => (
 
   <Box sx={{ alignSelf: 'flex-start' }}>
     <Typography component="legend">Rating</Typography>
-    <Rating />
+    <Rating name="rating" />
   </Box>
 );
 

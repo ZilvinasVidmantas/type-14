@@ -30,6 +30,7 @@ const ImagesField = () => {
         {imgFieldsIds.map((id) => (
           <TextField
             key={id}
+            name="images"
             label="Image"
             fullWidth
             variant="filled"
