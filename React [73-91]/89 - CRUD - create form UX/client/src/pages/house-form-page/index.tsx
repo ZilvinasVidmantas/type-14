@@ -3,7 +3,6 @@ import {
   Stack,
   Typography,
   TextField,
-  Paper,
   Button,
 } from '@mui/material';
 import HouseIcon from '@mui/icons-material/House';
