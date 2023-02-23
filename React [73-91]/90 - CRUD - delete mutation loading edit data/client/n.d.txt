@@ -1,19 +1,2 @@
 Pamokos darbas [0.1]
-  * pataisyti navigation/routes.tx tipus, jog RouteLink būti tik statinis tipas
-  * išskaidyti komponentais įrašo formos puslapį 
-  * Sukurti images field laukų pridėjimo/šalinimo logiką
-
-  * Reaguoti į formos submit'inimą
-    * Įvesties laukams uždėti name 
-    * Panaudoti FormData  prototipą ir React.useRef, kad nuskaityti duomenis
-    * Patikrinti duomenis
-    * Suformuoti duomenis
-    * Jei yra klaidų, apie jas pranešti
-    * patikrinimo ir suformavimo darbus iškelti į atskira funkciją aprašytą faile helpers.ts
       
-Namų darbas [0.1]
-  * Atsidaryti 56-57 pamokų darbus ir įsigilinti kaip atliekama fullstack mutacija
-  * Pritaikyti fullstack mutacijos veiksmus įrašo sukūrimui:
-    * Siųsti užklausą
-    * Sulaukus sėkmingos užklausos, nukreipti į pagrindinį puslapį (useNavigate)
-    * Pagrindiniame puslapyje turi matyti naujai sukurta įrašas
