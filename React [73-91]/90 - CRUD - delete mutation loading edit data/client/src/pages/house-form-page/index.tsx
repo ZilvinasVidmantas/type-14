@@ -14,20 +14,36 @@ import ImagesField from './images-field';
 import RatingField from './rating-field';
 import * as Styled from './styled';
 import { getHouseFormValues } from './helpers';
+import { getModeData } from './data';
 
 const HouseFormPage = () => {
   const { id } = useParams();
   const [house, loadingHouseData] = useHouse(id);
   const formRef = React.useRef<undefined | HTMLFormElement>(undefined);
+  const mode = id !== undefined ? 'edit' : 'create';
+  const {
+    title,
+    btnText,
+    color,
+    colorMain,
+  } = getModeData(mode);
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
     try {
       const values = getHouseFormValues(formRef.current);
-      // TODO: Atlikti sukurimo darbus ir po sukurimo, nuvesti į pagrindinį puslapį
-      console.log('Vykdomas sukūrimas');
-      console.log(values);
+      if (mode === 'create') {
+        // TODO: Atlikti sukurimo darbus ir po sukurimo, nuvesti į
+        // TODO: pagrindinį puslapį arba sukurto produkto puslapį
+        console.log('Vykdomas sukūrimas');
+        console.log(values);
+      } else {
+        // TODO: Atlikti atnaujinimo darbus ir po sukurimo, nuvesti į
+        // TODO: pagrindinį puslapį arba atnaujinto produkto puslapį
+        console.log('Vykdomas atnaujinimas');
+        console.log({ id, ...values });
+      }
     } catch (error) {
       if (error instanceof Error) {
         alert(error.message);
@@ -39,9 +55,6 @@ const HouseFormPage = () => {
 
   if (loadingHouseData) return null;
 
-  console.log('ATNAUJINAME DUOMENIS');
-  console.log(house);
-
   return (
     <Styled.PageLayout>
       <Styled.Paper elevation={6}>
@@ -51,16 +64,22 @@ const HouseFormPage = () => {
           onSubmit={handleSubmit}
           ref={formRef}
         >
-          <HouseIcon sx={{ fontSize: 60, color: 'primary.main' }} />
-          <Typography variant="h4" color="primary">Create new location</Typography>
+          <HouseIcon sx={{ fontSize: 60, color: colorMain }} />
+          <Typography variant="h4" color={colorMain}>{title}</Typography>
           <TextField
             label="Title"
             name="title"
             fullWidth
             variant="filled"
             size="small"
+            color={color}
+            defaultValue={house?.title}
           />
-          <LocationField />
+          <LocationField
+            color={color}
+            defaultCountry={house?.location.country}
+            defaultCity={house?.location.city}
+          />
           <TextField
             label="Price"
             name="price"
@@ -69,17 +88,19 @@ const HouseFormPage = () => {
             fullWidth
             variant="filled"
             size="small"
+            color={color}
+            defaultValue={house?.price.slice(0, -1)}
           />
-          <ImagesField />
-          <RatingField />
+          <ImagesField color={color} colorMain={colorMain} defaultImages={house?.images} />
+          <RatingField defaultValue={house?.rating} />
           <Button
             variant="contained"
-            color="primary"
+            color={color}
             size="large"
             fullWidth
             type="submit"
           >
-            Create
+            {btnText}
           </Button>
         </Stack>
       </Styled.Paper>

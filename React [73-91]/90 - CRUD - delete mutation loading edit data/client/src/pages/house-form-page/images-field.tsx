@@ -3,6 +3,7 @@ import {
   Stack,
   Typography,
   TextField,
+  TextFieldProps,
   Box,
   InputAdornment,
   IconButton,
@@ -13,8 +14,25 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 const initialIds = [createId()];
 
-const ImagesField = () => {
-  const [imgFieldsIds, setImgFieldsIds] = React.useState<string[]>(initialIds);
+type ImagesFieldProps = {
+  color: TextFieldProps['color']
+  colorMain: string,
+  defaultImages?: string[],
+};
+
+const ImagesField: React.FC<ImagesFieldProps> = ({ color, colorMain, defaultImages }) => {
+  const imgMap = React.useMemo(
+    () => defaultImages && defaultImages.reduce<{ [key: string]: string }>((prevMap, img) => ({
+      ...prevMap,
+      [createId()]: img,
+    }), {}),
+    [],
+  );
+
+  const [
+    imgFieldsIds,
+    setImgFieldsIds,
+  ] = React.useState<string[]>((imgMap && Object.keys(imgMap)) || initialIds);
 
   const addImgField = () => setImgFieldsIds([...imgFieldsIds, createId()]);
   const removeImgField = (id: string) => {
@@ -35,6 +53,8 @@ const ImagesField = () => {
             fullWidth
             variant="filled"
             size="small"
+            color={color}
+            defaultValue={imgMap && imgMap[id]}
             InputProps={imgFieldsIds.length > 1 ? {
               endAdornment: (
                 <InputAdornment position="end">
@@ -48,7 +68,7 @@ const ImagesField = () => {
         ))}
       </Stack>
       <IconButton onClick={addImgField}>
-        <AddCircleIcon sx={{ fontSize: 38, color: 'primary.main' }} />
+        <AddCircleIcon sx={{ fontSize: 38, color: colorMain }} />
       </IconButton>
     </Box>
   );
