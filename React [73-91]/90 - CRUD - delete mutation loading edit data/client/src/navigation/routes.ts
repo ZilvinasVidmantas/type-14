@@ -1,4 +1,5 @@
 const singleHousePageRoot = '/house/';
+const updateHousePageRoot = '/update-house/';
 
 const staticRoutes = {
   HomePage: '/',
@@ -9,6 +10,10 @@ const dynamicRoutes = {
   SingleHousePage: {
     path: `${singleHousePageRoot}:id`,
     createLink: (id: string | number) => `${singleHousePageRoot}${id}`,
+  },
+  UpdateHousePage: {
+    path: `${updateHousePageRoot}:id`,
+    createLink: (id: string | number) => `${updateHousePageRoot}${id}`,
   },
 } as const;
 

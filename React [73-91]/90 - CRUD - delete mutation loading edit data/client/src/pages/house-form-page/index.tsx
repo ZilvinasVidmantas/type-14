@@ -7,6 +7,8 @@ import {
 } from '@mui/material';
 import HouseIcon from '@mui/icons-material/House';
 
+import { useParams } from 'react-router-dom';
+import useHouse from 'hooks/use-house';
 import LocationField from './location-field';
 import ImagesField from './images-field';
 import RatingField from './rating-field';
@@ -14,6 +16,8 @@ import * as Styled from './styled';
 import { getHouseFormValues } from './helpers';
 
 const HouseFormPage = () => {
+  const { id } = useParams();
+  const [house, loadingHouseData] = useHouse(id);
   const formRef = React.useRef<undefined | HTMLFormElement>(undefined);
 
   const handleSubmit = (event: React.FormEvent) => {
@@ -32,6 +36,11 @@ const HouseFormPage = () => {
       }
     }
   };
+
+  if (loadingHouseData) return null;
+
+  console.log('ATNAUJINAME DUOMENIS');
+  console.log(house);
 
   return (
     <Styled.PageLayout>

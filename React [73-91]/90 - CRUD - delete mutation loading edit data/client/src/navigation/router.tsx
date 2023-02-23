@@ -16,12 +16,16 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
+        path: routes.SingleHousePage.path,
+        element: <SingleHousePage />,
+      },
+      {
         path: routes.HouseFormPage,
         element: <HouseFormPage />,
       },
       {
-        path: routes.SingleHousePage.path,
-        element: <SingleHousePage />,
+        path: routes.UpdateHousePage.path,
+        element: <HouseFormPage />,
       },
     ],
   },

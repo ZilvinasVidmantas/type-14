@@ -34,3 +34,11 @@ export const HouseCardRating = styled('div')(({ theme }) => ({
     content: '"★"',
   },
 }));
+
+export const ActionButtons = styled('div')(({ theme }) => ({
+  position: 'absolute',
+  right: 10,
+  top: 10,
+  display: 'flex',
+  gap: theme.spacing(0.5),
+}));

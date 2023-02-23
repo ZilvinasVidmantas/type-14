@@ -4,7 +4,6 @@ import {
 } from '@mui/material';
 import routes from 'navigation/routes';
 import { useParams, Navigate } from 'react-router-dom';
-import ApiService from 'services/api-service';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper';
 import 'swiper/css';
@@ -13,6 +12,7 @@ import 'swiper/css/navigation';
 import Img from 'components/ui/img';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+import useHouse from 'hooks/use-house';
 
 const StyledSwiper = styled(Swiper)({
   width: '100%',
@@ -23,16 +23,7 @@ const SingleHousePage = () => {
   const leftArrowRef = React.useRef<HTMLButtonElement | null>(null);
   const rightArrowRef = React.useRef<HTMLButtonElement | null>(null);
   const { id } = useParams();
-  const [house, setHouse] = React.useState<undefined | HouseModel>(undefined);
-
-  React.useEffect(() => {
-    if (id !== undefined) {
-      (async () => {
-        const fetchedHouse = await ApiService.fetchHouse(id);
-        setHouse(fetchedHouse);
-      })();
-    }
-  }, []);
+  const [house] = useHouse(id);
 
   if (id === undefined) return <Navigate to={routes.HomePage} />;
   if (house === undefined) return null;
