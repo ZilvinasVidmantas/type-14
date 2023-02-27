@@ -1,4 +1,5 @@
-Sukurkite express "multipage static" serverį su typescript ir eslint konfiguracija
-  * 3 puslapiai
-  * navigacija su aktyvaus puslapio pažymėjimo
-  * Kiekvienas puslapis turi nuotrauką
+Pamokos darbas
+  Sukurkite express "multipage static" serverį su typescript ir eslint konfiguracija
+    * 3 puslapiai
+    * navigacija su aktyvaus puslapio pažymėjimo
+    * Kiekvienas puslapis turi nuotrauką
