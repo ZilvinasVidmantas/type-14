@@ -1,5 +1,11 @@
-Pamokos darbas
+Pamokos darbas: [0.05]
   Sukurkite express "multipage static" serverį su typescript ir eslint konfiguracija
     * 3 puslapiai
     * navigacija su aktyvaus puslapio pažymėjimo
     * Kiekvienas puslapis turi nuotrauką
+  * Sukonguruoti aplikos kintamuosius
+  * įgalinti globalius kelius
+
+Namų darbas: padaryti cao.lt pamokas[0.10]
+  * 1 pamoka - [0.05]
+  * 2 pamoka - [0.05]
