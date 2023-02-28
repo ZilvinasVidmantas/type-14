@@ -9,6 +9,7 @@ housesRouter.get('/:id', getHouse);
 
 // create one
 housesRouter.post('/', (req, res) => {
+  console.log(req.body);
   res.send('create one house');
 });
 

@@ -6,6 +6,7 @@ import housesRouter from 'houses';
 
 const server = express();
 server.use(cors());
+server.use(express.json());
 server.use(morgan('tiny'));
 server.use(express.static('public'));
 server.use('/api/houses', housesRouter);

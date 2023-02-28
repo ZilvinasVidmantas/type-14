@@ -1,6 +1,6 @@
 {
   "ts-node": {
-    // Do not forget to `npm i -D tsconfig-paths`
+    "files": true,
     "require": [
       "tsconfig-paths/register"
     ]
@@ -16,5 +16,8 @@
     "noUnusedLocals": true,
     "useUnknownInCatchVariables": true,
     "baseUrl": "./src",
+    "typeRoots": [
+      "./src/types"
+    ]
   }
 }

@@ -4,7 +4,7 @@ import { HouseModel } from '../types';
 
 const getHouse: RequestHandler<
   { id?: string },
-  HouseModel | { error: string },
+  HouseModel | ErrorResponse,
   undefined,
   {}
 > = (req, res) => {
