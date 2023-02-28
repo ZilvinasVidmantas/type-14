@@ -17,5 +17,7 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'import/prefer-default-export': 'off',
+    '@typescript-eslint/indent': 'off'
   },
 };

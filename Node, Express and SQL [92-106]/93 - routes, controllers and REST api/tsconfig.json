@@ -14,7 +14,6 @@
     "skipLibCheck": false,
     "noImplicitAny": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "useUnknownInCatchVariables": true,
     "baseUrl": "./src",
   }

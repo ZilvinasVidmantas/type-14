@@ -1,31 +1,25 @@
 import express from 'express';
+import getHouses from './queries/get-houses';
+import getHouse from './queries/get-house';
 
-const houses = express.Router();
-// REST'ful
+const housesRouter = express.Router();
 
-// get all
-houses.get('/', (_req, res) => {
-  res.send('get all houses');
-});
-
-// get one by id
-houses.get('/:id', (_req, res) => {
-  res.send('get one house');
-});
+housesRouter.get('/', getHouses);
+housesRouter.get('/:id', getHouse);
 
 // create one
-houses.post('/', (_req, res) => {
+housesRouter.post('/', (req, res) => {
   res.send('create one house');
 });
 
 // update one
-houses.patch('/:id', (_req, res) => {
+housesRouter.patch('/:id', (req, res) => {
   res.send('updated one house');
 });
 
 // delete one
-houses.delete('/:id', (_req, res) => {
+housesRouter.delete('/:id', (req, res) => {
   res.send('deleted one house');
 });
 
-export default houses;
+export default housesRouter;
