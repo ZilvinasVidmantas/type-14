@@ -1,0 +1,6 @@
+Pamokos darbas: [0.05]
+  Pažingsniui atkartoti pamokos darbą.
+
+Namų darbas: padaryti cao.lt pamokas
+  * 3 pamoka - [0.05]
+  * 4 pamoka - [0.05]
