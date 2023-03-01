@@ -9,3 +9,7 @@ export type HouseModel = {
   price: number,
   rating: number
 };
+
+export type HouseData = Omit<HouseModel, 'id'>;
+
+export type PartialHouseData = PartialRecursive<HouseData>;

@@ -1,17 +1,14 @@
 import express from 'express';
 import getHouses from './queries/get-houses';
 import getHouse from './queries/get-house';
+import createHouse from './mutations/create-house';
 
 const housesRouter = express.Router();
 
 housesRouter.get('/', getHouses);
 housesRouter.get('/:id', getHouse);
 
-// create one
-housesRouter.post('/', (req, res) => {
-  console.log(req.body);
-  res.send('create one house');
-});
+housesRouter.post('/', createHouse);
 
 // update one
 housesRouter.patch('/:id', (req, res) => {
