@@ -21,8 +21,7 @@ const deleteHouse: RequestHandler<
     return;
   }
 
-  const foundHouse = houses[foundHouseIndex];
-  houses.splice(foundHouseIndex, 1);
+  const [foundHouse] = houses.splice(foundHouseIndex, 1);
 
   res.status(200).json(foundHouse);
 };
