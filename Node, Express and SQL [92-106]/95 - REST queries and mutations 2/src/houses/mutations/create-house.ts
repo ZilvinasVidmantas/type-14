@@ -42,14 +42,15 @@ const createHouse: RequestHandler<
       if (!(mainKey in prevErrObj)) {
         const childrenValidationErrors = validationErrors
           .filter((childValidationError) => childValidationError.path?.includes(`${mainKey}.`))
-          .map((childValidationError) => {
-            const keys = errorKey.split('.');
-            // eslint-disable-next-line no-param-reassign
-            childValidationError.path = keys.slice(1).join('.');
+          .map((childError) => {
+            const newValidationError = new ValidationError(
+              childError.errors.length === 1 ? childError.message : childError.inner,
+              childError.value,
+              childError.path?.split('.').slice(1).join('.'),
+            );
 
-            return childValidationError;
+            return newValidationError;
           });
-        console.log(childrenValidationErrors.map((x) => x.path));
 
         return {
           ...prevErrObj,
