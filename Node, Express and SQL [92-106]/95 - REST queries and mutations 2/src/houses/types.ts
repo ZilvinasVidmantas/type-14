@@ -12,4 +12,6 @@ export type HouseModel = {
 
 export type HouseData = Omit<HouseModel, 'id'>;
 
-export type PartialHouseData = PartialRecursive<HouseData>;
+export type PartialHouseData = Partial<HouseData>;
+
+export type HouseDataBody = PartialRecursive<HouseData>;

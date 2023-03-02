@@ -1,12 +1,12 @@
 import { RequestHandler } from 'express';
 import { houses } from 'houses/data';
-import { HouseModel, PartialHouseData } from 'houses/types';
+import { HouseModel, HouseDataBody } from 'houses/types';
 import houseDataValidationSchema from 'houses/validation-schemas/house-data-validation-schema';
 
-const replaceHouse: RequestHandler<
+const putHouse: RequestHandler<
   { id?: string },
   HouseModel | ErrorResponse,
-  PartialHouseData,
+  HouseDataBody,
   {}
 > = (req, res) => {
   const { id } = req.params;
@@ -40,4 +40,4 @@ const replaceHouse: RequestHandler<
   }
 };
 
-export default replaceHouse;
+export default putHouse;
