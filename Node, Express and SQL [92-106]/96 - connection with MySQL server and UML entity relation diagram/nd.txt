@@ -1,4 +1,0 @@
-Pamokos darbas: [0.05]
-  Pažingsniui atkartoti pamokos darbą.
-
-Namų darbas: spręsti cao.lt užduotis, už kiekvieną užduotį po [0.05]
