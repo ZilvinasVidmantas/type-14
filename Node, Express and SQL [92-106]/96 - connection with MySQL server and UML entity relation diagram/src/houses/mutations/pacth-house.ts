@@ -1,5 +1,8 @@
 import { RequestHandler } from 'express';
+import ServerSetupError from 'errors/server-setup-error';
+import handleRequestError from 'helpers/handle-request-error';
 import { houses } from 'houses/data';
+import HouseNotFoundError from 'houses/house-not-found-error';
 import { HouseModel, HouseDataBody } from 'houses/types';
 import partialHouseDataValidationSchema from 'houses/validation-schemas/partial-house-data-validation-schema';
 
@@ -11,26 +14,18 @@ const patchHouse: RequestHandler<
 > = (req, res) => {
   const { id } = req.params;
 
-  if (id === undefined) {
-    res.status(400).json({ error: 'Server setup error' });
-    return;
-  }
-
   try {
+    if (id === undefined) throw new ServerSetupError();
     const houseData = partialHouseDataValidationSchema.validateSync(req.body);
     const foundHouse = houses.find((house) => String(house.id) === id);
 
-    if (foundHouse === undefined) {
-      res.status(404).json({ error: `House with id '${id}' was not found` });
-      return;
-    }
+    if (foundHouse === undefined) throw new HouseNotFoundError(id);
 
     Object.assign(foundHouse, houseData);
 
     res.status(200).json(foundHouse);
-  } catch (error) {
-    const message = error instanceof Error ? error.message : 'Server error';
-    res.status(400).json({ error: message });
+  } catch (err) {
+    handleRequestError(err, res);
   }
 };
 

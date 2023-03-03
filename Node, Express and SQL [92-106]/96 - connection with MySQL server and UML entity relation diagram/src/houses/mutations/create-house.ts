@@ -1,9 +1,9 @@
 import { RequestHandler } from 'express';
+import createId from 'helpers/create-id';
+import handleRequestError from 'helpers/handle-request-error';
 import { houses } from 'houses/data';
 import { HouseDataBody, HouseModel } from 'houses/types';
 import houseDataValidationSchema from 'houses/validation-schemas/house-data-validation-schema';
-import { createId } from 'helpers/create-id';
-import { ValidationError } from 'yup';
 
 const createHouse: RequestHandler<
   {},
@@ -13,66 +13,12 @@ const createHouse: RequestHandler<
 > = (req, res) => {
   try {
     const houseData = houseDataValidationSchema.validateSync(req.body, { abortEarly: false });
-    const createdHouse = {
-      id: createId(),
-      ...houseData,
-    };
-
+    const createdHouse = { id: createId(), ...houseData };
     houses.push(createdHouse);
 
     res.status(201).json(createdHouse);
-  } catch (error) {
-    const recursiveValidationErrorReducer = (
-      prevErrObj: RecursiveStringObj,
-      validationError: ValidationError,
-      index: number,
-      validationErrors: ValidationError[],
-    ): RecursiveStringObj => {
-      const errorKey: string = validationError.path || String(createId());
-
-      const [mainKey, ...childrenKeys] = errorKey.split('.');
-
-      if (childrenKeys.length === 0) {
-        return {
-          ...prevErrObj,
-          [mainKey]: validationError.message,
-        };
-      }
-
-      if (!(mainKey in prevErrObj)) {
-        const childrenValidationErrors = validationErrors
-          .filter((childValidationError) => childValidationError.path?.includes(`${mainKey}.`))
-          .map((childError) => {
-            const newValidationError = new ValidationError(
-              childError.errors.length === 1 ? childError.message : childError.inner,
-              childError.value,
-              childError.path?.split('.').slice(1).join('.'),
-            );
-
-            return newValidationError;
-          });
-
-        return {
-          ...prevErrObj,
-          [mainKey]: childrenValidationErrors.reduce(recursiveValidationErrorReducer, {}),
-        };
-      }
-
-      return prevErrObj;
-    };
-
-    const errorResponse: ErrorResponse = {
-      error: 'request error',
-    };
-
-    if (error instanceof ValidationError && error.errors.length > 0) {
-      errorResponse.errors = error.inner.reduce(recursiveValidationErrorReducer, {});
-    }
-    if (error instanceof Error) {
-      errorResponse.error = error.message;
-    }
-
-    res.status(400).json(errorResponse);
+  } catch (err) {
+    handleRequestError(err, res);
   }
 };
 
