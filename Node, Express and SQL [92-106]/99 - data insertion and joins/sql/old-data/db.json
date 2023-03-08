@@ -13,7 +13,14 @@
         "https://a0.muscache.com/im/pictures/8920865b-d2e0-4157-91e1-ba5081705d3f.jpg?im_w=1440"
       ],
       "price": "32€",
-      "rating": 4.79
+      "rating": 4.79,
+      "host": {
+        "name": "Serbentautas",
+        "surname": "Bordiūras",
+        "mobile": "+372 546 58745",
+        "email": "user1@gmail.com",
+        "image": "https://pearnkandola.com/app/uploads/2018/09/James-Hatcher-300x300.png"
+      }
     },
     {
       "id": "2",
@@ -28,7 +35,14 @@
         "https://a0.muscache.com/im/pictures/miso/Hosting-43105686/original/b87b8ba8-d3d8-4567-8aa0-ce2a8e8a0dea.jpeg?im_w=1440"
       ],
       "price": "137€",
-      "rating": 4.97
+      "rating": 4.97,
+      "host": {
+        "name": "Juria",
+        "surname": "Valenta",
+        "mobile": "+475 622 48799",
+        "email": "user2@gmail.com",
+        "image": "https://architecture.ou.edu/wp-content/uploads/2018/07/ANGELAPERSON-1447-300x300.jpg"
+      }
     },
     {
       "id": "3",
@@ -43,7 +57,14 @@
         "https://a0.muscache.com/im/pictures/14cf87f4-cb04-49a1-b733-a43edfcff1c7.jpg?im_w=1440"
       ],
       "price": "66€",
-      "rating": 4.62
+      "rating": 4.62,
+      "host": {
+        "name": "Serbentautas",
+        "surname": "Bordiūras",
+        "mobile": "+372 546 58745",
+        "email": "user1@gmail.com",
+        "image": "https://pearnkandola.com/app/uploads/2018/09/James-Hatcher-300x300.png"
+      }
     },
     {
       "id": "4",
@@ -58,7 +79,14 @@
         "https://a0.muscache.com/im/pictures/miso/Hosting-49434096/original/551bca7c-e035-45a7-98fe-a09108083c93.jpeg?im_w=1440"
       ],
       "price": "92€",
-      "rating": 5.0
+      "rating": 5.0,
+      "host": {
+        "name": "Juria",
+        "surname": "Valenta",
+        "mobile": "+475 622 48799",
+        "email": "user2@gmail.com",
+        "image": "https://architecture.ou.edu/wp-content/uploads/2018/07/ANGELAPERSON-1447-300x300.jpg"
+      }
     },
     {
       "id": "5",
@@ -73,7 +101,14 @@
         "https://a0.muscache.com/im/pictures/miso/Hosting-37926580/original/62837d3d-cbe2-4036-97ee-18797dcef56b.jpeg?im_w=1440"
       ],
       "price": "94€",
-      "rating": 4.97
+      "rating": 4.97,
+      "host": {
+        "name": "Serbentautas",
+        "surname": "Bordiūras",
+        "mobile": "+372 546 58745",
+        "email": "user1@gmail.com",
+        "image": "https://pearnkandola.com/app/uploads/2018/09/James-Hatcher-300x300.png"
+      }
     },
     {
       "id": "6",
@@ -88,7 +123,14 @@
         "https://a0.muscache.com/im/pictures/0b18e267-3109-4027-a60e-10816bf2fbc9.jpg?im_w=1440"
       ],
       "price": "135€",
-      "rating": 5.0
+      "rating": 5.0,
+      "host": {
+        "name": "Juria",
+        "surname": "Valenta",
+        "mobile": "+475 622 48799",
+        "email": "user2@gmail.com",
+        "image": "https://architecture.ou.edu/wp-content/uploads/2018/07/ANGELAPERSON-1447-300x300.jpg"
+      }
     },
     {
       "id": "7",
@@ -103,7 +145,14 @@
         "https://a0.muscache.com/im/pictures/miso/Hosting-43620298/original/2f3f0463-9ef7-4ee7-a1f7-898ac3325d5e.jpeg?im_w=1440"
       ],
       "price": "60€",
-      "rating": 4.98
+      "rating": 4.98,
+      "host": {
+        "name": "Serbentautas",
+        "surname": "Bordiūras",
+        "mobile": "+372 546 58745",
+        "email": "user1@gmail.com",
+        "image": "https://pearnkandola.com/app/uploads/2018/09/James-Hatcher-300x300.png"
+      }
     },
     {
       "id": "8",
@@ -118,7 +167,14 @@
         "https://a0.muscache.com/im/pictures/miso/Hosting-44229733/original/94042e24-8afa-45e9-8c87-7d9155244dfb.jpeg?im_w=1440"
       ],
       "price": "90€",
-      "rating": 5.0
+      "rating": 5.0,
+      "host": {
+        "name": "Serbentautas",
+        "surname": "Bordiūras",
+        "mobile": "+372 546 58745",
+        "email": "user1@gmail.com",
+        "image": "https://pearnkandola.com/app/uploads/2018/09/James-Hatcher-300x300.png"
+      }
     },
     {
       "id": "9",
@@ -133,7 +189,14 @@
         "https://a0.muscache.com/im/pictures/27b7bb4e-fda9-4e5f-840a-04ffb0922993.jpg?im_w=1440"
       ],
       "price": "464€",
-      "rating": 5.0
+      "rating": 5.0,
+      "host": {
+        "name": "Serbentautas",
+        "surname": "Bordiūras",
+        "mobile": "+372 546 58745",
+        "email": "user1@gmail.com",
+        "image": "https://pearnkandola.com/app/uploads/2018/09/James-Hatcher-300x300.png"
+      }
     },
     {
       "id": "10",
@@ -148,7 +211,14 @@
         "https://a0.muscache.com/im/pictures/07b54251-f9b5-490e-8d0e-85afa65b161c.jpg?im_w=1440"
       ],
       "price": "144€",
-      "rating": 4.98
+      "rating": 4.98,
+      "host": {
+        "name": "Juria",
+        "surname": "Valenta",
+        "mobile": "+475 622 48799",
+        "email": "user2@gmail.com",
+        "image": "https://architecture.ou.edu/wp-content/uploads/2018/07/ANGELAPERSON-1447-300x300.jpg"
+      }
     },
     {
       "id": "11",
@@ -163,7 +233,14 @@
         "https://a0.muscache.com/im/pictures/miso/Hosting-37805118/original/a9274c1e-7221-4747-9d26-81a490ebed92.jpeg?im_w=1440"
       ],
       "price": "70€",
-      "rating": 4.95
+      "rating": 4.95,
+      "host": {
+        "name": "Serbentautas",
+        "surname": "Bordiūras",
+        "mobile": "+372 546 58745",
+        "email": "user1@gmail.com",
+        "image": "https://pearnkandola.com/app/uploads/2018/09/James-Hatcher-300x300.png"
+      }
     },
     {
       "id": "12",
@@ -178,7 +255,14 @@
         "https://a0.muscache.com/im/pictures/6d77e529-40b5-4dce-bfee-8fcf984bb895.jpg?im_w=1440"
       ],
       "price": "180€",
-      "rating": 4.96
+      "rating": 4.96,
+      "host": {
+        "name": "Juria",
+        "surname": "Valenta",
+        "mobile": "+475 622 48799",
+        "email": "user2@gmail.com",
+        "image": "https://architecture.ou.edu/wp-content/uploads/2018/07/ANGELAPERSON-1447-300x300.jpg"
+      }
     }
   ]
 }
