@@ -29,6 +29,7 @@ create table user (
   surname varchar(64) not null,
   mobile varchar(16) not null,
   imageId int4 unsigned not null unique,
+  role enum ('USER', 'ADMIN') default 'USER',
   createdAt timestamp default current_timestamp,
   updatedAt timestamp default current_timestamp on update current_timestamp,
   foreign key (imageId) references image(imageId)
@@ -45,7 +46,7 @@ create table house (
   foreign key (cityId) references city(cityId)
 );
 
-create table user_linked_house (
+create table user_liked_house (
 	houseId int4 unsigned not null,
 	userId int4 unsigned not null,
   foreign key (houseId) references house(houseId),

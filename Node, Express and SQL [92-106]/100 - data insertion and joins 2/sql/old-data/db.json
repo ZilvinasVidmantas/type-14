@@ -2,6 +2,7 @@
   "houses": [
     {
       "id": "1",
+      "address": "address 1",
       "title": "Domek na drzewie wśród zwierząt",
       "location": {
         "country": "Poland",
@@ -24,6 +25,7 @@
     },
     {
       "id": "2",
+      "address": "address 2",
       "title": "Trobelė",
       "location": {
         "country": "Latvija",
@@ -46,6 +48,7 @@
     },
     {
       "id": "3",
+      "address": "address 3",
       "title": "Gražus kaimiškas medinis rąstų namas Skriveri",
       "location": {
         "country": "Latvija",
@@ -68,6 +71,7 @@
     },
     {
       "id": "4",
+      "address": "address 4",
       "title": "Virš Ąžuolų - Forest SPA",
       "location": {
         "country": "Lietuva",
@@ -90,6 +94,7 @@
     },
     {
       "id": "5",
+      "address": "address 5",
       "title": "Ezernams",
       "location": {
         "country": "Latvija",
@@ -112,6 +117,7 @@
     },
     {
       "id": "6",
+      "address": "address 6",
       "title": "Jaukus namelis miške",
       "location": {
         "country": "Latvija",
@@ -134,6 +140,7 @@
     },
     {
       "id": "7",
+      "address": "address 7",
       "title": "Atostogų namai Elkos kalne",
       "location": {
         "country": "Latvija",
@@ -156,6 +163,7 @@
     },
     {
       "id": "8",
+      "address": "address 8",
       "title": "Sodyba BIČIULIŲ NAMAI",
       "location": {
         "country": "Lietuva",
@@ -178,6 +186,7 @@
     },
     {
       "id": "9",
+      "address": "address 9",
       "title": "Unikalus poilsio namelis Elmau centre, 100 m nuo trobelės",
       "location": {
         "country": "Austrija",
@@ -200,7 +209,9 @@
     },
     {
       "id": "10",
+      "address": "address 1",
       "title": "Gamtos rezidencija - Bondo slėnio gamtinis rezervatas",
+      "address": "address j",
       "location": {
         "country": "Italija",
         "city": "Brescia"
@@ -222,7 +233,9 @@
     },
     {
       "id": "11",
+      "address": "address 1",
       "title": "Dangaus detalė, ramybė, gamta ir atsipalaidavimas",
+      "address": "address a",
       "location": {
         "country": "Rumunija",
         "city": "Brașov County"
@@ -244,6 +257,7 @@
     },
     {
       "id": "12",
+      "address": "address 1",
       "title": "Alpių namelis su vaizdu į Aukštutinį Valė slėnį",
       "location": {
         "country": "Šveicarija",
