@@ -1,0 +1,7 @@
+https://www.youtube.com/watch?v=hF4yg1yFrdU&ab_channel=AveCoders
+https://www.youtube.com/watch?v=QpdhBUYk7Kk&ab_channel=LucidSoftware
+https://www.youtube.com/watch?v=-CuY5ADwn24&t=244s&ab_channel=LucidSoftware
+
+Sudaryti savo projekto UML diagramas:
+  * use case - panaudos atvejų: 0,05
+  * entity relation - esybių ryšių: 0,05
