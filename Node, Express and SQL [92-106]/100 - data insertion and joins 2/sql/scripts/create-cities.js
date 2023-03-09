@@ -4,26 +4,38 @@ const { countryMap } = require('./create-countries');
 const { houses } = dbData;
 
 const insertionRows = houses
-  .map(x => [countryMap[x.location.country], x.location.city])
-  .map(([id, title]) => `(${id}, '${title}')`)
+  .map(x => ({
+    countryId: countryMap[x.location.country],
+    title: x.location.city
+  }))
+  .map(({ countryId, title }) => `(${countryId}, '${title}')`)
   .join(',\n');
 
 const insertionSQL = `
 insert into city(countryId, title) values
 ${insertionRows};
-`
-console.log(insertionSQL)
+`;
 
-// TODO: suformuoti miestų struktūrą
+const countryCityMap = houses
+  .map(x => x.location)
+  .reduce((prevMap, { country, city }, i) => {
+    const nextMap = {
+      ...prevMap,
+    }
 
-cityId = cityMap['Wychodne']['Poland']
+    if (nextMap[country] === undefined) {
+      nextMap[country] = {};
+    }
 
-const cityMap = {
-  Wychodne: {
-    Poland: 1
-  },
-  Leliunai: {
-    Anyksciai: 25,
-    Moletai: 33
-  },
+    nextMap[country][city] = i + 1;
+
+
+    return nextMap
+  }, {})
+
+console.log(insertionSQL);
+console.log(countryCityMap)
+
+module.exports = {
+  countryCityMap,
 }
