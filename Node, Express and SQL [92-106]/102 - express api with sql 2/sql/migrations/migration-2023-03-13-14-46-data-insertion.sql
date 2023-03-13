@@ -31,19 +31,19 @@ insert into user(email, password, name, surname, mobile, imageId, role) values
 ('user1@gmail.com', 'laikinas', 'Serbentautas', 'Bordiūras', '+372 546 58745', 2, 'USER'),
 ('user2@gmail.com', 'laikinas', 'Juria', 'Valenta', '+475 622 48799', 3, 'USER');
 
-insert into house(userId, cityId, address) values
-(2, 1, 'address 1'),
-(3, 2, 'address 2'),
-(2, 3, 'address 3'),
-(3, 4, 'address 4'),
-(2, 5, 'address 5'),
-(3, 6, 'address 6'),
-(2, 7, 'address 7'),
-(2, 8, 'address 8'),
-(2, 9, 'address 9'),
-(3, 10, 'address j'),
-(2, 11, 'address a'),
-(3, 12, 'address 1');
+insert into house(userId, cityId, address, price) values
+(2, 1, 'address 1', 32),
+(3, 2, 'address 2', 137),
+(2, 3, 'address 3', 66),
+(3, 4, 'address 4', 92),
+(2, 5, 'address 5', 94),
+(3, 6, 'address 6', 135),
+(2, 7, 'address 7', 60),
+(2, 8, 'address 8', 90),
+(2, 9, 'address 9', 464),
+(3, 10, 'address j', 144),
+(2, 11, 'address a', 70),
+(3, 12, 'address 1', 180);
 
 insert into image(src) values
 ('https://a0.muscache.com/im/pictures/3a5a705d-af79-4ae3-8997-de37198b014b.jpg?im_w=1200'),

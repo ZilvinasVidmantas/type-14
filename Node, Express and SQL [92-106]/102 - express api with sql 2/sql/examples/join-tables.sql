@@ -8,6 +8,7 @@ select
 		'email', u.email,
 		'mobile', u.mobile
 	)  as owner, 
+	h.price,
 	json_object(
 		'city', c.title,
 		'country', cn.title

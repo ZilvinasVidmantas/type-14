@@ -40,6 +40,7 @@ create table house (
 	address varchar(256) not null,
   userId int4 unsigned not null,
   cityId int4 unsigned not null,
+  price float4 unsigned not null,
 	createdAt timestamp default current_timestamp,
 	updatedAt timestamp default current_timestamp on update current_timestamp,
   foreign key (userId) references user(userId),
@@ -49,6 +50,15 @@ create table house (
 create table user_liked_house (
 	houseId int4 unsigned not null,
 	userId int4 unsigned not null,
+  foreign key (houseId) references house(houseId),
+  foreign key (userId) references user(userId),
+  primary key (houseId, userId)
+);
+
+create table user_house_rating (
+	houseId int4 unsigned not null,
+	userId int4 unsigned not null,
+  amount int1 unsigned not null,
   foreign key (houseId) references house(houseId),
   foreign key (userId) references user(userId),
   primary key (houseId, userId)
