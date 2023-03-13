@@ -1,7 +1,6 @@
 import { RequestHandler } from 'express';
 import createId from 'helpers/create-id';
 import handleRequestError from 'helpers/handle-request-error';
-import { houses } from 'houses/data';
 import { HouseDataBody, HouseModel } from 'houses/types';
 import houseDataValidationSchema from 'houses/validation-schemas/house-data-validation-schema';
 

@@ -1,13 +1,14 @@
 select 
 	h.houseId as id,
 	h.address,
+	h.title,
     json_object(
 		'id', u.userId,
 		'name', u.name,
 		'surname', u.surname,
 		'email', u.email,
 		'mobile', u.mobile
-	)  as owner, 
+	)  as host, 
 	h.price,
 	json_object(
 		'city', c.title,

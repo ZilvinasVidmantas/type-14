@@ -4,12 +4,13 @@ const createHouses = (houses, usersEmailIdMap, countryCityMap) => {
       host,
       location: { country, city },
       address,
-      price
-    }) => `(${usersEmailIdMap[host.email]}, ${countryCityMap[country][city]}, '${address}', ${price.slice(0, -1)})`)
+      price,
+      title,
+    }) => `(${usersEmailIdMap[host.email]}, ${countryCityMap[country][city]}, '${address}', ${price.slice(0, -1)}, '${title}')`)
     .join(',\n');;
 
   return `
-insert into house(userId, cityId, address, price) values
+insert into house(userId, cityId, address, price, title) values
 ${housesInsertionRows};`;
 }
 

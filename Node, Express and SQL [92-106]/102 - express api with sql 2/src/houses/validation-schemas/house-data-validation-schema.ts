@@ -2,28 +2,15 @@ import { HouseData } from 'houses/types';
 import * as yup from 'yup';
 
 const houseDataValidationSchema: yup.ObjectSchema<HouseData> = yup.object({
+  address: yup.string()
+    .required('address is required')
+    .min(2, 'address must have at least 2 letters')
+    .max(32, 'address can\'t have more than 32 letters'),
+
   title: yup.string()
     .required('title is required')
     .min(2, 'title must have at least 2 letters')
     .max(32, 'title can\'t have more than 32 letters'),
-
-  location: yup
-    .object({
-      country: yup.string()
-        .required('location.country is required')
-        .min(2, 'location.country must have at least 2 letters')
-        .max(32, 'location.country can\'t have more than 32 letters'),
-
-      city: yup.string()
-        .required('location.city is required')
-        .min(2, 'location.city must have at least 2 letters')
-        .max(32, 'location.city can\'t have more than 32 letters'),
-    })
-    .required('location is required'),
-
-  images: yup
-    .array(yup.string().required())
-    .required('images are required'),
 
   price: yup.number()
     .required('price is required')
@@ -34,11 +21,12 @@ const houseDataValidationSchema: yup.ObjectSchema<HouseData> = yup.object({
       (value) => Number(value.toFixed(2)) === value,
     ),
 
-  rating: yup.number()
-    .required('rating is required')
-    .positive('rating must be positive')
-    .min(1, 'rating must be at least 1')
-    .max(5, 'rating can\'t be more than 5'),
+  images: yup
+    .array(yup.string().required())
+    .required('images are required'),
+
+  cityId: yup.number()
+    .required('city is required'),
 }).strict(true);
 
 export default houseDataValidationSchema;

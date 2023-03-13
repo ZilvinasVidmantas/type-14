@@ -1,7 +1,6 @@
 import { RequestHandler } from 'express';
 import ServerSetupError from 'errors/server-setup-error';
 import handleRequestError from 'helpers/handle-request-error';
-import { houses } from 'houses/data';
 import HouseNotFoundError from 'houses/house-not-found-error';
 import { HouseModel, HouseDataBody } from 'houses/types';
 import houseDataValidationSchema from 'houses/validation-schemas/house-data-validation-schema';

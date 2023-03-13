@@ -37,10 +37,11 @@ create table user (
 
 create table house (
 	houseId int4 unsigned primary key auto_increment,
-	address varchar(256) not null,
+	address varchar(64) not null,
+	title varchar(64) not null,
+  price float4 unsigned not null,
   userId int4 unsigned not null,
   cityId int4 unsigned not null,
-  price float4 unsigned not null,
 	createdAt timestamp default current_timestamp,
 	updatedAt timestamp default current_timestamp on update current_timestamp,
   foreign key (userId) references user(userId),

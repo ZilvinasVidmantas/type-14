@@ -1,16 +1,26 @@
 export type HouseModel = {
   id: number,
+  address: string,
   title: string,
+  host: {
+    id: number,
+    name: string,
+    surname: string,
+    email: string,
+    mobile: string,
+  },
+  price: number,
   location: {
-    country: string,
     city: string,
+    country: string,
   },
   images: string[],
-  price: number,
-  rating: number
+  rating?: number
 };
 
-export type HouseData = Omit<HouseModel, 'id'>;
+export type HouseData = Omit<HouseModel, 'id' | 'host' | 'location' | 'rating'> & {
+  cityId: number
+};
 
 export type PartialHouseData = Partial<HouseData>;
 
