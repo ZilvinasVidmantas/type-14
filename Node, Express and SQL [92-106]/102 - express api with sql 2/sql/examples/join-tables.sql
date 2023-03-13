@@ -10,7 +10,7 @@ select
 	)  as owner, 
 	json_object(
 		'city', c.title,
-        'country', cn.title
+		'country', cn.title
 	) as location,
 	json_arrayagg(i.src) as images
 from house as h
@@ -24,5 +24,5 @@ join house_image as hi
 on h.houseId = hi.houseId
 join image as i
 on hi.imageId = i.imageId
-group by h.houseId
+group by h.houseId;
 
