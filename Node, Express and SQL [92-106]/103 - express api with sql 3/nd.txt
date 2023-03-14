@@ -1,0 +1,1 @@
+Įgalinti apjungtų duomenų parsiuntimą iš duomenų bazės, naudojant express serverį
