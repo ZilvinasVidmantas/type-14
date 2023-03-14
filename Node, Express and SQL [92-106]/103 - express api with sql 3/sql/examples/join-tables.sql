@@ -14,7 +14,7 @@ select
 		'city', c.title,
 		'country', cn.title
 	) as location,
-	json_arrayagg(i.src) as images
+	if(count(i.imageId) = 0, json_array(), json_arrayagg(i.src)) as images
 from house as h
 join user as u
 on h.userId = u.userId
@@ -22,9 +22,8 @@ join city as c
 on h.cityId = c.cityId
 join country as cn
 on c.countryId = cn.countryId 
-join house_image as hi
+left join house_image as hi
 on h.houseId = hi.houseId
-join image as i
+left join image as i
 on hi.imageId = i.imageId
 group by h.houseId;
-

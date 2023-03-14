@@ -1,1 +1,2 @@
-Įgalinti apjungtų duomenų parsiuntimą iš duomenų bazės, naudojant express serverį
+Papildomas [0,05]:
+  * SQL script'as kuris suriša lenteles sujungtas naudojant daug-su-daug ryšį.

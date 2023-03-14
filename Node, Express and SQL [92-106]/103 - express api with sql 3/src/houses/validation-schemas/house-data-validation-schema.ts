@@ -23,6 +23,7 @@ const houseDataValidationSchema: yup.ObjectSchema<HouseData> = yup.object({
 
   images: yup
     .array(yup.string().required())
+    .min(1, 'at least one image required')
     .required('images are required'),
 
   cityId: yup.number()
