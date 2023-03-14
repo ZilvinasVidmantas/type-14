@@ -39,6 +39,7 @@ const config = {
     database: DB_SCHEMA,
     host: DB_HOST,
     port: Number(DB_PORT),
+    multipleStatements: true,
   },
 };
 

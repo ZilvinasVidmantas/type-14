@@ -1,15 +1,12 @@
 import { RequestHandler } from 'express';
-import mysql from 'mysql2/promise';
-import { HouseModel } from 'houses/types';
-import config from 'config';
+import { HouseViewModel } from 'houses/types';
 import ServerSetupError from 'errors/server-setup-error';
 import handleRequestError from 'helpers/handle-request-error';
-import SQL from 'houses/sql';
-import HouseNotFoundError from '../house-not-found-error';
+import HouseModel from 'houses/houses-model';
 
 const getHouse: RequestHandler<
   { id?: string },
-  HouseModel | ErrorResponse,
+  HouseViewModel | ErrorResponse,
   undefined,
   {}
 > = async (req, res) => {
@@ -17,19 +14,9 @@ const getHouse: RequestHandler<
 
   try {
     if (id === undefined) throw new ServerSetupError();
-    const connection = await mysql.createConnection(config.database);
+    const houseViewModel = await HouseModel.getHouse(id);
 
-    const sql = `
-    ${SQL.SELECT}
-    where h.houseId = ${id}
-    ${SQL.GROUP}`;
-
-    const [houses] = await connection.query<mysql.RowDataPacket[]>(sql);
-    if (houses.length === 0) throw new HouseNotFoundError(id);
-
-    connection.end();
-
-    res.json(houses[0] as HouseModel);
+    res.json(houseViewModel);
   } catch (err) {
     handleRequestError(err, res);
   }

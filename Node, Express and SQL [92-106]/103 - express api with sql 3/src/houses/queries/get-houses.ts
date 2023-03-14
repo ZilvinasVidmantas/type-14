@@ -1,27 +1,15 @@
-import config from 'config';
 import { RequestHandler } from 'express';
-import SQL from 'houses/sql';
-import { HouseModel } from 'houses/types';
-import mysql from 'mysql2/promise';
+import HouseModel from 'houses/houses-model';
+import { HouseViewModel } from 'houses/types';
 
 const getHouses: RequestHandler<
   {},
-  HouseModel[],
+  HouseViewModel[],
   undefined,
   {}
 > = async (req, res) => {
-  const connection = await mysql.createConnection(config.database);
-
-  const sql = `
-  ${SQL.SELECT}
-  ${SQL.GROUP}
-  `;
-
-  const [houses] = await connection.query(sql);
-
-  connection.end();
-
-  res.json(houses as HouseModel[]);
+  const houseViewModelArray = await HouseModel.getHouses();
+  res.json(houseViewModelArray);
 };
 
 export default getHouses;

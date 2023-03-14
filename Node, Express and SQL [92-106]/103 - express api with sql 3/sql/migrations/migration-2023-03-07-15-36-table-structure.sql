@@ -67,8 +67,9 @@ create table user_house_rating (
 
 create table house_image (
 	houseId int4 unsigned not null,
-	imageId int4 unsigned not null primary key,
+	imageId int4 unsigned not null,
   foreign key (houseId) references house(houseId),
-  foreign key (imageId) references image(imageId)
+  foreign key (imageId) references image(imageId) on delete cascade,
+  primary key imageId,
 );
 

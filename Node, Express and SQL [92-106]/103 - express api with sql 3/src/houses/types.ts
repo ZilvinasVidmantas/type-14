@@ -1,4 +1,4 @@
-export type HouseModel = {
+export type HouseViewModel = {
   id: number,
   address: string,
   title: string,
@@ -18,7 +18,7 @@ export type HouseModel = {
   rating?: number
 };
 
-export type HouseData = Omit<HouseModel, 'id' | 'host' | 'location' | 'rating'> & {
+export type HouseData = Omit<HouseViewModel, 'id' | 'host' | 'location' | 'rating'> & {
   cityId: number
 };
 

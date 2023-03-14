@@ -1,26 +1,23 @@
 import { RequestHandler } from 'express';
 import ServerSetupError from 'errors/server-setup-error';
 import handleRequestError from 'helpers/handle-request-error';
-import HouseNotFoundError from 'houses/house-not-found-error';
-import { HouseModel } from 'houses/types';
+import { HouseViewModel } from 'houses/types';
+import HouseModel from 'houses/houses-model';
 
 const deleteHouse: RequestHandler<
   { id?: string },
-  HouseModel | ErrorResponse,
+  HouseViewModel | ErrorResponse,
   {},
   {}
-> = (req, res) => {
+> = async (req, res) => {
   const { id } = req.params;
 
   try {
     if (id === undefined) throw new ServerSetupError();
+    const houseViewModel = await HouseModel.getHouse(id);
+    await HouseModel.deleteHouse(id);
 
-    const foundHouseIndex = houses.findIndex((house) => String(house.id) === id);
-    if (foundHouseIndex === -1) throw new HouseNotFoundError(id);
-
-    const [foundHouse] = houses.splice(foundHouseIndex, 1);
-
-    res.status(200).json(foundHouse);
+    res.status(200).json(houseViewModel);
   } catch (err) {
     handleRequestError(err, res);
   }
