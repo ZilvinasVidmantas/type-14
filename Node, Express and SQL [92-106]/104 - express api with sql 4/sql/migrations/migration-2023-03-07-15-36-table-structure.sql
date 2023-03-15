@@ -70,6 +70,6 @@ create table house_image (
 	imageId int4 unsigned not null,
   foreign key (houseId) references house(houseId),
   foreign key (imageId) references image(imageId) on delete cascade,
-  primary key imageId,
+  primary key (imageId)
 );
 

@@ -1,5 +1,5 @@
-insert into house (address, title, price, cityId, userId) values
-('Vilniaus g.', 'Irenos kotedžas', 200, 3, 2);
+insert into house (address, title, price, cityId) values
+('Raudongrutu g.', 'Vitalijaus menė', 200, 4, 2);
 
 set @created_house_id = last_insert_id();
 
@@ -10,11 +10,9 @@ insert into image (src) values
 ('nuotrauka 4'),
 ('nuotrauka 5');
 
-set @image_id = last_insert_id();
+set @first_image_id = last_insert_id();
 
-insert into house_image (imageId, houseId) values
-(@image_id, @created_house_id),
-(@image_id + 1, @created_house_id),
-(@image_id + 2, @created_house_id),
-(@image_id + 3, @created_house_id),
-(@image_id + 4, @created_house_id);
+insert into house_image(imageId, houseId)
+select imageId, @created_house_id as houseId
+from image
+where imageId >= @first_image_id;

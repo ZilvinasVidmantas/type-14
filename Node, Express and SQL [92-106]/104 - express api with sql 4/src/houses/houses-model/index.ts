@@ -106,11 +106,68 @@ ${SQL.GROUP};
   return house;
 };
 
+const replaceHouse = async (houseId: string, houseData: HouseData): Promise<HouseViewModel> => {
+  const connection = await mysql.createConnection(config.database);
+
+  const preparedSql = `
+update house
+set address = ?, title= ?, price=?, cityId=?
+where houseId = ?;
+
+set @houseImagesIds = (
+  select group_concat(imageId) 
+    from house_image 
+    where houseId = ?
+    group by houseId);
+
+delete from house_image
+where houseId = ?;
+
+delete from image
+where find_in_set(imageId, @houseImagesIds);
+
+insert into image (src) values
+${houseData.images.map(() => '(?)').join(',\n')};
+
+set @first_image_id = last_insert_id();
+
+insert into house_image(imageId, houseId)
+select imageId, ? as houseId
+from image
+where imageId >= @first_image_id;
+
+${SQL.SELECT}
+where h.houseId = ?
+${SQL.GROUP};
+`;
+
+  const bindings = [
+    houseData.address,
+    houseData.title,
+    houseData.price,
+    houseData.cityId,
+    houseId,
+    houseId,
+    houseId,
+    ...houseData.images,
+    houseId,
+    houseId,
+  ];
+
+  const [queryResult] = await connection.query<mysql.RowDataPacket[][]>(preparedSql, bindings);
+  const [house] = queryResult[queryResult.length - 1] as HouseViewModel[];
+
+  connection.end();
+
+  return house;
+};
+
 const HouseModel = {
   getHouses,
   getHouse,
   deleteHouse,
   createHouse,
+  replaceHouse,
 };
 
 export default HouseModel;
