@@ -7,3 +7,9 @@ export type RegistrationBody = {
   mobile: string,
   image: string,
 };
+
+export type UserData = Omit<RegistrationBody, 'passwordConfirmation'>;
+
+export type UserViewModel = Omit<RegistrationBody, 'password' | 'passwordConfirmation'> & {
+  id: number,
+};

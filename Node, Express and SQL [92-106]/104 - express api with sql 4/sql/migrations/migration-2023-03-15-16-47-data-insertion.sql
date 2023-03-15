@@ -27,9 +27,9 @@ insert into image(src) values
 ('https://architecture.ou.edu/wp-content/uploads/2018/07/ANGELAPERSON-1447-300x300.jpg');
 
 insert into user(email, password, name, surname, mobile, imageId, role) values
-('admin@gmail.com', 'Vilnius123!', 'Bangimantas', 'Ūsas', '+370 68957488', 1, 'ADMIN'),
-('user1@gmail.com', 'laikinas', 'Serbentautas', 'Bordiūras', '+372 546 58745', 2, 'USER'),
-('user2@gmail.com', 'laikinas', 'Juria', 'Valenta', '+475 622 48799', 3, 'USER');
+('admin@gmail.com', '$2b$10$/oolJQxqMnjLmsB8iaaBguk67FPht.zUAXTb2A1zRTF70mv8WmzG6', 'Bangimantas', 'Ūsas', '+370 68957488', 1, 'ADMIN'),
+('user1@gmail.com', '$2b$10$/oolJQxqMnjLmsB8iaaBguk67FPht.zUAXTb2A1zRTF70mv8WmzG6', 'Serbentautas', 'Bordiūras', '+372 546 58745', 2, 'USER'),
+('user2@gmail.com', '$2b$10$/oolJQxqMnjLmsB8iaaBguk67FPht.zUAXTb2A1zRTF70mv8WmzG6', 'Juria', 'Valenta', '+475 622 48799', 3, 'USER');
 
 insert into house(userId, cityId, address, price, title) values
 (2, 1, 'address 1', 32, 'Domek na drzewie wśród zwierząt'),
