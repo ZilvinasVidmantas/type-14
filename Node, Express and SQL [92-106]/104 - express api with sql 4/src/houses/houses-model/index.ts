@@ -1,6 +1,6 @@
 import config from 'config';
 import HouseNotFoundError from 'houses/house-not-found-error';
-import { HouseViewModel } from 'houses/types';
+import { HouseViewModel, HouseData } from 'houses/types';
 import mysql from 'mysql2/promise';
 import SQL from './sql';
 
@@ -62,12 +62,55 @@ const deleteHouse = async (id: string): Promise<void> => {
 
   const bindings = [id, id, id, id, id];
   await connection.query(preparedSql, bindings);
+  connection.end();
+};
+
+const createHouse = async (houseData: HouseData): Promise<HouseViewModel> => {
+  const connection = await mysql.createConnection(config.database);
+
+  // TODO: priimti ir įdėti user'io id (kuomet bus įgalinta autentifikacija)
+  const preparedSql = `
+insert into house (address, title, price, cityId, userId) values
+(?, ?, ?, ?, 2);
+
+set @created_house_id = last_insert_id();
+
+insert into image (src) values
+${houseData.images.map(() => '(?)').join(',\n')};
+
+set @first_image_id = last_insert_id();
+
+insert into house_image(imageId, houseId)
+select imageId, @created_house_id as houseId
+from image
+where imageId >= @first_image_id;
+
+${SQL.SELECT}
+where h.houseId = @created_house_id
+${SQL.GROUP};
+`;
+
+  const bindings = [
+    houseData.address,
+    houseData.title,
+    houseData.price,
+    houseData.cityId,
+    ...houseData.images,
+  ];
+
+  const [queryResult] = await connection.query<mysql.RowDataPacket[][]>(preparedSql, bindings);
+  const [house] = queryResult[queryResult.length - 1] as HouseViewModel[];
+
+  connection.end();
+
+  return house;
 };
 
 const HouseModel = {
   getHouses,
   getHouse,
   deleteHouse,
+  createHouse,
 };
 
 export default HouseModel;

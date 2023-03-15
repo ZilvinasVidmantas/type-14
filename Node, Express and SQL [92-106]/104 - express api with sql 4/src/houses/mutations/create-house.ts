@@ -1,6 +1,6 @@
 import { RequestHandler } from 'express';
-import createId from 'helpers/create-id';
 import handleRequestError from 'helpers/handle-request-error';
+import HouseModel from 'houses/houses-model';
 import { HouseDataBody, HouseViewModel } from 'houses/types';
 import houseDataValidationSchema from 'houses/validation-schemas/house-data-validation-schema';
 
@@ -9,13 +9,12 @@ const createHouse: RequestHandler<
   HouseViewModel | ErrorResponse,
   HouseDataBody,
   {}
-> = (req, res) => {
+> = async (req, res) => {
   try {
     const houseData = houseDataValidationSchema.validateSync(req.body, { abortEarly: false });
-    const createdHouse = { id: createId(), ...houseData };
-    houses.push(createdHouse);
+    const houseViewModel = await HouseModel.createHouse(houseData);
 
-    res.status(201).json(createdHouse);
+    res.status(201).json(houseViewModel);
   } catch (err) {
     handleRequestError(err, res);
   }
