@@ -4,7 +4,6 @@ import getHouse from './queries/get-house';
 import createHouse from './mutations/create-house';
 import deleteHouse from './mutations/delete-house';
 import putHouse from './mutations/put-house';
-// import patchHouse from './mutations/pacth-house';
 
 const housesController = express.Router();
 
@@ -13,7 +12,6 @@ housesController.get('/:id', getHouse);
 
 housesController.post('/', createHouse);
 housesController.put('/:id', putHouse);
-// housesController.patch('/:id', patchHouse);
 housesController.delete('/:id', deleteHouse);
 
 export default housesController;
