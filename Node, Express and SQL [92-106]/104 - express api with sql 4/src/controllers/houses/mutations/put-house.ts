@@ -1,8 +1,8 @@
 import { RequestHandler } from 'express';
 import ServerSetupError from 'errors/server-setup-error';
 import handleRequestError from 'helpers/handle-request-error';
-import { HouseViewModel, HouseDataBody } from 'houses/types';
-import houseDataValidationSchema from 'houses/validation-schemas/house-data-validation-schema';
+import { HouseViewModel, HouseDataBody } from '../types';
+import houseDataValidationSchema from '../validation-schemas/house-data-validation-schema';
 import HouseModel from '../houses-model/index';
 
 const putHouse: RequestHandler<

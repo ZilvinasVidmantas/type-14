@@ -1,5 +1,5 @@
-import { PartialHouseData } from 'houses/types';
 import * as yup from 'yup';
+import { PartialHouseData } from '../types';
 
 const partialHouseDataValidationSchema: yup.ObjectSchema<PartialHouseData> = yup.object({
   address: yup.string()

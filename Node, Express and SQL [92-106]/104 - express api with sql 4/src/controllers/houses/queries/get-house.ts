@@ -1,8 +1,8 @@
 import { RequestHandler } from 'express';
-import { HouseViewModel } from 'houses/types';
 import ServerSetupError from 'errors/server-setup-error';
 import handleRequestError from 'helpers/handle-request-error';
-import HouseModel from 'houses/houses-model';
+import { HouseViewModel } from '../types';
+import HouseModel from '../houses-model';
 
 const getHouse: RequestHandler<
   { id?: string },

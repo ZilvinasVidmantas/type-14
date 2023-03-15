@@ -1,7 +1,7 @@
 import config from 'config';
-import HouseNotFoundError from 'houses/house-not-found-error';
-import { HouseViewModel, HouseData } from 'houses/types';
 import mysql from 'mysql2/promise';
+import HouseNotFoundError from '../house-not-found-error';
+import { HouseViewModel, HouseData } from '../types';
 import SQL from './sql';
 
 const getHouses = async (): Promise<HouseViewModel[]> => {
