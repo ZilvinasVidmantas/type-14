@@ -1,13 +1,14 @@
 import { RequestHandler } from 'express';
-import bcrypt from 'bcrypt';
 import handleRequestError from 'helpers/handle-request-error';
-import { RegistrationBody, UserViewModel } from '../types';
+import BcryptService from 'services/bcrypt-service';
+import JwtTokenService from 'services/jwt-token-service';
+import { RegistrationBody, AuthResponse } from '../types';
 import UserModel from '../user-model';
 import registrationBodyValidationSchema from '../validation-schemas/registration-body-validation-schema';
 
 export const register: RequestHandler<
   {},
-  UserViewModel | ErrorResponse,
+  AuthResponse | ErrorResponse,
   Partial<RegistrationBody>,
   {}
 > = async (req, res) => {
@@ -21,10 +22,15 @@ export const register: RequestHandler<
     await UserModel.checkEmail(userData.email);
     const userViewModel = await UserModel.createUser({
       ...userData,
-      password: bcrypt.hashSync(password, 10),
+      password: BcryptService.encrypt(password),
     });
 
-    res.json(userViewModel);
+    const token = JwtTokenService.create({
+      email: userViewModel.email,
+      id: userViewModel.id,
+    });
+
+    res.json({ user: userViewModel, token });
   } catch (err) {
     handleRequestError(err, res);
   }
