@@ -20,7 +20,7 @@ export const register: RequestHandler<
     } = registrationBodyValidationSchema.validateSync(req.body, { abortEarly: false });
 
     await UserModel.checkEmail(userData.email);
-    const userViewModel = await UserModel.createUser({
+    const { password: notUsed, ...userViewModel } = await UserModel.createUser({
       ...userData,
       password: BcryptService.encrypt(password),
     });
