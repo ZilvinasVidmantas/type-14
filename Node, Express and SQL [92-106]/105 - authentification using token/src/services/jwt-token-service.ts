@@ -6,6 +6,11 @@ type TokenData = {
   id: number,
 };
 
+type DecodedTokenData = TokenData & {
+  iat: number,
+  exp: number
+};
+
 const create = (data: TokenData) => jwt.sign(data, config.token.secret, {
   expiresIn: config.token.expiration,
 });
@@ -15,7 +20,7 @@ const decode = (token: string) => {
 
   if (decodedData === null) return null;
 
-  return decodedData as TokenData;
+  return decodedData as DecodedTokenData;
 };
 
 const JwtTokenService = {

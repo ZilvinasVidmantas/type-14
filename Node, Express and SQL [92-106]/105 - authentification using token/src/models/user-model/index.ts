@@ -1,7 +1,7 @@
 import mysql from 'mysql2/promise';
 import config from 'config';
 import NotFoundError from 'errors/not-found-error';
-import { UserData, UserEntity } from '../types';
+import { UserData } from 'controllers/auth/types';
 import SQL from './sql';
 
 const checkEmail = async (email: string): Promise<true> => {

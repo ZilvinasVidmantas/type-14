@@ -65,13 +65,12 @@ const deleteHouse = async (id: string): Promise<void> => {
   connection.end();
 };
 
-const createHouse = async (houseData: HouseData): Promise<HouseViewModel> => {
+const createHouse = async (houseData: HouseData, userId: number): Promise<HouseViewModel> => {
   const connection = await mysql.createConnection(config.database);
 
-  // TODO: priimti ir įdėti user'io id (kuomet bus įgalinta autentifikacija)
   const preparedSql = `
 insert into house (address, title, price, cityId, userId) values
-(?, ?, ?, ?, 2);
+(?, ?, ?, ?, ?);
 
 set @created_house_id = last_insert_id();
 
@@ -95,6 +94,7 @@ ${SQL.GROUP};
     houseData.title,
     houseData.price,
     houseData.cityId,
+    userId,
     ...houseData.images,
   ];
 

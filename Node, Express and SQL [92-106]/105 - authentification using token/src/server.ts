@@ -7,6 +7,7 @@ import DatabaseService from 'services/database-service';
 import authController from 'controllers/auth';
 
 const server = express();
+
 server.use(cors());
 server.use(express.json());
 server.use(morgan('tiny'));

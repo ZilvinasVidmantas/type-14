@@ -1,4 +1,5 @@
 import express from 'express';
+import jwtTokenMiddleware from 'middlewares/jwt-token-middleware';
 import getHouses from './queries/get-houses';
 import getHouse from './queries/get-house';
 import createHouse from './mutations/create-house';
@@ -10,8 +11,8 @@ const housesController = express.Router();
 housesController.get('/', getHouses);
 housesController.get('/:id', getHouse);
 
-housesController.post('/', createHouse);
-housesController.put('/:id', putHouse);
-housesController.delete('/:id', deleteHouse);
+housesController.post('/', jwtTokenMiddleware, createHouse);
+housesController.put('/:id', jwtTokenMiddleware, putHouse);
+housesController.delete('/:id', jwtTokenMiddleware, deleteHouse);
 
 export default housesController;
