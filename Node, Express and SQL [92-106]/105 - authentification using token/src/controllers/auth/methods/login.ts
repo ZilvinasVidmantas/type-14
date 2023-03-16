@@ -2,8 +2,8 @@ import { RequestHandler } from 'express';
 import handleRequestError from 'helpers/handle-request-error';
 import BcryptService from 'services/bcrypt-service';
 import JwtTokenService from 'services/jwt-token-service';
+import UserModel from 'models/user-model';
 import { Credentials, AuthResponse } from '../types';
-import UserModel from '../../../models/user-model';
 import credentialsValidationSchema from '../validation-schemas/credentials-validation-schema';
 
 export const login: RequestHandler<

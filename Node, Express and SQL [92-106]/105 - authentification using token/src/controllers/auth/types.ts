@@ -1,4 +1,4 @@
-export type RegistrationBody = Omit<UserEntity, 'id'> & {
+export type RegistrationBody = Omit<UserEntity, 'id' | 'role'> & {
   passwordConfirmation: string,
 };
 

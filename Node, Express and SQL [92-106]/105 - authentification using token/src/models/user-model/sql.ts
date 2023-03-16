@@ -6,6 +6,7 @@ select
   u.surname,
   u.mobile,
   u.password,
+  u.role,
   i.src as image
 from user as u
 left join image as i

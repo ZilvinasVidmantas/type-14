@@ -19,7 +19,7 @@ const partialHouseDataValidationSchema: yup.ObjectSchema<PartialHouseData> = yup
     ),
 
   images: yup
-    .array(yup.string().required()),
+    .array(yup.string().required().url('image must be accessible')),
 
   cityId: yup.number(),
 }).strict(true);
