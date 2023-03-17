@@ -23,29 +23,32 @@ const HouseCard: React.FC<HouseCardProps> = ({
   rating,
 }) => {
   const navigate = useNavigate();
+  const token = localStorage.getItem('token');
 
   return (
     <Stack sx={{ boxShadow: 4, position: 'relative' }}>
-      <Styled.ActionButtons>
-        <Button
-          variant="contained"
-          color="warning"
-          size="small"
-          sx={{ minWidth: 'initial', p: 0.5 }}
-          onClick={() => navigate(routes.UpdateHousePage.createLink(id))}
-        >
-          <EditIcon />
-        </Button>
-        <Button
-          variant="contained"
-          color="error"
-          size="small"
-          sx={{ minWidth: 'initial', p: 0.5 }}
-          onClick={() => console.log(`uždaugęs darysiu užklausą į jSON serverį per ApiService ir sulaukęs satsakymo per naujo atsiųsiu visus duomenis. mano id '${id}'`)}
-        >
-          <DeleteIcon />
-        </Button>
-      </Styled.ActionButtons>
+      {token !== null && (
+        <Styled.ActionButtons>
+          <Button
+            variant="contained"
+            color="warning"
+            size="small"
+            sx={{ minWidth: 'initial', p: 0.5 }}
+            onClick={() => navigate(routes.UpdateHousePage.createLink(id))}
+          >
+            <EditIcon />
+          </Button>
+          <Button
+            variant="contained"
+            color="error"
+            size="small"
+            sx={{ minWidth: 'initial', p: 0.5 }}
+            onClick={() => console.log(`uždaugęs darysiu užklausą į jSON serverį per ApiService ir sulaukęs satsakymo per naujo atsiųsiu visus duomenis. mano id '${id}'`)}
+          >
+            <DeleteIcon />
+          </Button>
+        </Styled.ActionButtons>
+      )}
 
       <Img src={images[0]} alt="" sx={{ aspectRatio: '1.42', width: 1 }} />
       <Styled.HouseCardContent>
