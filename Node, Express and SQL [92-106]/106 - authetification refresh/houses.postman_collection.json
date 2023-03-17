@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "0b96b1e8-012d-40aa-81af-4a915b212cc7",
+		"name": "houses",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1854907"
+	},
+	"item": [
+		{
+			"name": "many",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{address}}/api/houses",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"api",
+						"houses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "single",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{address}}/api/houses/1",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"api",
+						"houses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "single",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"2fghfgh\",\r\n    \"rating\": 1.9,\r\n    \"price\": 5.2,\r\n    \"address\": \"testukas 123\",\r\n    \"cityId\": 11,\r\n    \"images\": [\r\n        \"https://a0.muscache.com/im/pictures/miso/Hosting-49434096/original/97836fa1-c200-4899-a9d8-a1d1b013f15c.jpeg?im_w=1440\",\r\n        \"https://a0.muscache.com/im/pictures/miso/Hosting-49434096/original/3fcc350c-ac5f-4464-b757-4f43ef33c89f.jpeg?im_w=1200\",\r\n        \"https://a0.muscache.com/im/pictures/miso/Hosting-49434096/original/551bca7c-e035-45a7-98fe-a09108083c93.jpeg?im_w=1440\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{address}}/api/houses",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"api",
+						"houses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "single",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{address}}/api/houses/4",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"api",
+						"houses",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "single",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"pakeista\",\r\n    \"price\": 51.19,\r\n    \"address\": \"pakeista\",\r\n    \"cityId\": 1,\r\n    \"images\": [\r\n        \"testine nuotrauka 1\",\r\n        \"testine nuotrauka 2\",\r\n        \"testine nuotrauka 3\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{address}}/api/houses/2",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"api",
+						"houses",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
